@@ -160,3 +160,33 @@ I have created wireframes using Balsamiq for Desktop, Tablet and Phone
 - [Recipe Not Logged In](readme-images/wireframes/phone/recipe-not-logged-in-phone.png)
 - [Register](readme-images/wireframes/phone/register-phone.png)
 - [Login](readme-images/wireframes/phone/login-phone.png)
+
+## Database Models and Schema
+
+### Recipes
+
+- The Recipes Model contains the information about each recipe on the website.
+- The title field is the name of the recipe, and is unique.
+- It contains a one-to-many relationship with the Comment Model.
+- The title field is the foreign key for this relationship.
+It contains a many-to-one relationship with the Category Model.
+- The category field is the foreign key for this relationship.
+- It contains a many-to-many key for Likes.
+
+### Comments
+
+- The Comments Model contains the content of each comment made on each recipe.
+- It contains a many-to-one relationship with the Recipe Model.
+- The id field is the primary key for this relationship.
+
+### Category
+
+- The Category model contains an id and category_name fields.
+- It contains a one-to-many relationship with the Recipe Model.
+- The id field is the primary key for this relationship.
+
+## Database Schema
+
+My database schema was created using Lucid Chart and is displayed in the below diagram.
+
+ ![Image of database schema](readme-images/screenshot-database-schema.png)
