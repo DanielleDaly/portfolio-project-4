@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-danielledaly-portfolio-p-hayry7065u.us2.codeanyapp.com', 'easy_eats_recipe_app.herokuapp.com'. 'localhost']
+    '8000-danielledaly-portfolio-p-hayry7065u.us2.codeanyapp.com', 'easy_eats_recipe_app.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -133,9 +133,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = [os.path.join(BASE_DIR, 'staticfiles')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-MEDIA_URL = '/media'
+MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
