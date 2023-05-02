@@ -14,7 +14,7 @@ class Recipe(models.Model):
     image = CloudinaryField('image', default='placeholder')
     cooking_time = models.CharField(max_length=10)
     serves = models.CharField(max_length=10)
-    ingredients = models.TextField()
+    ingredients = models.TextField
     method = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
