@@ -4,8 +4,12 @@ from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
-class Category(models.Model):
-    category_name = models.CharField(max_length=100)
+# class Category(models.Model):
+#     category_name = models.CharField(max_length=100)
+#     slug = models.SlugField(max_length=100, unique=True)
+
+#     def __str__(self):
+#         return self.category_name
 
 class Recipe(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -14,15 +18,15 @@ class Recipe(models.Model):
     image = CloudinaryField('image', default='placeholder')
     cooking_time = models.CharField(max_length=10)
     serves = models.CharField(max_length=10)
-    ingredients = models.TextField
+    ingredients = models.TextField()
     method = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     short_description = models.TextField()
     likes = models.ManyToManyField(User, related_name='recipe_likes', blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    category = models.ForeignKey(
-        Category, related_name='recipe_category', on_delete=models.CASCADE)
+    # category = models.ForeignKey(
+    #     Category, related_name='recipe_category', on_delete=models.CASCADE)
 
     class Meta:
         ordering = ['-created_on']
