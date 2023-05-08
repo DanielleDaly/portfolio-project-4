@@ -14,3 +14,45 @@
     </div>
 </div>
 
+<!-- Latest Recipes -->
+<div class="container">
+    <h2 class="my-4">Latest Recipes</h2>
+    <div class="row">
+        <!-- Individual Recipes -->
+        <div class="col-12">
+            <div class="row">
+                {% for recipe in recipe_list %}
+                <div class="col-4">
+                    <div class="card recipe-card mb-4 shadow">
+                        <div class="card-body recipe-card-body">
+                            <a href="#" class="recipe-image-link">
+                                <div class="image-container">
+                                    {% if "placeholder" in recipe.image.url %}
+                                    <img class="card-img-top" src="/static/images/image-placeholder-recipe.jpeg">
+                                    {% else %}
+                                    <img class="card-img-top" src="{{ recipe.image.url }}">
+                                    {% endif %}
+                                </div>
+                            </a>
+                            <a href="#" class="recipe-title-link">
+                                <h3 class="card-title">{{ recipe.title }}</h3>
+                            </a>
+                            <p class="card-text"><strong>Cooking Time:</strong> {{ recipe.cooking_time }}</p>
+                            <p class="card-text"><strong>Serves:</strong> {{ recipe.serves }}</p>
+                            <p class="card-text">{{ recipe.short_description }}</p>
+                            <p class="card-text h6">{{ recipe.created_on }} <i class="fa-solid fa-heart"></i> {{ recipe.number_of_likes }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:3 %}
+                </div>
+                <div class="row">
+                {% endif %}
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
