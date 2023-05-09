@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
 
 <div class="recipe-intro">
@@ -71,6 +73,22 @@
                     </p>
                 </div>
                 {% endfor %}
+                {% if commented %}
+                <div class="alert-alert-success" role="alert"></div>
+                Your comment is awaiting approval
+                </div>
+                {% else %}
+                {% if user.is_authenticated %}
+
+                <h3>Leave a Comment:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form method="post" style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-signup btn-lge">Submit</button>
+                </form>
+                {% endif %}
+                {% endif %}
             </div>
         </div>
     </div>
