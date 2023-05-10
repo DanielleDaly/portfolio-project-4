@@ -27,8 +27,24 @@
 
                 <div class="row">
                     <div class="col-md-6">
-                        <strong><i class="fa-solid fa-heart"></i> Likes: {{ recipe.number_of_likes }} </strong>
-                    </div>
+                        <strong>
+                            {% if user.is_authenticated %}
+                            <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="POST">
+                                {% csrf_token %}
+                                {% if liked %}
+                                <button type="submit" name="recipe_id" value="{{ recipe.slug }}" class="btn-like"><i class="fa-solid fa-heart"></i></button>
+
+                                {% else %}
+                                <button type="submit" name="recipe_id" value="{{ recipe.slug }}" class="btn-like"><i class="fa-regular fa-heart"></i></button>
+
+                                {% endif %}
+                            </form>
+                            {% else %}
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            {% endif %}
+                        <span>Likes: {{ recipe.number_of_likes }} </span>
+                    </strong>
+                </div>
                     <div class="col-md-6">
                         {% with comments.count as total_comments %}
                         <strong><i class="fa-solid fa-comment"></i> Comments: {{ total_comments }}</strong>
@@ -74,7 +90,7 @@
                 </div>
                 {% endfor %}
                 {% if commented %}
-                <div class="alert-alert-success" role="alert"></div>
+                <div class="alert-alert-success" role="alert">
                 Your comment is awaiting approval
                 </div>
                 {% else %}
