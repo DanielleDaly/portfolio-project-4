@@ -10,6 +10,12 @@ class RecipeList(generic.ListView):
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
 
+class AllRecipes(generic.ListView):
+    model = Recipe
+    queryset = Recipe.objects.filter(status=1).order_by('-created_on')
+    template_name = 'all_recipes.html'
+    paginate_by = 6
+
 class FullRecipe(View):
 
     def get(self, request, slug, *args, **kwargs):
