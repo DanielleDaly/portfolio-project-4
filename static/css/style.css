@@ -1,0 +1,67 @@
+body {
+    background-color: #f7f1e9;
+}
+
+/* Navigation */
+
+.navbar {
+    background-color: #f7f1e9;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 600;
+    color: rgb(114,63,95);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+    color: #ffffff;
+    background-color: rgb(114,63,95);
+}
+
+/* Callout */
+
+.container-outer{
+    height: 50vh;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.callout-container {
+    height: 50vh;
+    background: url(../images/image-hero.jpeg) no-repeat center center;
+    background-size: cover;
+
+    animation-name: container-zoom;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes container-zoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.callout-text{
+    color: #ffffff; 
+}
+.callout-text h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+.callout-text p {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+
+
+
