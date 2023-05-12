@@ -3,27 +3,29 @@
 {% block content %}
 
 <!-- Callout -->
-<div class="container-fluid callout-container">
-    <div class="row">
-        <div class="col-12">
-            <section class="callout text-center mt-3">
-                <h1>Easy Eats</h1>
-                <p class="lead">Welcome to Easy Eats. Here you'll find delicious and easy to prepare meals for all occasions, budgets and tastes. Happy Cooking!
-            </section>
+<div class="container-fluid container-outer">
+    <div class="callout-container">
+        <div class="row">
+            <div class="col-12">
+                <section class="callout-text">
+                    <h1>Easy Eats</h1>
+                    <p class="lead">Welcome to Easy Eats. Here you'll find delicious and easy to prepare meals for all occasions, budgets and tastes. Happy Cooking!
+                </section>
+            </div>
         </div>
     </div>
 </div>
 
 <!-- Latest Recipes -->
 <div class="container">
-    <h2 class="my-4">Latest Recipes</h2>
+    <h2 class="my-4 text-center section-title">Latest Recipes</h2>
     <div class="row">
         <!-- Recipe Cards -->
         <div class="col-12">
-            <div class="row">
+            <div class="row mb-4">
                 {% for recipe in recipe_list %}
-                <div class="col-4">
-                    <div class="card recipe-card mb-4 shadow">
+                <div class="col-sm-12 col-md-4">
+                    <div class="card recipe-card shadow">
                         <div class="card-body recipe-card-body">
                             <a href="{% url 'full-recipe' recipe.slug %}" class="recipe-image-link">
                                 <div class="image-container">
@@ -37,16 +39,30 @@
                             <a href="{% url 'full-recipe' recipe.slug %}" class="recipe-title-link">
                                 <h3 class="card-title">{{ recipe.title }}</h3>
                             </a>
-                            <p class="card-text"><strong>Cooking Time:</strong> {{ recipe.cooking_time }}</p>
-                            <p class="card-text"><strong>Serves:</strong> {{ recipe.serves }}</p>
-                            <p class="card-text">{{ recipe.short_description }}</p>
-                            <p class="card-text h6">{{ recipe.created_on }} <i class="fa-regular fa-heart"></i> {{ recipe.number_of_likes }}</p>
+                            <p class="card-text card-text-with-icon">
+                                <i class="fa-regular fa-clock me-1"></i> <strong>Cooking Time:</strong> {{ recipe.cooking_time }}
+                            </p>
+                            <p class="card-text card-text-with-icon">
+                                <i class="fa-regular fa-user me-1"></i> <strong>Serves:</strong> {{ recipe.serves }}
+                            </p>
+                            <p class="card-text card-text-with-icon">
+                                <i class="fa-regular fa-heart me-1"></i> <strong>Likes:</strong> {{ recipe.number_of_likes }}
+                            </p>
+                            <p class="card-text">
+                                {{ recipe.short_description }}
+                            </p>
+                            <p class="card-text py-2 mb-0 recipe-card-date">
+                                {{ recipe.created_on }}
+                            </p>
+                            <a href="{% url 'full-recipe' recipe.slug %}" class="card-text py-2 recipe-card-link">
+                                View Recipe
+                            </a>
                         </div>
                     </div>
                 </div>
                 {% if forloop.counter|divisibleby:3 %}
                 </div>
-                <div class="row">
+                <div class="row mb-4">
                 {% endif %}
                 {% endfor %}
                 </div>
@@ -55,6 +71,6 @@
     </div>
 </div>
 <!-- Link to All Recipes Button -->
-<a class="btn btn-primary btn-lg col-4 offset-4 mb-3 mt-3" href="{% url 'all-recipes' %}" role="button">All Recipes</a>
+<a class="btn btn-link btn-lg col-4 offset-4 mb-3 mt-3" href="{% url 'all-recipes' %}" role="button">All Recipes</a>
 
 {% endblock %}

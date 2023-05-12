@@ -59,9 +59,120 @@ body {
 }
 
 
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: rgb(114,63,95);
+}
 
 
+/* Recipe Cards */
+.recipe-card {
+    height: 100%;
+    border: none;
+}
+
+.recipe-card-body {
+    padding: 0 0 4.5rem 0;
+}
+
+.recipe-card-date {
+    position: absolute;
+    left: 0;
+    bottom: 2.5rem;
+    width: 100%;
+}
+
+.recipe-card-link {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0 1rem;
+    color: rgb(114,63,95);
+    font-weight: 600 !important;
+}
+
+.recipe-card-link:hover {
+    color: rgb(114,63,95);
+}
+
+.recipe-image-link {
+    display: block;
+}
+
+.recipe-title-link {
+    display: block;
+    text-decoration: none;
+    background-color: rgb(114,63,95);
+}
+
+.card-title {
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+}
+
+.recipe-title-link:hover .card-title {
+    color: rgb(255,203,112);
+}
+
+.card-text {
+    padding: 0 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.card-text strong {
+    font-weight: 600;
+}
+
+.card-text-with-icon {
+    margin-bottom: 0.75rem;
+}
 
 
+/* Recipe */
+.recipe-ingredients {}
+
+.recipe-ingredients ul, .recipe-ingredients ol {}
+
+.recipe-ingredients li {
+    font-size: medium !important;
+}
+
+.recipe-method {}
+
+.recipe-method ul, .recipe-method ol {}
+
+.recipe-method li {
+    font-size: medium !important;
+}
+ 
+
+.btn-link {
+    font-weight: 600;
+    color: #fff;
+    background-color: rgb(114, 69, 98);
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    font-weight: 600;
+    background-color: rgb(255,203,112);
+    color: rgb(114, 69, 98);
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+
+}
 
 
+.footer-icon {
+    color: #ffffff;
+}
+
+.footer-icon:hover {
+    color: rgb(255,203,112);
+}
