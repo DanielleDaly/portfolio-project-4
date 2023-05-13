@@ -73,22 +73,22 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container recipe-comments">
     <div class="row">
-        <div class="col card mb-4">
-            <h3>Comments:</h3>
-            <div class="card-body">
+        <div class="col-12 card mb-4 p-4">
+            <h3 class="recipe-comments-title">Comments:</h3>
+            <div class="recipe-comments-list">
                 {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
+                <div class="comment mb-4">
+                    <div class="comment-details p-2">
                         {{ comment.name }}
-                        <span class="font-weight-normal">
+                        <span class="comment-details-date">
                             {{ comment.created_on }}
                         </span>
-                    </p>
-                    <p>
+                    </div>
+                    <div class="comment-contents p-2">
                         {{ comment.body | linebreaks }}
-                    </p>
+                    </div>
                 </div>
                 {% endfor %}
                 {% if commented %}
@@ -103,7 +103,7 @@
                 <form method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lge">Submit</button>
+                    <button type="submit" class="btn btn-link btn-lge mt-2">Submit</button>
                 </form>
                 {% endif %}
                 {% endif %}

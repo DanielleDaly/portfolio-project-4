@@ -261,6 +261,24 @@ body {
     font-size: 1rem !important;
     line-height: 1.5rem !important;
 }
+
+
+/* Comments */
+
+.recipe-comments h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: rgb(114,63,95);
+}
+
+.comment {
+    border: solid 1px rgb(114,63,95);
+}
+
+.comment-details {
+    background-color: rgb(114,63,95);
+    color: #ffffff;
+}
  
 
 .btn-link {
@@ -269,6 +287,7 @@ body {
     background-color: rgb(114, 69, 98);
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
+    border: none;
 }
 
 .btn-link:hover {
@@ -277,7 +296,6 @@ body {
     color: rgb(114, 69, 98);
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
-
 }
 
 .link {
