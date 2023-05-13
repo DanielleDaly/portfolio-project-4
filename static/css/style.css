@@ -34,9 +34,9 @@ body {
     background: url(../images/image-hero.jpeg) no-repeat center center;
     background-size: cover;
 
-    animation-name: container-zoom;
+    /* animation-name: container-zoom;
     animation-duration: 3s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
 }
 
 @keyframes container-zoom {
@@ -63,6 +63,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: rgb(114,63,95);
+    
 }
 
 
@@ -132,6 +133,31 @@ body {
     margin-bottom: 0.75rem;
 }
 
+/* Logout */
+
+.signout-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: medium;
+}
+
+.register-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: medium;
+}
+
+#msg {
+    background-color: rgb(114,63,95);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #fff;
+}
+
+.btn-msg {
+    color: #fff;
+}
+
 
 /* Recipe */
 .recipe-ingredients {}
@@ -168,6 +194,13 @@ body {
 
 }
 
+.link {
+    color: rgb(114, 69, 98);
+}
+
+.link:hover {
+    color: rgb(114, 69, 98);
+}
 
 .footer-icon {
     color: #ffffff;
