@@ -7,22 +7,22 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
-            <h3>{% trans "Sign Up" %}</h3>
+        <div class="col-md-8 mt-3 offset-2 text-center">
+            <h3 class="section-title">{% trans "Sign Up" %}</h3>
 
-            <p>{% blocktrans %}Welcome back to the code|star blog. Do you already have an account? Then please <a
+            <p class="register-text pt-2 pb-2">{% blocktrans %}Welcome back to Easy Eats. Do you already have an account? Then please <a
                     class="link" href="{{ login_url }}">sign in</a> instead.{% endblocktrans %}</p>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
+        <div class="col-md-8 mt-3 offset-2 d-flex justify-content-center">
             <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
                 {% csrf_token %}
                 {{ form.as_p }}
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
-                <button class="btn btn-signup right" type="submit">{% trans "Sign Up" %} &raquo;</button>
+                <button class="btn btn-signup right btn-link mt-3" type="submit">{% trans "Sign Up" %} &raquo;</button>
             </form>
         </div>
     </div>
