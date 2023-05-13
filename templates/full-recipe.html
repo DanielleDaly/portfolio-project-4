@@ -4,8 +4,8 @@
 
 {% block content %}
 
-<div class="recipe-intro">
-    <div class="container">
+<div class="recipe-intro mb-3">
+    <div class="container p-0">
         <div class="row g-0 bg-white">
             <div class="col-md-6 recipe-intro-image image-container">
                 {% if "placeholder" in recipe.image.url %}
@@ -55,25 +55,27 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container mb-3 recipe-contents">
     <div class="row">
         <!-- Ingredients -->
-        <div class="col-3 mt-3 left top">
-            <div class="recipe-ingredients">
-                <strong>Ingredients:</strong> {{ recipe.ingredients | safe }}
+        <div class="col-md-4 p-4 recipe-ingredients">
+            <h2>Ingredients:</h2>
+            <div>
+                {{ recipe.ingredients | safe }}
             </div>
         </div>
         <!-- Method -->
-        <div class="col-9 mt-3 right top">
-            <div class="recipe-method">
-                <strong>Method:</strong> {{ recipe.method | safe }}
+        <div class="col-md-8 p-4 recipe-method">
+            <h2>Method:</h2>
+            <div>
+                {{ recipe.method | safe }}
             </div>
         </div>
     </div>
 </div>
 <div class="container">
     <div class="row">
-        <div class="col card mb-4 mt-3 ">
+        <div class="col card mb-4">
             <h3>Comments:</h3>
             <div class="card-body">
                 {% for comment in comments %}
