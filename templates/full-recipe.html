@@ -6,7 +6,7 @@
 
 <div class="recipe-intro">
     <div class="container">
-        <div class="row g-0">
+        <div class="row g-0 bg-white">
             <div class="col-md-6 recipe-intro-image image-container">
                 {% if "placeholder" in recipe.image.url %}
                 <img src="/static/images/image-placeholder-recipe.jpeg">
@@ -15,7 +15,7 @@
                 {% endif %}
             </div>
 
-            <div class="col-md-6 ps-4 recipe-intro-text">
+            <div class="col-md-6 p-4 recipe-intro-text">
                 <!-- Recipe Title -->
                 <h1 class="recipe-title">{{ recipe.title }}</h1>
                 <!-- Cooking Time -->
@@ -25,8 +25,8 @@
                 <!-- Decsription -->
                 <div class="recipe-description">{{ recipe.description }}</div>
 
-                <div class="row">
-                    <div class="col-md-6">
+                <div class="recipe-intro-comments-likes px-4 py-2 text-center">
+                    <div class="col-6">
                         <strong>
                             {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="POST">
@@ -45,7 +45,7 @@
                         <span>Likes: {{ recipe.number_of_likes }} </span>
                     </strong>
                 </div>
-                    <div class="col-md-6">
+                    <div class="col-6">
                         {% with comments.count as total_comments %}
                         <strong><i class="fa-solid fa-comment"></i> Comments: {{ total_comments }}</strong>
                         {% endwith %}
