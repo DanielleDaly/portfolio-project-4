@@ -23,7 +23,7 @@
         <!-- Recipe Cards -->
         <div class="col-12">
             <div class="row mb-4">
-                {% for recipe in recipe_list %}
+                {% for recipe in recipe_list|slice:":6" %}
                 <div class="col-sm-12 col-md-4">
                     <div class="card recipe-card shadow">
                         <div class="card-body recipe-card-body">
