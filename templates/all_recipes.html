@@ -3,14 +3,14 @@
 {% block content %}
 
 <div class="container">
-    <h2 class="my-4">All Recipes</h2>
+    <h2 class="mt-3 mb-4 text-center section-title">All Recipes</h2>
     <div class="row">
-        <!-- Recipe Cards -->
-        <div class="col-12">
-            <div class="row">
-                {% for recipe in recipe_list %}
-                <div class="col-4">
-                    <div class="card recipe-card mb-4 shadow">
+         <!-- Recipe Cards -->
+         <div class="col-12">
+            <div class="row mb-4">
+                {% for recipe in recipe_list|slice:":6" %}
+                <div class="col-sm-12 col-md-4">
+                    <div class="card recipe-card shadow">
                         <div class="card-body recipe-card-body">
                             <a href="{% url 'full-recipe' recipe.slug %}" class="recipe-image-link">
                                 <div class="image-container">
@@ -24,16 +24,30 @@
                             <a href="{% url 'full-recipe' recipe.slug %}" class="recipe-title-link">
                                 <h3 class="card-title">{{ recipe.title }}</h3>
                             </a>
-                            <p class="card-text"><strong>Cooking Time:</strong> {{ recipe.cooking_time }}</p>
-                            <p class="card-text"><strong>Serves:</strong> {{ recipe.serves }}</p>
-                            <p class="card-text">{{ recipe.short_description }}</p>
-                            <p class="card-text h6">{{ recipe.created_on }} <i class="fa-regular fa-heart"></i> {{ recipe.number_of_likes }}</p>
+                            <p class="card-text card-text-with-icon">
+                                <i class="fa-regular fa-clock me-1"></i> <strong>Cooking Time:</strong> {{ recipe.cooking_time }}
+                            </p>
+                            <p class="card-text card-text-with-icon">
+                                <i class="fa-regular fa-user me-1"></i> <strong>Serves:</strong> {{ recipe.serves }}
+                            </p>
+                            <p class="card-text card-text-with-icon">
+                                <i class="fa-regular fa-heart me-1"></i> <strong>Likes:</strong> {{ recipe.number_of_likes }}
+                            </p>
+                            <p class="card-text">
+                                {{ recipe.short_description }}
+                            </p>
+                            <p class="card-text py-2 mb-0 recipe-card-date">
+                                {{ recipe.created_on }}
+                            </p>
+                            <a href="{% url 'full-recipe' recipe.slug %}" class="card-text py-2 recipe-card-link">
+                                View Recipe
+                            </a>
                         </div>
                     </div>
                 </div>
                 {% if forloop.counter|divisibleby:3 %}
                 </div>
-                <div class="row">
+                <div class="row mb-4">
                 {% endif %}
                 {% endfor %}
                 </div>
@@ -46,10 +60,10 @@
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link btn-link">&laquo; PREV </a></li>
             {% endif %}
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link btn-link"> NEXT &raquo;</a></li>
             {% endif %}
             {% endif %}
         </ul>
