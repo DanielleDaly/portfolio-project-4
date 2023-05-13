@@ -14,7 +14,7 @@ class AllRecipes(generic.ListView):
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')
     template_name = 'all_recipes.html'
-    paginate_by = 6
+    paginate_by = 9
 
 class FullRecipe(View):
 
@@ -66,8 +66,8 @@ class FullRecipe(View):
                 "commented": True,
                 "liked": liked,
                 "comment_form": CommentForm()
-            },
-        )
+            },)
+
 class RecipeLike(View):
 
     def post(self, request, slug):
