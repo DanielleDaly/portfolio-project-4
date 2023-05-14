@@ -2,6 +2,10 @@ body {
     background-color: #f7f1e9;
 }
 
+main {
+    min-height: calc(100vh - 130px);
+}
+
 /* Navigation */
 
 .navbar {
@@ -265,10 +269,19 @@ body {
 
 /* Comments */
 
+.comments-link:hover {
+    color: rgb(255,203,112);
+    cursor: pointer;
+}
+
 .recipe-comments h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: rgb(114,63,95);
+}
+
+.recipe-comments-list form label {
+    display: none;
 }
 
 .comment {
@@ -276,8 +289,60 @@ body {
 }
 
 .comment-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: rgb(114,63,95);
     color: #ffffff;
+}
+
+.comment-actions button {
+    border: none;
+    padding: 0.25rem 0.5rem;
+    background-color: #ffffff;
+    color: rgb(114, 69, 98);
+    font-weight: 600;
+    border-radius: 4px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.comment-actions button:hover {
+    background-color: rgb(255,203,112);
+}
+
+.modal-comment-delete .modal-header {
+    background-color: rgb(114, 69, 98);
+}
+
+.modal-comment-delete .modal-title {
+    font-weight: 600;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.modal-comment-delete .modal-button {
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.modal-comment-delete .modal-button.btn-cancel {
+    background-color: #222222;
+}
+.modal-comment-delete .modal-button.btn-cancel:hover {
+    background-color: #666666;
+}
+
+.modal-comment-delete .modal-button.btn-delete {
+    background-color: #ff0000;
+}
+.modal-comment-delete .modal-button.btn-delete:hover {
+    background-color: #7a0000;
+}
+
+.comment-contents {
+    background-color: rgba(114,63,95,0.1);
 }
  
 

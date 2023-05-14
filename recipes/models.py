@@ -32,7 +32,7 @@ class Recipe(models.Model):
 class Comment(models.Model):
     recipe = models.ForeignKey(
         Recipe, related_name='recipe_comment', on_delete=models.CASCADE)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     email = models.EmailField()
     body = models.TextField()

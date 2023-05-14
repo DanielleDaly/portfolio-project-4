@@ -29,6 +29,7 @@
                     <div class="col-6">
                         <strong>
                             {% if user.is_authenticated %}
+                            <span>Like this recipe? </span>
                             <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
@@ -41,13 +42,15 @@
                             </form>
                             {% else %}
                             <span><i class="fa-regular fa-heart"></i></span>
+                            <span>Likes: {{ recipe.number_of_likes }} </span>
                             {% endif %}
-                        <span>Likes: {{ recipe.number_of_likes }} </span>
                     </strong>
                 </div>
                     <div class="col-6">
                         {% with comments.count as total_comments %}
-                        <strong><i class="fa-solid fa-comment"></i> Comments: {{ total_comments }}</strong>
+                        <strong>
+                            <i class="fa-solid fa-comment"></i> <span class="comments-link" id="comments-link">Comments: {{ total_comments }}</span>
+                        </strong>
                         {% endwith %}
                     </div>
                 </div>
@@ -82,10 +85,7 @@
 
                 {% if edit_comment %}
                 <h4>Edit Comment:</h4>
-                <p>
-                    {{ edit_comment }}
-                </p>
-                <form method="post" style="margin-top: 1.3em;" class="mb-4">
+                <form method="post" class="mt-2 mb-4">
                     <input type="hidden" name="action" value="edit_comment">
                     {{ edit_comment_form | crispy }}
                     {% csrf_token %}
@@ -96,18 +96,51 @@
                 {% for comment in comments %}
                 <div class="comment mb-4">
                     <div class="comment-details p-2">
-                        {{ comment.name }}
-                        <span class="comment-details-date">
-                            {{ comment.created_on }}
-                        </span>
-                        <span>
+                        <div class="comment-details-name-date">
+                            <div class="comment-details-name">
+                                {{ comment.name }}
+                            </div>
+                            <div class="comment-details-date">
+                                {{ comment.created_on }}
+                            </div>
+                        </div>
+                        {% if user == comment.author %}
+                        <div class="comment-actions">
                             <a href="?edit_comment_id={{ comment.id }}">
-                                <button>Edit</button>
+                                <button class="btn-comment-edit me-md-2">Edit</button>
                             </a>
-                            <a href="?delete_comment_id={{ comment.id }}">
-                                <button>Delete</button>
-                            </a>
-                        </span>
+                            <button class="btn-comment-delete" data-bs-toggle="modal" data-bs-target="#comment-deleteModal-{{comment.id}}">Delete</button>
+                        </div>
+                        <!-- Delete Comment Modal -->
+                        <div class="modal fade modal-comment-delete" id="comment-deleteModal-{{comment.id}}" tabindex="-1"
+                            aria-labelledby="comment-deleteModalLabel-{{comment.id}}" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title fs-1 m-auto" id="comment-deleteModalLabel-{{comment.id}}">Delete
+                                            Comment!
+                                        </h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="text-center text-danger fs-3">
+                                            Are you sure you want to delete your comment?
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer m-auto">
+                                        <button type="button" class="modal-button
+                                        btn-cancel flex-center" data-bs-dismiss="modal">Cancel</button>
+                                        <form method="post">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="action" value="delete_comment">
+                                            <input type="hidden" name="delete_comment_id" value="{{comment.id}}">
+                                            <button class="modal-button flex-center btn-delete"
+                                                type="submit">Delete</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
                     </div>
                     <div class="comment-contents p-2">
                         {{ comment.body | linebreaks }}
@@ -121,10 +154,10 @@
                 </div>
                 {% endif %}
 
-                {% if user.is_authenticated and not editing_comment %}
+                {% if user.is_authenticated and not edit_comment %}
                 <h3>Leave a Comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
+                <p>Posting as: <strong>{{ user.username }}</strong></p>
+                <form method="post" class="mt-2">
                     <input type="hidden" name="action" value="add_comment">
                     {{ comment_form | crispy }}
                     {% csrf_token %}

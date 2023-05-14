@@ -30,6 +30,7 @@ class FullRecipe(View):
             edit_comment_form = EditCommentForm(instance=edit_comment)
 
             if edit_comment_form.is_valid():
+                edit_comment_form.instance.author = request.user
                 edit_comment_form.instance.email = request.user.email
                 edit_comment_form.instance.name = request.user.username
                 comment = edit_comment_form.save(commit=False)
@@ -75,6 +76,7 @@ class FullRecipe(View):
             commented = True
 
             if comment_form.is_valid():
+                comment_form.instance.author = request.user
                 comment_form.instance.email = request.user.email
                 comment_form.instance.name = request.user.username
                 comment = comment_form.save(commit=False)
@@ -96,19 +98,13 @@ class FullRecipe(View):
             else:
                 edit_comment_form = EditCommentForm()
 
-        return render(
-            request,
-            "full-recipe.html",
-            {
-                "recipe": recipe,
-                "comments": comments,
-                "commented": commented,
-                "liked": liked,
-                "comment_form": CommentForm(),
-                "edit_comment_form": EditCommentForm(),
-                "editing_comment": editing_comment
-            },
-        )
+        if action == 'delete_comment':
+            delete_comment_id = request.POST['delete_comment_id']
+            if delete_comment_id:
+                delete_comment = get_object_or_404(Comment, pk=delete_comment_id)
+                delete_comment.delete()
+
+        return HttpResponseRedirect(reverse('full-recipe', args=[slug]))
 
 
 class RecipeLike(View):
@@ -120,4 +116,4 @@ class RecipeLike(View):
         else:
             recipe.likes.add(request.user)
 
-        return HttpResponseRedirect(reverse('full-recipe',  args=[slug]))
+        return HttpResponseRedirect(reverse('full-recipe', args=[slug]))
