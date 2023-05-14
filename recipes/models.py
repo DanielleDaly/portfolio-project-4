@@ -4,13 +4,6 @@ from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
-# class Category(models.Model):
-#     category_name = models.CharField(max_length=100)
-#     slug = models.SlugField(max_length=100, unique=True)
-
-#     def __str__(self):
-#         return self.category_name
-
 class Recipe(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
@@ -25,8 +18,6 @@ class Recipe(models.Model):
     short_description = models.TextField()
     likes = models.ManyToManyField(User, related_name='recipe_likes', blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    # category = models.ForeignKey(
-    #     Category, related_name='recipe_category', on_delete=models.CASCADE)
 
     class Meta:
         ordering = ['-created_on']
@@ -37,9 +28,11 @@ class Recipe(models.Model):
     def number_of_likes(self):
         return self.likes.count()
 
+
 class Comment(models.Model):
     recipe = models.ForeignKey(
         Recipe, related_name='recipe_comment', on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     email = models.EmailField()
     body = models.TextField()

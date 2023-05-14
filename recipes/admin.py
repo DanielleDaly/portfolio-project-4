@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Recipe, Comment
-# from .models import Recipe, Category
+# from .models import Recipe
 from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Recipe)
@@ -21,11 +21,6 @@ class CommentAdmin(admin.ModelAdmin):
 
     def approve_comments(self, request, queryset):
         queryset.update(approved=True)
-
-# @admin.register(Category)
-# class CategoryAdmin(SummernoteModelAdmin):
-
-#     prepopulated_fields = {"slug": ("category_name",)}
 
 
 
