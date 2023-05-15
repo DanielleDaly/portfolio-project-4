@@ -363,6 +363,16 @@ main {
     text-decoration: none;
 }
 
+.btn-close {
+    float: right;
+    background: no-repeat center center url(../images/close-icon.png) transparent !important;
+    opacity: 1;
+}
+
+.btn-close:hover {
+    opacity: 0.8;
+}
+
 .link {
     color: rgb(114, 69, 98);
 }
