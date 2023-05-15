@@ -1,3 +1,26 @@
+# Easy Eats
+
+## Portfolio Project 4
+
+Easy Eats is a recipe website aimed at anyone who is looking for inspiration and ideas for their next meal. It includes the most recent recipes featured on the homepage, a link to the full recipe details and all recipes available. 
+
+On each recipe the user can view the recipe title,how many people the recipe serves, the cooking time as well as a short description of the recipe. 
+
+The main function of this website is to ....
+
+This project aims to build a full-stack web application using the python framework Django, Cloudinary database, HTML, CSS and Javascript
+ 
+My application features ....with full CRUD capabilities, a comment feature, a like feature, user- sign up, user login and an admin section.
+
+Admin login details included ....
+For the assessor, I have included the admin login details in the comments section when submitting the project.
+
+This project aims to build a full-stack web application using Django, HTML, CSS and javascript.
+### View the live project here:
+
+
+
+
 ## User Stories
 
 ### As a user I want to be able to navigate the website using the navigation bar links, so that I can easily access all areas of the site
@@ -190,3 +213,216 @@ It contains a many-to-one relationship with the Category Model.
 My database schema was created using Lucid Chart and is displayed in the below diagram.
 
  ![Image of database schema](readme-images/screenshot-database-schema.png)
+
+## Existing features
+
+### The Navigation Bar
+
+#### Image of Desktop Navigation Bar - Logged In 
+
+ ![Image of Desktop Navigation Bar - Logged In](readme-images/navbar-images/screenshot-navbar-logged-in-desktop.png)
+
+#### Image of Tablet Navigation Bar - Not Logged In 
+
+ ![Image of Tablet Navigation Bar - Logged In](readme-images/navbar-images/screenshot-navbar-logged-in-tablet.png)
+
+ #### Image of Desktop Navigation Bar - Not Logged In 
+
+ ![Image of Desktop Navigation Bar - Logged In](readme-images/navbar-images/screenshot-navbar-not-logged-in-desktop.png)
+
+The Navigation Bar for this website consists of the the following:
+
+When logged in the navigation bar will display: Home, Recipes & Logout
+
+When not logged in the navigation bar will display: Home, Recipes, Register & Login
+
+Login, Logout and Register sections were created using Django allauth.
+
+There are located on the top right- hand side of the page and enables the user to easily navigate to their desired location on the website.
+
+Each section on the navbar changes color when the user hovers over it. The hover color used is consistent throughout for hover states used throughout the website.
+
+On the top-left hand side of the navigation bar, the website logo is displayed. This contains the name of the website Easy Eats and an icon of a plate and utensils. This indicates to the user what the site will be about. 
+
+The Easy Eats logo contains a link to the homepage which can be accessed from any page to bring hte user back to the homepage when clicked and allows them to easily navigate the site. 
+
+The colors of the logo match the colors used throughout the site. 
+
+The navigation bar is the same across all pages in order to provide ease of use and consistency to the user. It also uses a contrasting colour scheme which allows the user to quickly navigate through the website.
+
+### The Navigation Bar - Tablet and Mobile View
+
+The Navigation Bar is displayed as a burger menu toggle for Tablet and Mobile views. 
+
+When a user clicks on the toggle the options are displayed below, towards the right hand side of the page.
+
+
+#### Image of Tablet Navigation Bar - Logged In 
+
+ ![Image of Tablet Navigation Bar - Logged In](readme-images/navbar-images/screenshot-navbar-logged-in-tablet.png)
+
+ #### Image of Mobile Navigation Bar - Logged In 
+
+ ![Image of Mobile Navigation Bar - Logged In](readme-images/navbar-images/screenshot-navbar-logged-in-mobile.png)
+ 
+
+ #### Image of Mobile Navigation Bar - Not Logged In 
+
+ ![Image of Mobile Navigation Bar - Not Logged In](readme-images/navbar-images/screenshot-navbar-not-logged-in-mobile.png)
+ 
+ 
+### Homepage 
+
+The Hero Section
+
+The Hero Section on the homepage consists of the main image featured on the page with a text overlay which includes a description of what the user can expect to find on the website as well as the website name Easy Eats. 
+
+The Hero Image contains animation which makes it appear as though it's moving forward on the page. 
+
+#### Image of the Hero Image
+
+ ![Image of the Hero Image](readme-images/screenshot-hero-image-homepage.png)
+
+### Latest Recipes
+
+#### Image of Latest Recipes
+
+ ![Image of the Latest Recipes](readme-images/screenshot-latest-recipes.png)
+
+ Below the Hero Image are a selection of the Latest Recipes. These are ordered with the newest recipe appearing first.
+
+ The recipes on this page contain a brief overview of the recipe designed to grab the users attention. 
+
+ Each recipe in this section contains an image of the recipe,,the recipe title a short description of the recipe, the cooking time, how many peple this recipe serves and how many likes it has. Details of the full recipe can be accessed by 3 links on the recipe - the recipe image, the recipe title and a view recipe link at the bottom. All of which brings to user to a page where they can view the full recipe details. The cooking time, number of people served and likes all contain an icon to allow the user to scan the recipe quickly for the information they require. Each recipe also contains, the date and time that the recipe was uploaded.
+
+ ### Full Recipe Page
+
+ #### Image of Full Recipe Page
+
+ ![Image of Full Recipe Page](readme-images/screenshot-full-recipe-page.png)
+ 
+ From any of the recipes on the homepage, located under the Latest Recipes heading, users can access full detail about any of the recipes by clicking on the links provided.
+
+ On each recipe these are located in the recipe image, the recipe title and the vew recipe link.
+ 
+ Once a user clcks on the link they are brought to a page that contains full details of the recipe that the user has clicked on. 
+
+ #### Image of Full Recipe Page - Image and Description
+
+ ![Image of Full Recipe Page Image and Description](readme-images/screenshot-full-recipe-page-image-description.png)
+
+ The top section of the page contains an image representing the recipe on the left. This also contains animation. On the right contains some information about the recipe. The design and infomration provided mirrors the shorter version of hte recipe displayed on the homepage somewhat to achieve consistency in user experience. The details include the recipe heading, the cooking time with icon and numebr of people served with icon. Below is also a description as in the recipe listing on the homepage but this description has been expanded and contains more detail. This section also displays likes and comments.
+
+ ### Like Recipe
+
+A logged in user can also like recipes. 
+
+If a user is logged in they will see an option called "Like this Recipe?". This is displayed by a heart outline. If a user clicks on the heart icon, it adds a like to the recipe. Once a user has liked a recipe the heart icon changes to display that the recipe has already been liked. A logged in user can also unlike a recipe by clicking on the heart icon again. Once the user unlikes a recipe, the heart icon reverts to a heart outline. 
+
+ #### Image of Like Recipe
+
+ ![Image of Like Recipe](readme-images/screenshot-like-recipe.png)
+
+  #### Image of Unlike Recipe
+
+ ![Image of Unlike Recipe](readme-images/screenshot-unlike-recipe.png)
+
+If a user is not logged in they canot like or unlike a recipe. In this instance instead of displaying "Like this recipe?", the number of likes a recipe has received is displayed instead. 
+
+ #### Image of Number of Likes
+
+ ![Image of Number of likes](readme-images/screenshot-number-of-likes.png)
+
+
+ #### Image of Full Recipe Page - Image and Description
+
+ ![Image of Full Recipe Page Image and Description](readme-images/screenshot-full-recipe-page-image-description.png)
+ 
+
+ #### Image of Full Recipe Page - Ingredients and Method
+
+ ![Image of Full Recipe Page Ingredients and Method](readme-images/screenshot-full-recipe-page-ingredients-method.png)
+ 
+ The next section of the page contains the recipe ingredients and method. On the left the ingredients are displayed, on the right the method. These are displayed in contrasting colours to ensable users to eaiily find the infomation they are looking for.
+
+### Comments Section
+
+ The final section on the page is the comments section. Here users can view any comments that have been made about a particular recipe. All users can view comments made on a recipe regardless of whether they are a registered user and logged in or not. 
+
+ Each comment contains the name of the user that has left the comment, the time and date the comment was left. 
+
+#### Image of a Comment
+
+ ![Image of a Comment](readme-images/screenshot-comments.png)
+
+ If a user is not logged in they can view only the comments that have been left but they cannot interact with the site themselves by leaving comments.
+
+ Logged in/ registered users can leave their own comments on a recipe. When a user is logged in their view is slightly different. Below the displayed comments there is an option to leave a comment.
+
+#### Image of Comments Section - Leave Comment
+
+ ![Image of Comments Section Leave Comment](readme-images/screenshot-leave-comment.png)
+
+ Once a user has left a comment, the comment will go for approval by the site admin. This allows the site admin to control the content visible on tee website and to delete any comments that are deemed offensive or inappropriate.
+
+ A pop up message is displayed to advise the logged in user is advised that their comment has gone for approval.buttons Once approved their comment will display on the site.
+
+#### Image of Comments Section - Comment Approval Message
+
+ ![Image of Comment Approval Message](readme-images/screenshot-comment-approval-message.png)
+
+ A logged in user can also edit and delete their own comments. They can do this by clicking on the edit or delete buttons on the comments themselves. A user can only edit/ delete comments that they have made themselves. They cannot edit or delete comments made by other people.
+
+ If a user is logged in the edit and delete buttins are only visible on their own comments bit not on others.
+
+#### Image of Comments Section - Edit and Delete Comments
+
+ ![Image Edit and Delete Comments](readme-images/screenshot-edit-delete-comments.png)
+
+ ### Editing a Comment
+
+ A logged in users can edit their own comment by clicking on the Edit buttton located on their previous comments. 
+
+ Once they click on the Edit button, their previous comment/ the comment they have chosen to edit is displayed in the comment box. The user can edit their comment. An update button is displayed below which allows them to save the changes to their comments.
+
+#### Image of Edit Comments Section
+
+ ![Image of Edit Comment Section](readme-images/screenshot-edit-comment.png)
+
+ ### Deleting a Comment
+
+ A logged in user can delete a comment. They can only delete comments they have made themselves. To delete a comment the user must click on the Delete button on the comment they wish to delete. They are prompted with a warning message which asks them "Are you sure you want to delete your comment". below this warning there are 2 buttons displaye - Cancel and Delete. If a user clicks cancel they are brought back to the comments section. If they click delet their comment isdeleted and removed from the list of displyed comments
+
+ #### Image of Delete Comment Warning
+
+ ![Image of Delete Comment Warning](readme-images/screenshot-delete-comment-warning.png)
+
+### Link to Recipes Page - "All Recipes" button
+
+#### Image of "All Recipes" button
+  
+ ![Image of the All Recipes button](readme-images/screenshot-all-recipes-button.png)
+
+ At the botton of the homepage the "All Recipes" button is located. This links to the recipes page wherethe user can view all the recipes that are available on the website.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
