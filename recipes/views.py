@@ -14,7 +14,7 @@ class RecipeList(generic.ListView):
 class AllRecipes(generic.ListView):
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')
-    template_name = 'all_recipes.html'
+    template_name = 'all-recipes.html'
     paginate_by = 6
 
 
@@ -64,7 +64,6 @@ class FullRecipe(View):
         queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
         comments = recipe.recipe_comment.filter(approved=True).order_by('created_on')
-        commented = False
         editing_comment = False
         liked = False
         if recipe.likes.filter(id=self.request.user.id).exists():
@@ -85,9 +84,25 @@ class FullRecipe(View):
             else:
                 comment_form = CommentForm()
 
+            edit_comment_form = EditCommentForm()
+            
+            return render(
+                request,
+                "full-recipe.html",
+                {
+                    "recipe": recipe,
+                    "comments": comments,
+                    "commented": commented,
+                    "liked": liked,
+                    "edit_comment_form": edit_comment_form,
+                    "comment_form": CommentForm()
+                },
+            )
+
         if action == 'edit_comment':
             edit_comment_id = request.GET.get('edit_comment_id', '')
             editing_comment = True
+            commented = False
             if edit_comment_id:
                 edit_comment = get_object_or_404(Comment, pk=edit_comment_id)
 
@@ -97,6 +112,20 @@ class FullRecipe(View):
                 edit_comment.save()
             else:
                 edit_comment_form = EditCommentForm()
+
+            return render(
+                request,
+                "full-recipe.html",
+                {
+                    "recipe": recipe,
+                    "edit_comment": edit_comment,
+                    "comments": comments,
+                    "commented": False,
+                    "liked": liked,
+                    "edit_comment_form": edit_comment_form,
+                    "comment_form": CommentForm()
+                },
+            )
 
         if action == 'delete_comment':
             delete_comment_id = request.POST['delete_comment_id']
