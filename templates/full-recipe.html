@@ -9,9 +9,9 @@
         <div class="row g-0 bg-white">
             <div class="col-md-6 recipe-intro-image image-container">
                 {% if "placeholder" in recipe.image.url %}
-                <img src="/static/images/image-placeholder-recipe.jpeg">
+                <img src="/static/images/image-placeholder-recipe.jpeg" alt="Placeholder image for recipe">
                 {% else %}
-                <img src="{{ recipe.image.url }}" width="100%">
+                <img src="{{ recipe.image.url }}" width="100%" alt="Photo of {{ recipe.title }} recipe">
                 {% endif %}
             </div>
 
@@ -33,10 +33,10 @@
                             <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
-                                <button type="submit" name="recipe_id" value="{{ recipe.slug }}" class="btn-like"><i class="fa-solid fa-heart"></i></button>
+                                <button type="submit" name="recipe_id" value="{{ recipe.slug }}" class="btn-like" aria-label="Unlike this recipe"><i class="fa-solid fa-heart"></i></button>
 
                                 {% else %}
-                                <button type="submit" name="recipe_id" value="{{ recipe.slug }}" class="btn-like"><i class="fa-regular fa-heart"></i></button>
+                                <button type="submit" name="recipe_id" value="{{ recipe.slug }}" class="btn-like" aria-label="Like this recipe"><i class="fa-regular fa-heart"></i></button>
 
                                 {% endif %}
                             </form>
@@ -44,12 +44,12 @@
                             <span><i class="fa-regular fa-heart"></i></span>
                             <span>Likes: {{ recipe.number_of_likes }} </span>
                             {% endif %}
-                    </strong>
-                </div>
+                        </strong>
+                    </div>
                     <div class="col-6">
                         {% with comments.count as total_comments %}
                         <strong>
-                            <i class="fa-solid fa-comment"></i> <span class="comments-link" id="comments-link">Comments: {{ total_comments }}</span>
+                            <i class="fa-solid fa-comment"></i> <span class="comments-link" id="comments-link" aria-label="Scroll to comments">Comments: {{ total_comments }}</span>
                         </strong>
                         {% endwith %}
                     </div>
@@ -58,7 +58,7 @@
         </div>
     </div>
 </div>
-<div class="container mb-3 recipe-contents">
+<article class="container mb-3 recipe-contents">
     <div class="row">
         <!-- Ingredients -->
         <div class="col-md-4 p-4 recipe-ingredients">
@@ -75,7 +75,7 @@
             </div>
         </div>
     </div>
-</div>
+</article>
 <!-- Comments -->
 <div class="container recipe-comments" id="comments-container">
     <div class="row">
@@ -107,9 +107,9 @@
                         {% if user == comment.author %}
                         <div class="comment-actions">
                             <a href="?edit_comment_id={{ comment.id }}">
-                                <button class="btn-comment-edit me-md-2">Edit</button>
+                                <button class="btn-comment-edit me-md-2" aria-label="Edit this comment">Edit</button>
                             </a>
-                            <button class="btn-comment-delete" data-bs-toggle="modal" data-bs-target="#comment-deleteModal-{{comment.id}}">Delete</button>
+                            <button class="btn-comment-delete" data-bs-toggle="modal" data-bs-target="#comment-deleteModal-{{comment.id}}" aria-label="Delete this comment">Delete</button>
                         </div>
                         <!-- Delete Comment Modal -->
                         <div class="modal fade modal-comment-delete" id="comment-deleteModal-{{comment.id}}" tabindex="-1"
@@ -128,13 +128,13 @@
                                     </div>
                                     <div class="modal-footer m-auto">
                                         <button type="button" class="modal-button
-                                        btn-cancel flex-center" data-bs-dismiss="modal">Cancel</button>
+                                        btn-cancel flex-center" data-bs-dismiss="modal" aria-label="Cancel deletion of this comment">Cancel</button>
                                         <form method="post">
                                             {% csrf_token %}
                                             <input type="hidden" name="action" value="delete_comment">
                                             <input type="hidden" name="delete_comment_id" value="{{comment.id}}">
                                             <button class="modal-button flex-center btn-delete"
-                                                type="submit">Delete</button>
+                                                type="submit" aria-label="Confirm deletion of this comment">Delete</button>
                                         </form>
                                     </div>
                                 </div>
@@ -161,7 +161,7 @@
                     <input type="hidden" name="action" value="add_comment">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-link btn-lge mt-2">Submit</button>
+                    <button type="submit" class="btn btn-link btn-lge mt-2" aria-label="Submit comment for approval">Submit</button>
                 </form>
                 {% endif %}
             </div>
