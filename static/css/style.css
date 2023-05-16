@@ -388,3 +388,44 @@ main {
 .footer-icon:hover {
     color: rgb(255,203,112);
 }
+
+
+/* Media Queries */
+
+@media screen and (max-width: 991px) {
+
+    .callout-container-wrapper {
+        height: 40vh;
+    }
+
+    .callout-container {
+        height: 40vh;
+    }
+
+    
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+
+    .recipe-title {
+        font-size: 1.5rem;
+    }
+
+    .recipe-ingredients h2, .recipe-method h2 {
+        font-size: 1.25rem;
+    }
+
+    .recipe-comments h3 {
+        font-size: 1.25rem;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .recipe-intro-image {
+        max-height: 300px;
+    }
+
+}
