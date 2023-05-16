@@ -15,13 +15,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/3128113473.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
     </head>
     <body class="h-100">
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg">
+        <nav aria-label="Main Navigation" role="navigation" class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{% url 'home' %}">
+                <a class="navbar-brand" href="{% url 'home' %}" aria-label="Go to Easy Eats Homepage">
                     <img src="/static/images/easy-eats-logo.png" width="150" alt="Easy Eats Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,10 +78,10 @@
         <footer class="footer mt-auto py-3 bg-dark">
             <p class="m-0 text-center text-white">
                 Follow Easy Eats on: 
-                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square ms-3 footer-icon"></i></a>
-                <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter ms-1 footer-icon"></i></a>
-                <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram ms-1 footer-icon"></i></a>
-                <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube ms-1 footer-icon"></i></a>
+                <a href="https://facebook.com" target="_blank" aria-label="Follow Easy Eats on Facebook"><i class="fab fa-facebook-square ms-3 footer-icon"></i></a>
+                <a href="https://twitter.com" target="_blank" aria-label="Follow Easy Eats on Twitter"><i class="fa-brands fa-twitter ms-1 footer-icon"></i></a>
+                <a href="https://instagram.com" target="_blank" aria-label="Follow Easy Eats on Instagram"><i class="fa-brands fa-instagram ms-1 footer-icon"></i></a>
+                <a href="https://youtube.com" target="_blank" aria-label="Watch Easy Eats on YouTube"><i class="fa-brands fa-youtube ms-1 footer-icon"></i></a>
             </p>
         </footer>
 

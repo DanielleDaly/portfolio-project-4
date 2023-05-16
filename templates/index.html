@@ -24,16 +24,16 @@
                 <div class="col-sm-12 col-md-4 mb-4">
                     <div class="card recipe-card shadow">
                         <div class="card-body recipe-card-body">
-                            <a href="{% url 'full-recipe' recipe.slug %}" class="recipe-image-link">
+                            <a href="{% url 'full-recipe' recipe.slug %}" class="recipe-image-link" aria-label="Read the full {{ recipe.title }} recipe">
                                 <div class="image-container">
                                     {% if "placeholder" in recipe.image.url %}
-                                    <img class="card-img-top" src="/static/images/image-placeholder-recipe.jpeg">
+                                    <img class="card-img-top" src="/static/images/image-placeholder-recipe.jpeg" alt="Placeholder image for recipe">
                                     {% else %}
-                                    <img class="card-img-top" src="{{ recipe.image.url }}">
+                                    <img class="card-img-top" src="{{ recipe.image.url }}" alt="Photo of {{ recipe.title }} recipe">
                                     {% endif %}
                                 </div>
                             </a>
-                            <a href="{% url 'full-recipe' recipe.slug %}" class="recipe-title-link">
+                            <a href="{% url 'full-recipe' recipe.slug %}" class="recipe-title-link" aria-label="Read the full {{ recipe.title }} recipe">
                                 <h3 class="card-title">{{ recipe.title }}</h3>
                             </a>
                             <p class="card-text card-text-with-icon">
@@ -51,7 +51,7 @@
                             <p class="card-text py-2 mb-0 recipe-card-date">
                                 {{ recipe.created_on }}
                             </p>
-                            <a href="{% url 'full-recipe' recipe.slug %}" class="card-text py-2 recipe-card-link">
+                            <a href="{% url 'full-recipe' recipe.slug %}" class="card-text py-2 recipe-card-link" aria-label="Read the full {{ recipe.title }} recipe">
                                 View Recipe
                             </a>
                         </div>
@@ -68,6 +68,6 @@
     </div>
 </div>
 <!-- Link to All Recipes Button -->
-<a class="btn btn-link btn-lg col-4 offset-4 mb-3 mt-3" href="{% url 'all-recipes' %}" role="button">All Recipes</a>
+<a class="btn btn-link btn-lg col-4 offset-4 mb-3 mt-3" href="{% url 'all-recipes' %}" role="button" aria-label="See all recipes">All Recipes</a>
 
 {% endblock %}

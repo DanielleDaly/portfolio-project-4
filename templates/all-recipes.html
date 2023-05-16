@@ -12,16 +12,16 @@
                 <div class="col-sm-12 col-md-4 mb-4">
                     <div class="card recipe-card shadow">
                         <div class="card-body recipe-card-body">
-                            <a href="{% url 'full-recipe' recipe.slug %}" class="recipe-image-link">
+                            <a href="{% url 'full-recipe' recipe.slug %}" class="recipe-image-link" aria-label="Read the full {{ recipe.title }} recipe">
                                 <div class="image-container">
                                     {% if "placeholder" in recipe.image.url %}
-                                    <img class="card-img-top" src="/static/images/image-placeholder-recipe.jpeg">
+                                    <img class="card-img-top" src="/static/images/image-placeholder-recipe.jpeg" alt="Placeholder image for recipe">
                                     {% else %}
-                                    <img class="card-img-top" src="{{ recipe.image.url }}">
+                                    <img class="card-img-top" src="{{ recipe.image.url }}" alt="Photo of {{ recipe.title }} recipe">
                                     {% endif %}
                                 </div>
                             </a>
-                            <a href="{% url 'full-recipe' recipe.slug %}" class="recipe-title-link">
+                            <a href="{% url 'full-recipe' recipe.slug %}" class="recipe-title-link" aria-label="Read the full {{ recipe.title }} recipe">
                                 <h3 class="card-title">{{ recipe.title }}</h3>
                             </a>
                             <p class="card-text card-text-with-icon">
@@ -39,7 +39,7 @@
                             <p class="card-text py-2 mb-0 recipe-card-date">
                                 {{ recipe.created_on }}
                             </p>
-                            <a href="{% url 'full-recipe' recipe.slug %}" class="card-text py-2 recipe-card-link">
+                            <a href="{% url 'full-recipe' recipe.slug %}" class="card-text py-2 recipe-card-link" aria-label="Read the full {{ recipe.title }} recipe">
                                 View Recipe
                             </a>
                         </div>
@@ -60,13 +60,13 @@
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link btn-link">&laquo; PREV </a></li>
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link btn-link" aria-label="Go to the previous page">&laquo; PREV </a></li>
             {% endif %}
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link btn-link"> NEXT &raquo;</a></li>
-            {% endif %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link btn-link" aria-label="Go to the next page"> NEXT &raquo;</a></li>
             {% endif %}
         </ul>
     </nav>
+{% endif %}
 
 {% endblock %}
