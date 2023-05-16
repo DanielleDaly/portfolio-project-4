@@ -405,11 +405,86 @@ If a user is not logged in they canot like or unlike a recipe. In this instance 
 
  At the botton of the homepage the "All Recipes" button is located. This links to the recipes page wherethe user can view all the recipes that are available on the website.
 
+ ### Recipes Page
+
+#### Image of Recipes page
+  
+ ![Image of Recipes page](readme-images/screenshot-recipes-page.png)
+ 
+ The Recipes Page can be accesed via the Recipes link on the Navigation Bar. It can also be accessed by clicking on the "All Recipes" button on the homepage. 
+
+ The Recipes Page contains a list of a. the recipes that are available to view on the website. The recipe cards are identical to those on the homepage. They contain an image, the recipe title, the cooking time, the number of people the recipe serves, the likes the recipe has received, the date and time the recipe was posted, a short description and a View more link to the full recipe. The full-recipe details can also be accessed by clicking on the image and the title.
+
+The All Recipes Page contains pagination so that 6 recipes are displayed per page. At the bottom of the page there is a next button that takes you to the next 6 recipes. On the final page of recipes the prev button is displayed to take to you to the previous page of recipes. 
+
+#### Image of Next Button
+  
+ ![Image of Next Button](readme-images/screenshot-next-button.png)
+ 
+ #### Image of Previous Button
+  
+ ![Image of Previous Button](readme-images/screenshot-prev-button.png)
+ 
+
+The styling, layout and color scheme used are the same as the homepage to give consistency to the user and to provide a good user experience
+
+### Register Page
 
 
 
+Users can sign up for the website by registering on the Register Page. The Register Page is accessed via a link on the Navigation Bar. 
+
+Once a user clicks on the Register Page they will see a Sign Up Form. The Sign Up Form requests the user inputs the following details: username, email, password, password repeat. The email address is not required in order to register. Users can sign up using a username and password only of they wish. if they prefer they can sign up using an email address. 
+
+ ![Image of Sign up Form](readme-images/screenshot-register-form.png)
 
 
+Below the form is a "Sign Up" button. Once the user has entered their details and clicked on the button they will receive a message to advise that they have logged in successfully. This message can be dismissed by the user or it will disappear autiomatically after 3 seconds. Once logged in the Navigation Bar option changes. An option now appears for Logout and the Register and Login In options are no longer available. 
+
+![Image of Navigation Bar Change Form](readme-images/navbar-images/screenshot-navbar-logout.png) 
+
+
+If a user tries to register but they already have an account "A user with that username already exists" will be displayed on screen. 
+
+![Image of Username already exists](readme-images/screenshot-user-already-exists.png)
+
+If a user tries to submit a blank form or without a username/ password it wont be possible and "Please fill in this field" will be displayed. 
+
+![Image of Blank Form](readme-images/screenshot-blank-form.png)
+
+The register page also has a short Welcome message. "Welcome back to Easy Eats. Do you already have an account? Then please sign in instead." Users can click on the sign in link which will re-direct them to the login page. This benefits the user in terms of experience as they dont have to navigate back to the homepage first if they find themselves on the incorrect page. 
+
+![Image of Welcome Message on Register Page](readme-images/screenshot-register-message.png)
+
+
+### Logout
+
+A logged in  user can logout by clicking on the Logout link in the Navigation Bar. Once a user clicks the logout link, the logout page displays. 
+
+![Image of Logout Page](readme-images/screenshot-logout-page.png)
+
+The user is asked "Are you sure you want to Sign Out". If a user clicks on the Sign Out button they will be logged out of the website. Once logged out a message will display to the user to tell them that they have signed out successfully.
+
+![Image of Logged Out Successfully Message](readme-images/screenshot-logged-out-successfully.png)
+
+
+### Login Page
+
+![Image of Login Page](readme-images/screenshot-login-page.png)
+
+A user can login to the website by clicking on the Login link in the Navigation Bar. To Login a user is asked to enter their username and password. They can also select the remeer me tick box to allow them to sign in more easily next time they visit the site. 
+
+After the user clicks on the Sign In button a message will display to tell the user that they have loeed in successfully. 
+
+![Image of Login Successfully Message](readme-images/screenshot-logged-in-successfully.png)
+
+If the user enters the incorrect details they will not be able to log in. "The username and/or password you specified are not correct"
+
+![Image of Incorrect Login Details](readme-images/screenshot-incorrect-login-details.png)
+
+The Login Page also contains a link to redirect users to the Register Page in order to sign up if they do not already have an account. "Don't have an account? Register Now!" 
+
+![Image Don't have an account message](readme-images/screenshot-no-account-message.png)
 
 
 
