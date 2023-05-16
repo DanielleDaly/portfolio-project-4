@@ -2,20 +2,19 @@
 
 ## Portfolio Project 4
 
-Easy Eats is a recipe website aimed at anyone who is looking for inspiration and ideas for their next meal. It includes the most recent recipes featured on the homepage, a link to the full recipe details and all recipes available. 
+Easy Eats is a recipe website aimed at anyone who is looking for inspiration and ideas for their next meal. Site Users can browse the latest recipes on the homepage, all available recipes on the Recipes page and click on a recipe for more detail.
 
-On each recipe the user can view the recipe title,how many people the recipe serves, the cooking time as well as a short description of the recipe. 
+They can also easily access basic information on a recipe from the homepage and recipes page without having to view the full recipe detail. Each recipe listing contains an image of the recipe, the recipe title, how many people the recipe serves, the cooking time, how many likes this recipe has received from users, the date and time the recipe was posted as well as a short description of the recipe.
 
-The main function of this website is to ....
+Easy Eats is a  full-stack web application using the Python Django Framework, the Cloudinary database, HTML, CSS and JavaScript.
 
-This project aims to build a full-stack web application using the python framework Django, Cloudinary database, HTML, CSS and Javascript
- 
-My application features ....with full CRUD capabilities, a comment feature, a like feature, user- sign up, user login and an admin section.
+It provides full CRUD capabilities to the user, accessible from the front end without having to access the admin section. Users can create, read, update and delete their own comments when they are logged in. They can also read comments from other users and further interact with the website by 'liking' and 'unliking' a recipe. Users can also see the total number of likes a recipe has received.
 
-Admin login details included ....
+Easy Eats also has an Administration section.
+
 For the assessor, I have included the admin login details in the comments section when submitting the project.
 
-This project aims to build a full-stack web application using Django, HTML, CSS and javascript.
+
 ### View the live project here:
 
 
@@ -495,10 +494,226 @@ The Login Page also contains a link to redirect users to the Register Page in or
 Easy Eats has a footer which is displayed across all pages on the site. It is a simple footer containing the name of the webiste, Easy Eats and where to follow on social media. Links to Instagram, Facebook, Twitter and Youtube can be found in the footer. These are displayed as the icons for those social media sites. The links have a hover state which changes to yellow when a user hovers over the icon. The hover is the same color used throughout the site when the user hovers over a link for ease of use and an enhanced user experience. The footer itself is a dark grey color which is contrasted by white text and icone. The color of the footer also creates a contrast with the colors used in the main page to make the Footer more obvious and easier to find for the user. 
 
 
+### The Admin Section
+
+The Admin Section for Easy Eats was created using Django.
+
+On the main site administration page you can see the following sections on the left: 
+Accounts - where you can view the email addresses entered by users and their usernames.
+Authentication and Authorization
+Django Summernote
+Recipes - which contains recipes and comments
+Sites 
+Social Accounts
+
+You can also see a list of recent activity. 
+
+### The Recipe Administration
+
+The Recipe Section contains details on the recipes posted to the website and the comments made on each recipe. 
+
+![Image of Django Administration Home](readme-images/screenshot-admin-home.png)
+
+Recipe
+Recipes can be added to the website in the recipe administration section.
 
 
+![Image of Django Administration Recipe](readme-images/screenshot-admin-recipe.png)
+
+All current recipes are displayed under title, slug, created on, status. 
+There is a search bar that can be used to search recipes.
+On the right a filter table is displayed. You can filter by status or created on dates
 
 
+![Image of Django Administration Recipe Add & Edit](readme-images/screenshot-admin-recipe-add-edit.png)
+
+
+Adding/ editing a recipe
+By clicking on Add Recipe you can add the recipe details that you would like to appear on the website. These are displayed under different sections. The sections are: title, slug, description, image, cooking time, serves, methos, short description, likes and status. 
+
+Recipes can be deleted by clicking on the recipe toggle and selecting the delete option
+
+![Image of Django Administration Delete Recipes](readme-images/screenshot-admin-delete-recipe.png)
+
+
+the slug is autimatically generated from the title
+
+the ingredients and method sections use django summernote to create a wysiwyg
+
+Status can be published or draft
+
+By clicking save the recipe is added to the website
+
+save and add another
+
+save and continue editing
+
+delete button
+
+recipes can also be edited in this area and once saved the changes are save to the website.
+
+
+Comments
+Comments can be managed in the administration section.
+
+![Image of Django Administration Comments](readme-images/screenshot-admin-comments.png)
+
+All current comments are displayed under recipe, name, body, created_on, approved
+
+There is a search bar that can be used to search comments
+On the right a filter table is displayed. You can filter by approved comments or created on dates
+
+![Image of Django Administration Comments Filter](readme-images/screenshot-admin-comments-filter.png)
+
+
+Comments can be deleted by clicking on the comment toggle and selecting the delete option
+A site admin can delete any/ all comments
+Commants must be approved by a site admin before they are displayed on the website
+
+![Image of Django Administration Delete Comments](readme-images/screenshot-admin-delete-comment.png)
+
+
+### Testing
+All functionality of the website was tested to ensure it all worked correctly
+
+
+#### Forms
+
+#### Testing blank forms
+
+I have tested all forms on the site to see if they display validation error if they have been left blank when the field is required. 
+
+### Sign Up / Register Form
+
+For the sign up/ register form the following fields are required: Username, Password and Password (again). The email address is optional and not required. 
+
+I tested by leaving the entire form blank. I was unable to submit the form and the message displayed for the username "Please fill in this field"
+
+I tested by entering a username and leaving the password and repeat password fields blank. I was unable to submit the form and the message displayed for the password "Please fill in this field"
+
+I tested by entering a username and a password but leaving the repeat password field blank. I was unable to submit the form and the message displayed for the  repeat password "Please fill in this field"
+
+![Image of Blank Username Sign Up Form](readme-images/screenshot-blank-username-register.png)
+
+![Image of Blank Password Sign Up Form](readme-images/screenshot-blank-password-register.png)
+
+For the Login Form both the Username and Password are required.
+
+I tested by leaving the entire form blank. I was unable to submit the form and the message displayed for the username "Please fill in this field"
+
+I tested by entering a username and leaving the password field blank. I was unable to submit the form and the message displayed for the password "Please fill in this field"
+
+![Image of Blank Username Login Form](readme-images/screenshot-blank-username-login.png)
+![Image of Blank Password Login Form](readme-images/screenshot-blank-password-login.png)
+
+For the comment form, the body of the comment is required. I was unable to submit the comment and the message displayed "Please fill in this field"
+
+![Image of Blank Comment Form](readme-images/screenshot-blank-comment-form.png)
+
+For the edit comment form, the body of the comment is required. When editing the content of the comment cannot be complete;y removed and left blank. After I removed the comment and clicked on the update button,  I was unable to submit the updated comment and the message displayed "Please fill in this field"
+
+I tested if I could resubmit the same comment twice but clicking on update with the previous comment. It returned me to the main edit comment section. 
+
+![Image of Blank Edit Comment Form](readme-images/screenshot-blank-edit-comment-form.png)
+
+Testing Forms - Incorrect Input
+
+I checked the login and register forms to see if error messages are displayed to the user when entering the incorect inputs. 
+
+Login 
+I tested the login by entering the incorrect password with the correct username. I was unable to login and the message displated was " The username/ and or password you specified are not correct?
+
+I tested the login by entering the incorrect name with the correct password. I was unable to login and the message displated was " The username/ and or password you specified are not correct?
+
+![Image of Blank Edit Comment Form](readme-images/screenshot-login-incorrect-details.png)
+
+Register
+
+I tested the sign up / register for validation errors by entering in invalid inputs into the registration fields. 
+
+Validation errors were returned when a user chooses a password that is similar to their username."The password is too similar to the username"
+
+I tried entering a password that was too short. Validation error was returned to the user to advised that a min of 8 characters are required "This password is too short. It must contain at least 8 characters.
+
+![Image of Blank Edit Comment Form](readme-images/screenshot-register-invalid-input.png)
+
+Testing CRUD functionality 
+
+Comments Section
+
+The main area of this site where all elements of crud are displayed is in the comments section. The comments section allows users to interact with the website from the user interfact without having to access the admin section
+
+
+Logged in users can create a comment. Users that are not logged in cannot. 
+I tested the site to ensure that if a user is not logged in, the leave a comments section does not display. 
+I logged in as a user to test if I could leave a comment as a logged in user. As a logged in user the leave a comment section was now displated with the logged in user user name displayed. 
+I tested if a comment cold be written in the comment box provided and it could. 
+I tested if the submit button for the comment worked and it did. 
+I tested if a message would display to advise the user that their comment was awaiting approval. 
+I logged in as an admin to approve the comment. I tested if the comment could be approved. 
+I tested if the approved comment displayed on the recipe with the other comments. 
+I tested if the username was correct on the published comment
+I tested if the time and date was correct in the approved comment
+I tested if the comments were displaying in the correct order based on their created on dates
+I tested if the number of comments displayed increased after my test comment was made
+I tested that I could view other users comments as well as my own
+I tested that the Edit Comment button was displayed on my comment
+I tested that I could update my comments
+I tested if I could update other peoples comments
+I tested that my updated comment displayed correctly and the previous comment was no longer visible. 
+I tested that the delete button was visible on my comment
+i tested that i could delete my comment
+i tested that my deleted comment no longer displayed in the comments section
+I tested if I could delete a comment created by another user. 
+
+Likes
+I tested that the like this comment option was displayed on the recipe page. 
+I tested that the icon for likes is displayed as a heart outline
+I tested if i coul like a recipe
+I tested if after liking a recipe there the icon changed on the recipe website
+i tested that after linking the total number of likes increased on the recipe cards. 
+I tested that I could unlike a recipe. 
+i tested that adter unliking a recipe the like heart icon changed
+i tested that after unliking a recipe the total number of likes on the recipe card decreased
+
+Messages
+I tested that a messgae displayed to the user when they logged in
+i tested that a message displayed to the user when logged out
+I tested that a message displayed to the user when their comment was awaiting approval. 
+I tested that the user was able to dismiss these messages themselves
+i tested that the message dissappeared by itself within the 3 seconds time frame
+
+Admin
+I tested that i could log into the admin section as a supeuser
+I tested that all the required fields from my model displayed when adding a recipe
+I tested that the wysiwyg from django displayed in the ingredients and methods section
+I tested the functionality of the wysiwyg
+I tested that i could set my recipe to publish and it would be added to the website when saved
+I tested that i could save a draft recipe
+I tested that I could return to the draft recipe later and continue working on it
+i tested that I could delete a recipe
+I tested that i could update a recipe that i had already published
+I tested that the comment fields displayed as per the comments model
+I tested that I could view if a comment is awaiting approval 
+I tested that i could approve comments
+I tested that I could delete comments as an admin
+I tested that comments deleted as an admin were not published on the website
+
+Navbar
+I tested that the logo link on the homepage was working correctly
+i tested that the recipes link on the b=navbar was working correctly
+i tested that the register link on the navbar was working
+i tested that the login link on the navbar
+i tested that when logged in the login and register links are no longer displayed on hte navbar
+I tested that when logged in the logout link was displayed on the navbar
+I tested that the logout link worked correctly
+I tested that the hover state for each link on the navbar worked correclty
+
+Footer
+I tested that the text displayed correctly on the footer
+I tested that all social media links were displayed on the navbar
+I tested that all the social media links on the footer link to the correct website
+i tested that the hover state on the social media links was working correclty
 
 
 
