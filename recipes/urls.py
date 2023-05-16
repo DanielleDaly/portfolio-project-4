@@ -1,6 +1,7 @@
 from . import views
 from django.urls import path
 
+# Set up URLs for the website
 urlpatterns = [
     path('', views.RecipeList.as_view(), name='home'),
     path('all-recipes', views.AllRecipes.as_view(), name="all-recipes"),

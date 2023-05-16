@@ -8,11 +8,13 @@
          <!-- Recipe Cards -->
          <div class="col-12">
             <div class="row mb-4">
+                <!-- Loop through Recipes in List -->
                 {% for recipe in recipe_list %}
                 <div class="col-sm-12 col-md-4 mb-4">
                     <div class="card recipe-card shadow">
                         <div class="card-body recipe-card-body">
                             <a href="{% url 'full-recipe' recipe.slug %}" class="recipe-image-link" aria-label="Read the full {{ recipe.title }} recipe">
+                                <!-- Recipe Image -->
                                 <div class="image-container">
                                     {% if "placeholder" in recipe.image.url %}
                                     <img class="card-img-top" src="/static/images/image-placeholder-recipe.jpeg" alt="Placeholder image for recipe">
@@ -21,30 +23,38 @@
                                     {% endif %}
                                 </div>
                             </a>
+                            <!-- Recipe Title -->
                             <a href="{% url 'full-recipe' recipe.slug %}" class="recipe-title-link" aria-label="Read the full {{ recipe.title }} recipe">
                                 <h3 class="card-title">{{ recipe.title }}</h3>
                             </a>
+                            <!-- Cooking Time -->
                             <p class="card-text card-text-with-icon">
                                 <i class="fa-regular fa-clock me-1"></i> <strong>Cooking Time:</strong> {{ recipe.cooking_time }}
                             </p>
+                            <!-- Number of People Recipe Serves -->
                             <p class="card-text card-text-with-icon">
                                 <i class="fa-regular fa-user me-1"></i> <strong>Serves:</strong> {{ recipe.serves }}
                             </p>
+                            <!-- Number of Likes -->
                             <p class="card-text card-text-with-icon">
                                 <i class="fa-regular fa-heart me-1"></i> <strong>Likes:</strong> {{ recipe.number_of_likes }}
                             </p>
+                            <!-- Recipe Short Description -->
                             <p class="card-text">
                                 {{ recipe.short_description }}
                             </p>
+                            <!-- Date Recipe Created -->
                             <p class="card-text py-2 mb-0 recipe-card-date">
                                 {{ recipe.created_on }}
                             </p>
+                            <!-- Link to Recipe -->
                             <a href="{% url 'full-recipe' recipe.slug %}" class="card-text py-2 recipe-card-link" aria-label="Read the full {{ recipe.title }} recipe">
                                 View Recipe
                             </a>
                         </div>
                     </div>
                 </div>
+                <!-- After Every 3 Recipes, End Row and Start New Row -->
                 {% if forloop.counter|divisibleby:3 %}
                 </div>
                 <div class="row mb-4">
@@ -56,14 +66,17 @@
     </div>
 </div>
 
+<!-- Show Pagination -->
 {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
+            <!-- Prev Button -->
             {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link btn-link" aria-label="Go to the previous page">&laquo; PREV </a></li>
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link btn-link" aria-label="Go to the previous page">&laquo; PREV</a></li>
             {% endif %}
+            <!-- Next Button -->
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link btn-link" aria-label="Go to the next page"> NEXT &raquo;</a></li>
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link btn-link" aria-label="Go to the next page">NEXT &raquo;</a></li>
             {% endif %}
         </ul>
     </nav>

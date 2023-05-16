@@ -8,7 +8,7 @@
     <div class="callout-container">
         <div class="callout-text flex-grow-0 col-sm-12 col-md-6 offset-md-6 col-lg-6 offset-lg-6 p-4">
             <h1>Easy Eats</h1>
-            <p class="lead">Welcome to Easy Eats. Here you'll find delicious and easy to prepare meals for all occasions, budgets and tastes. Happy Cooking!
+            <p class="lead">Welcome to Easy Eats. Here you'll find delicious and easy to prepare meals for all occasions, budgets and tastes. Happy Cooking!</p>
         </div>
     </div>
 </div>
@@ -20,11 +20,13 @@
         <!-- Recipe Cards -->
         <div class="col-12">
             <div class="row mb-4">
+                <!-- Loop through Recipes in List -->
                 {% for recipe in recipe_list|slice:":6" %}
                 <div class="col-sm-12 col-md-4 mb-4">
                     <div class="card recipe-card shadow">
                         <div class="card-body recipe-card-body">
                             <a href="{% url 'full-recipe' recipe.slug %}" class="recipe-image-link" aria-label="Read the full {{ recipe.title }} recipe">
+                                <!-- Recipe Image -->
                                 <div class="image-container">
                                     {% if "placeholder" in recipe.image.url %}
                                     <img class="card-img-top" src="/static/images/image-placeholder-recipe.jpeg" alt="Placeholder image for recipe">
@@ -33,30 +35,38 @@
                                     {% endif %}
                                 </div>
                             </a>
+                            <!-- Recipe Title -->
                             <a href="{% url 'full-recipe' recipe.slug %}" class="recipe-title-link" aria-label="Read the full {{ recipe.title }} recipe">
                                 <h3 class="card-title">{{ recipe.title }}</h3>
                             </a>
+                            <!-- Cooking Time -->
                             <p class="card-text card-text-with-icon">
                                 <i class="fa-regular fa-clock me-1"></i> <strong>Cooking Time:</strong> {{ recipe.cooking_time }}
                             </p>
+                            <!-- Number of People Recipe Serves -->
                             <p class="card-text card-text-with-icon">
                                 <i class="fa-regular fa-user me-1"></i> <strong>Serves:</strong> {{ recipe.serves }}
                             </p>
+                            <!-- Number of Likes -->
                             <p class="card-text card-text-with-icon">
                                 <i class="fa-regular fa-heart me-1"></i> <strong>Likes:</strong> {{ recipe.number_of_likes }}
                             </p>
+                            <!-- Recipe Short Description -->
                             <p class="card-text">
                                 {{ recipe.short_description }}
                             </p>
+                            <!-- Date Recipe Created -->
                             <p class="card-text py-2 mb-0 recipe-card-date">
                                 {{ recipe.created_on }}
                             </p>
+                            <!-- Link to Recipe -->
                             <a href="{% url 'full-recipe' recipe.slug %}" class="card-text py-2 recipe-card-link" aria-label="Read the full {{ recipe.title }} recipe">
                                 View Recipe
                             </a>
                         </div>
                     </div>
                 </div>
+                <!-- After Every 3 Recipes, End Row and Start New Row -->
                 {% if forloop.counter|divisibleby:3 %}
                 </div>
                 <div class="row mb-4">

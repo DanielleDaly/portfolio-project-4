@@ -1,3 +1,5 @@
+/* Body and Main */
+
 body {
     background-color: #f7f1e9;
 }
@@ -7,7 +9,6 @@ main {
 }
 
 /* Navigation */
-
 .navbar {
     background-color: #f7f1e9;
 }
@@ -25,8 +26,7 @@ main {
     background-color: rgb(114,63,95);
 }
 
-/* Callout */
-
+/* Callout / Hero */
 .container-outer{
     height: 50vh;
     background-size: cover;
@@ -61,6 +61,7 @@ main {
     animation-fill-mode: forwards;
 }
 
+/* Zoom Animation */
 @keyframes callout-zoom {
     from {
         transform: scale(1);
@@ -75,14 +76,17 @@ main {
     background-color: rgba(255,255,255,0.7);
     color: rgba(114,63,95);
 }
+
 .callout-text h1 {
     font-family: 'Montserrat', sans-serif;
 }
+
 .callout-text p {
     font-family: 'Poppins', sans-serif;
 }
 
 
+/* Page Section Title */
 .section-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -159,7 +163,6 @@ main {
 
 
 /* Logout */
-
 .signout-text {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -184,8 +187,7 @@ main {
 }
 
 
-/* Recipe */
-
+/* Full Recipe */
 .recipe-intro-image {
     overflow: hidden;
 }
@@ -199,6 +201,12 @@ main {
     animation-name: callout-zoom;
     animation-duration: 3s;
     animation-fill-mode: forwards;
+}
+
+.recipe-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: rgb(114,63,95);
 }
 
 .recipe-intro-text {
@@ -220,14 +228,8 @@ main {
     border: none;
 }
 
-.recipe-title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: rgb(114,63,95);
-}
 
-/* Recipe Contents */
-
+/* Full Recipe Contents */
 .recipe-contents h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -268,7 +270,6 @@ main {
 
 
 /* Comments */
-
 .comments-link:hover {
     color: rgb(255,203,112);
     cursor: pointer;
@@ -310,6 +311,11 @@ main {
     background-color: rgb(255,203,112);
 }
 
+.comment-contents {
+    background-color: rgba(114,63,95,0.1);
+}
+
+/* Delete Comment Modal */
 .modal-comment-delete .modal-header {
     background-color: rgb(114, 69, 98);
 }
@@ -340,12 +346,9 @@ main {
 .modal-comment-delete .modal-button.btn-delete:hover {
     background-color: #7a0000;
 }
-
-.comment-contents {
-    background-color: rgba(114,63,95,0.1);
-}
  
 
+/* Utilities */
 .btn-link {
     font-weight: 600;
     color: #fff;
@@ -390,10 +393,14 @@ main {
 }
 
 
+/*****************/
 /* Media Queries */
+/*****************/
 
+/* Tablets */
 @media screen and (max-width: 991px) {
 
+    /* Callout / Hero */
     .callout-container-wrapper {
         height: 40vh;
     }
@@ -402,12 +409,14 @@ main {
         height: 40vh;
     }
 
-    
+
+    /* Recipe Cards */
     .card-title {
         font-size: 1.25rem;
     }
 
 
+    /* Full Recipe */
     .recipe-title {
         font-size: 1.5rem;
     }
@@ -422,8 +431,11 @@ main {
 
 }
 
+
+/* Mobile Phones */
 @media screen and (max-width: 767px) {
 
+    /* Full Recipe Intro Image */
     .recipe-intro-image {
         max-height: 300px;
     }

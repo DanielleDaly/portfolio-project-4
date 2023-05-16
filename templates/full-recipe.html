@@ -4,9 +4,10 @@
 
 {% block content %}
 
-<div class="recipe-intro mb-3">
+<header class="recipe-intro mb-3">
     <div class="container p-0">
         <div class="row g-0 bg-white">
+            <!-- Recipe Photo -->
             <div class="col-md-6 recipe-intro-image image-container">
                 {% if "placeholder" in recipe.image.url %}
                 <img src="/static/images/image-placeholder-recipe.jpeg" alt="Placeholder image for recipe">
@@ -24,11 +25,12 @@
                 <div class="recipe-serves mb-2"><i class="fa-regular fa-user me-1"></i> <strong>Serves:</strong> {{ recipe.serves }}</div>
                 <!-- Decsription -->
                 <div class="recipe-description">{{ recipe.description }}</div>
-
+                <!-- Comments and Likes -->
                 <div class="recipe-intro-comments-likes px-md-2 px-lg-4 py-2 text-center">
                     <div class="col-6">
                         <strong>
                             {% if user.is_authenticated %}
+                            <!-- Like Button (Heart Icon) -->
                             <span>Like this recipe? </span>
                             <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="POST">
                                 {% csrf_token %}
@@ -41,11 +43,13 @@
                                 {% endif %}
                             </form>
                             {% else %}
+                            <!-- Show Number of Likes -->
                             <span><i class="fa-regular fa-heart"></i></span>
                             <span>Likes: {{ recipe.number_of_likes }} </span>
                             {% endif %}
                         </strong>
                     </div>
+                    <!-- Show Number of Comments -->
                     <div class="col-6">
                         {% with comments.count as total_comments %}
                         <strong>
@@ -57,7 +61,7 @@
             </div>
         </div>
     </div>
-</div>
+</header>
 <article class="container mb-3 recipe-contents">
     <div class="row">
         <!-- Ingredients -->
@@ -82,7 +86,7 @@
         <div class="col-12 card mb-4 p-4">
             <h3 class="recipe-comments-title">Comments:</h3>
             <div class="recipe-comments-list">
-
+                <!-- If Editing a Comment -->
                 {% if edit_comment %}
                 <h4>Edit Comment:</h4>
                 <form method="post" class="mt-2 mb-4">
@@ -93,6 +97,7 @@
                 </form>
                 {% endif %}
 
+                <!-- Show Comments -->
                 {% for comment in comments %}
                 <div class="comment mb-4">
                     <div class="comment-details p-2">
@@ -104,6 +109,7 @@
                                 {{ comment.created_on }}
                             </div>
                         </div>
+                        <!-- Show Edit and Delete Buttons if User is the Author -->
                         {% if user == comment.author %}
                         <div class="comment-actions">
                             <a href="?edit_comment_id={{ comment.id }}">
@@ -142,18 +148,21 @@
                         </div>
                         {% endif %}
                     </div>
+                    <!-- Show Comment Contents -->
                     <div class="comment-contents p-2">
                         {{ comment.body | linebreaks }}
                     </div>
                 </div>
                 {% endfor %}
 
+                <!-- Show Awaiting Approval Message -->
                 {% if commented %}
                 <div class="alert alert-success" role="alert">
                 Your comment is awaiting approval
                 </div>
                 {% endif %}
 
+                <!-- Show Add New Comment Form (User logged in and not editing another comment) -->
                 {% if user.is_authenticated and not edit_comment %}
                 <h3>Leave a Comment:</h3>
                 <p>Posting as: <strong>{{ user.username }}</strong></p>
