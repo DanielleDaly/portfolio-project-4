@@ -487,7 +487,12 @@ The Login Page also contains a link to redirect users to the Register Page in or
 ![Image Don't have an account message](readme-images/screenshot-no-account-message.png)
 
 
+### Footer
 
+
+![Image of Footer](readme-images/screenshot-footer.png)
+
+Easy Eats has a footer which is displayed across all pages on the site. It is a simple footer containing the name of the webiste, Easy Eats and where to follow on social media. Links to Instagram, Facebook, Twitter and Youtube can be found in the footer. These are displayed as the icons for those social media sites. The links have a hover state which changes to yellow when a user hovers over the icon. The hover is the same color used throughout the site when the user hovers over a link for ease of use and an enhanced user experience. The footer itself is a dark grey color which is contrasted by white text and icone. The color of the footer also creates a contrast with the colors used in the main page to make the Footer more obvious and easier to find for the user. 
 
 
 
