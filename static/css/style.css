@@ -230,10 +230,18 @@ main {
 
 
 /* Full Recipe Contents */
+.recipe-cooking-time, .recipe-serves, .recipe-description, .recipe-intro-comments-likes {
+    font-family: 'poppins', sans-serif;
+}
+
 .recipe-contents h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: rgb(114,63,95);
+}
+
+.recipe-contents li, .recipe-contents p {
+    font-family: 'poppins', sans-serif !important;
 }
 
 .recipe-ingredients {
@@ -281,8 +289,16 @@ main {
     color: rgb(114,63,95);
 }
 
+.recipe-comments-list p {
+    font-family: 'Poppins', sans-serif;
+}
+
 .recipe-comments-list form label {
     display: none;
+}
+
+.recipe-comments-list .form-control {
+    font-family: 'Poppins', sans-serif;
 }
 
 .comment {
@@ -294,6 +310,7 @@ main {
     align-items: center;
     justify-content: space-between;
     background-color: rgb(114,63,95);
+    font-family: 'Poppins', sans-serif;
     color: #ffffff;
 }
 
@@ -301,6 +318,7 @@ main {
     border: none;
     padding: 0.25rem 0.5rem;
     background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
     color: rgb(114, 69, 98);
     font-weight: 600;
     border-radius: 4px;
@@ -313,6 +331,7 @@ main {
 
 .comment-contents {
     background-color: rgba(114,63,95,0.1);
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Delete Comment Modal */
