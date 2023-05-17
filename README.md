@@ -715,9 +715,89 @@ I tested that all social media links were displayed on the navbar
 I tested that all the social media links on the footer link to the correct website
 i tested that the hover state on the social media links was working correclty
 
+Homepage - recipe cards
+I confirmed that all the detail added for the recipe cards in the admin section was displayed on the recipe cards on the homepage
+I confirmed that the recipe cards contained the following information: recipe image, recipe title, cooking time, number of people served, date and time recipe was added, number of likes, a short description and the view link app
+I confirmed the icons for the cooking time, likes and people served were displaying correctly
+i confirmed the links to the full recipe detail were working correctly on the recipe cards,
+i tested the link on the recipe image and confirmed that it was working correctly
+i tested the linnk in the recipe title and confirmed that it was working correctly
+i tested the view recipe link and confirmed that irt was working correctly.
+Homepage - All recipes Button
+I tested the link in the all recipes button ad confirmed that it brought me to the recipes page
 
+Recipes page
+i confirmed that the pagination was working correctly. Pagination is set to 6 recipe cards per page and 6 recipes cards were displaying.
+At the botttom of the page a next button brought me to the next page of 6 recipes when clicked.
+On the final page of recipes i confirmed that the next button was replaced with the prev (previous button). I tested this by clicking on it and confirmed that it brought me to the previous page of recipes
+Login
+I tested the login form and confirmed that it allowed me to log in
+I tested that a user was unable to log in if the username and/ or password details were entered incorrectly
+I confirmed a user could not log in by submitting a blank form
+I confirmed that the login form requested a users username and password before allowing them to login
+I tested that validation errors were working correctly if a user entered incorrect details or blank inputs into the required fields.
+I confirmed that … message on ligin page
+i confirmed that a message displayed when the user had logged in to tell them that they had logged in successfully.
+I confirmed that once a user has logged in successfully that they were redirected back to the homepage
 
+Logout
+I confirmed that a user was able to log out easily
+i confirmed that …logout message
+I confirmed that once a user has logged out they are redirected back to the home page
 
+Register/ Sign up
+I confirmed that the correct details were displaying on the register form
+I confirmed that the following fields were displaying on the register/ sign up form: username, email address, password, password again
+I confirmed that the user did not have to enter an email address to register
+I confirmed that the username and password fields were required in order for a user to register
+i confirmed that validation errors displayed correctly when users entered blank fields or incorrect inpouts
+I confirmed that a user cannot enter a password that is less than 8 characters long
+i confirmed that a user cannot enter a password that is the same as the username…?
+I confirmed that a user is redirected to the homepage once they have registered.
 
+Browser
+I tested this website on a number of different browsers and confirmed that it was working in Chrome, Safari, Firefox
 
+## Validator Testing
 
+### HTML
+
+I passed my HTML through the validator (validator.w3.org) by right-clicking on the page in the deployed app and selecting the view page source.
+
+I received one warning: "The navigation role is unnecessary for the element nav
+
+I received one error: "Stray end tag div"
+
+#### Image of HTML Validator Testing with Error and Warning:
+
+![Image of HTML Validator Testing](readme-images/screenshot-html-validator.png)
+
+I removed the unnecessary navigation role and the stray div and ran the code through the validator again. This time it came back without any errors or warnings.
+
+#### Image of HTML Validator Testing Fixed/No Errors:
+
+![Image of HTML Validator Testing](readme-images/screenshot-html-validator-fixed.png)
+
+### CSS
+
+I passed my code through the CSS validator (validator.w3.org) and no errors were found
+
+#### Image of CSS Validator Testing:
+
+![Image of CSS Validator Testing](readme-images/screenshot-css-validator.png)
+
+### JavaScript
+
+My JavaScript was passed through jshint for validation.
+
+There was 1 unusued variable edit_comment_id which i removed.
+
+There was 1 undefined variable: bootstrap
+
+There are 7 warnings given by the validator stating that const and arrow functions should be used with ES6 only. As this website is intended for use on modern web browsers, which support ES6 functionality these warnings can be ignored.
+
+#### Image of jshint Validator Testing:
+
+![Image of jshint Validator Testing](readme-images/screenshot-jshint-validator.png)
+
+### Python Validator
