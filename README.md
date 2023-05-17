@@ -743,109 +743,124 @@ I tested if the Edit Comment was displayed on comments made by other users and c
 ![Image of Delete Comment Message](readme-images/screenshot-delete-comment-message.png)
 
 
--
+### Likes
 
-Likes
-I tested that the like this comment option was displayed on the recipe page. 
-I tested that the icon for likes is displayed as a heart outline
-I tested if i coul like a recipe
-I tested if after liking a recipe there the icon changed on the recipe website
-i tested that after linking the total number of likes increased on the recipe cards. 
-I tested that I could unlike a recipe. 
-i tested that adter unliking a recipe the like heart icon changed
-i tested that after unliking a recipe the total number of likes on the recipe card decreased
+- I tested that the like this comment option was displayed on the recipe page. 
+- I tested that the icon for likes is displayed as a heart outline
+- I tested if i coul like a recipe
+- I tested if after liking a recipe there the icon changed on the recipe website
+- I tested that after linking the total number of likes increased on the recipe cards. 
+- I tested that I could unlike a recipe. 
+- I tested that adter unliking a recipe the like heart icon changed
+- I tested that after unliking a recipe the total number of likes on the recipe card decreased
 
-Messages
-I tested that a messgae displayed to the user when they logged in
-i tested that a message displayed to the user when logged out
-I tested that a message displayed to the user when their comment was awaiting approval. 
-I tested that the user was able to dismiss these messages themselves
-i tested that the message dissappeared by itself within the 3 seconds time frame
+### Messages
 
-Admin
-I tested that i could log into the admin section as a supeuser
-I tested that all the required fields from my model displayed when adding a recipe
-I tested that the wysiwyg from django displayed in the ingredients and methods section
-I tested the functionality of the wysiwyg
-I tested that i could set my recipe to publish and it would be added to the website when saved
-I tested that i could save a draft recipe
-I tested that I could return to the draft recipe later and continue working on it
-i tested that I could delete a recipe
-I tested that i could update a recipe that i had already published
-I tested that the comment fields displayed as per the comments model
-I tested that I could view if a comment is awaiting approval 
-I tested that i could approve comments
-I tested that I could delete comments as an admin
-I tested that comments deleted as an admin were not published on the website
+- I tested that a messgae displayed to the user when they logged in
+- I tested that a message displayed to the user when logged out
+- I tested that a message displayed to the user when their comment was awaiting approval. 
+- I tested that the user was able to dismiss these messages themselves
+- I tested that the message dissappeared by itself within the 3 seconds time frame
 
-Navbar
-I tested that the logo link on the homepage was working correctly
-i tested that the recipes link on the b=navbar was working correctly
-i tested that the register link on the navbar was working
-i tested that the login link on the navbar
-i tested that when logged in the login and register links are no longer displayed on hte navbar
-I tested that when logged in the logout link was displayed on the navbar
-I tested that the logout link worked correctly
-I tested that the hover state for each link on the navbar worked correclty
+### Admin Section
 
-Footer
-I tested that the text displayed correctly on the footer
-I tested that all social media links were displayed on the navbar
-I tested that all the social media links on the footer link to the correct website
-i tested that the hover state on the social media links was working correclty
+- I tested that i could log into the admin section as a supeuser
+- I tested that all the required fields from my model displayed when adding a recipe
+- I tested that the wysiwyg from django displayed in the ingredients and methods section
+- I tested the functionality of the wysiwyg
+- I tested that i could set my recipe to publish and it would be added to the website when saved
+- I tested that i could save a draft recipe
+- I tested that I could return to the draft recipe later and continue working on it
+- I tested that I could delete a recipe
+- I tested that i could update a recipe that i had already published
+- I tested that the comment fields displayed as per the comments model
+- I tested that I could view if a comment is awaiting approval 
+- I tested that i could approve comments
+- I tested that I could delete comments as an admin
+- I tested that comments deleted as an admin were not published on the website
 
-Homepage - recipe cards
-I confirmed that all the detail added for the recipe cards in the admin section was displayed on the recipe cards on the homepage
-I confirmed that the recipe cards contained the following information: recipe image, recipe title, cooking time, number of people served, date and time recipe was added, number of likes, a short description and the view link app
-I confirmed the icons for the cooking time, likes and people served were displaying correctly
-i confirmed the links to the full recipe detail were working correctly on the recipe cards,
-i tested the link on the recipe image and confirmed that it was working correctly
-i tested the linnk in the recipe title and confirmed that it was working correctly
-i tested the view recipe link and confirmed that irt was working correctly.
-Homepage - All recipes Button
-I tested the link in the all recipes button ad confirmed that it brought me to the recipes page
+### Navbar
 
-Recipes page
-i confirmed that the pagination was working correctly. Pagination is set to 6 recipe cards per page and 6 recipes cards were displaying.
-At the botttom of the page a next button brought me to the next page of 6 recipes when clicked.
-On the final page of recipes i confirmed that the next button was replaced with the prev (previous button). I tested this by clicking on it and confirmed that it brought me to the previous page of recipes
-Login
-I tested the login form and confirmed that it allowed me to log in
-I tested that a user was unable to log in if the username and/ or password details were entered incorrectly
-I confirmed a user could not log in by submitting a blank form
-I confirmed that the login form requested a users username and password before allowing them to login
-I tested that validation errors were working correctly if a user entered incorrect details or blank inputs into the required fields.
-I confirmed that … message on ligin page
-i confirmed that a message displayed when the user had logged in to tell them that they had logged in successfully.
-I confirmed that once a user has logged in successfully that they were redirected back to the homepage
+- I tested that the logo link on the homepage was working correctly
+- I tested that the recipes link on the b=navbar was working correctly
+- I tested that the register link on the navbar was working
+- I tested that the login link on the navbar
+- I tested that when logged in the login and register links are no longer displayed on hte navbar
+- I tested that when logged in the logout link was displayed on the navbar
+- I tested that the logout link worked correctly
+- I tested that the hover state for each link on the navbar worked correclty
 
-Logout
-I confirmed that a user was able to log out easily
-i confirmed that …logout message
-I confirmed that once a user has logged out they are redirected back to the home page
+### Footer
 
-Register/ Sign up
-I confirmed that the correct details were displaying on the register form
-I confirmed that the following fields were displaying on the register/ sign up form: username, email address, password, password again
-I confirmed that the user did not have to enter an email address to register
-I confirmed that the username and password fields were required in order for a user to register
-i confirmed that validation errors displayed correctly when users entered blank fields or incorrect inpouts
-I confirmed that a user cannot enter a password that is less than 8 characters long
-i confirmed that a user cannot enter a password that is the same as the username…?
-I confirmed that a user is redirected to the homepage once they have registered.
+- I tested that the text displayed correctly on the footer
+- I tested that all social media links were displayed on the navbar
+- I tested that all the social media links on the footer link to the correct website
+- I tested that the hover state on the social media links was working correclty
 
-Browser
-I tested this website on a number of different browsers and confirmed that it was working in Chrome, Safari, Firefox
+### Homepage
+
+#### Recipe Cards:
+
+- I confirmed that all the detail added for the recipe cards in the admin section was displayed on the recipe cards on the homepage
+- I confirmed that the recipe cards contained the following information: recipe image, recipe title, cooking time, number of people served, date and time recipe was added, number of likes, a short description and the view link app
+- I confirmed the icons for the cooking time, likes and people served were displaying correctly
+- I confirmed the links to the full recipe detail were working correctly on the recipe cards,
+- I tested the link on the recipe image and confirmed that it was working correctly
+- I tested the linnk in the recipe title and confirmed that it was working correctly
+- I tested the view recipe link and confirmed that irt was working correctly.
+
+#### All Recipes Button
+
+- I tested the link in the all recipes button ad confirmed that it brought me to the recipes page
+
+### Recipes Page
+
+- I confirmed that the pagination was working correctly. Pagination is set to 6 recipe cards per page and 6 recipes cards were displaying.
+- At the botttom of the page a next button brought me to the next page of 6 recipes when clicked.
+- On the final page of recipes i confirmed that the next button was replaced with the prev (previous button). - I tested this by clicking on it and confirmed that it brought me to the previous page of recipes
+
+### Login
+
+- I tested the login form and confirmed that it allowed me to log in
+- I tested that a user was unable to log in if the username and/ or password details were entered incorrectly
+- I confirmed a user could not log in by submitting a blank form
+- I confirmed that the login form requested a users username and password before allowing them to login
+- I tested that validation errors were working correctly if a user entered incorrect details or blank inputs into the required fields.
+- I confirmed that … message on ligin page
+- I confirmed that a message displayed when the user had logged in to tell them that they had logged in successfully.
+- I confirmed that once a user has logged in successfully that they were redirected back to the homepage
+
+### Logout
+
+- I confirmed that a user was able to log out easily
+- I confirmed that …logout message
+- I confirmed that once a user has logged out they are redirected back to the home page
+
+### Register/ Sign up
+
+- I confirmed that the correct details were displaying on the register form
+- I confirmed that the following fields were displaying on the register/ sign up form: username, email address, password, password again
+- I confirmed that the user did not have to enter an email address to register
+- I confirmed that the username and password fields were required in order for a user to register
+- I confirmed that validation errors displayed correctly when users entered blank fields or incorrect inpouts
+- I confirmed that a user cannot enter a password that is less than 8 characters long
+- I confirmed that a user cannot enter a password that is the same as the username…?
+- I confirmed that a user is redirected to the homepage once they have registered.
+
+### Browsers
+
+- I tested this website on a number of different browsers and confirmed that it was working in Chrome, Safari, Firefox
+
 
 ## Validator Testing
 
 ### HTML
 
-I passed my HTML through the validator (validator.w3.org) by right-clicking on the page in the deployed app and selecting the view page source.
+- I passed my HTML through the validator (validator.w3.org) by right-clicking on the page in the deployed app and selecting the view page source.
 
-I received one warning: "The navigation role is unnecessary for the element nav
+- I received one warning: "The navigation role is unnecessary for the element nav
 
-I received one error: "Stray end tag div"
+- I received one error: "Stray end tag div"
 
 #### Image of HTML Validator Testing with Error and Warning:
 
@@ -859,7 +874,7 @@ I removed the unnecessary navigation role and the stray div and ran the code thr
 
 ### CSS
 
-I passed my code through the CSS validator (validator.w3.org) and no errors were found
+- I passed my code through the CSS validator (validator.w3.org) and no errors were found
 
 #### Image of CSS Validator Testing:
 
@@ -867,16 +882,167 @@ I passed my code through the CSS validator (validator.w3.org) and no errors were
 
 ### JavaScript
 
-My JavaScript was passed through jshint for validation.
+- My JavaScript was passed through jshint for validation.
 
-There was 1 unusued variable edit_comment_id which i removed.
+- There was 1 unusued variable edit_comment_id which i removed.
 
-There was 1 undefined variable: bootstrap
+- There was 1 undefined variable: bootstrap
 
-There are 7 warnings given by the validator stating that const and arrow functions should be used with ES6 only. As this website is intended for use on modern web browsers, which support ES6 functionality these warnings can be ignored.
+- There are 7 warnings given by the validator stating that const and arrow functions should be used with ES6 only. As this website is intended for use on modern web browsers, which support ES6 functionality these warnings can be ignored.
 
 #### Image of jshint Validator Testing:
 
 ![Image of jshint Validator Testing](readme-images/screenshot-jshint-validator.png)
 
 ### Python Validator
+
+### Deployment
+
+#### Workspace set up
+
+- I used CodeAnywhere and Github to begin creating this website.
+- I logged into Github.
+- I navigated to the CI Full Template Repository for CodeAnywhere.
+- I clicked on the "Use this template" button.
+- I named this repository "portfolio-project-4".
+- I clicked on "Create repository from template".
+- Once my repository was created on GitHub, I copied the repository URL.
+- I logged into CodeAnywhere with my Github account.
+- On the Dashboard, I clicked on the "New Workspace" button.
+- I pasted in the URL I had copied from Gitub.
+- I clicked on "Create".
+- I used Github to create a User Story Template for my project. As I progressed through the project I moved my user stories from "To do" to "In progress" to "Done".
+
+#### Git
+
+- I used Git to save my progress while working on the project.
+- After I completed each section, I used the git add command to add any changes that I had made.
+- I then used the git commit command to commit these changes.
+- These were pushed to Github using the git push command.
+
+### Install Django and supporting libraries
+
+- Gunicorn is the server that I used to run Django on Heroku.
+- I entered the following command in the terminal to install gunocorn: pip3 install 'django<4' gunicorn
+- I installed the supporting libraries using: pip3 install dj_database_url==0.5.0 psycopg2
+- I installed the libraries needed to run cloudinary using: pip3 install dj3-cloudinary-storage
+- I created a requirements.txt file using: pip3 freeze —local > requirements.txt
+- I created a  new Django project from the terminal using: django-admin startproject easy-eats
+- I created my recipe app using: python3 manage.py startapp recipe
+- I added this app to the settings.py file in INSTALLED_APPS 
+- I migrated changes to the database using: python3 manage.py migrate
+
+### Create a new Heroku App
+
+- I signed into Heroku.com 
+- On the Heroku app, I clicked “New”
+- I click on the "Create New App" button
+- I entered my project name under "App Name". Each app name must be unique. The name entered for this project is "easy-eats-recipe-app"
+- I selected my region in the space provided under "Choose a region". I selected Europe
+- I clicked on the "Create App" button
+
+### Create a PostgreSQL database instance
+
+- I logged in to ElephantSQL.com
+- I accessed the dashboard
+- I clicked on “Create New Instance”
+- I named my instance easy-eats
+- I selected the "Tiny Turtle free plan
+- I selected a region
+- I selected a data center: EU-West-1 (Ireland)
+- I clicked review
+- I clicked on "Create Instance"
+- I returned to the ElephantSQL dashboard and clicked on the easy-eats instance
+- In the URL section, I clicked the copy icon to copy the database URL
+
+### Create an eny.py file
+
+- In my workspace I createed a file called env.py
+- I checked that this file is included in the .gitignore file. As I used the CI template for this project it was already there
+- I added the following to my env.py file: import os
+- I then added some environment variables. I set a DATABASE_URL variable, with the value I had copied from   ElephantSQL. I added os.environ["DATABASE_URL"]="<copiedURL>" replace <copiedURL> with the value I had copied from ElephantSQL
+- I added a SECRET_KEY in the env.py file. I added os.environ["SECRET_KEY"]="my_secret_key", replacing "my_secret_key" with an actual secret key
+
+### Modify settings.py
+
+- I opened the settings.py file and added the following code:
+    import os
+    import dj_database_url
+    if os.path.isfile('env.py'):
+    import env
+
+- I removed the secret key provided by Django and changed the secret key variable to the following: SECRET_KEY = os.environ.get('SECRET_KEY')
+- I scrolled down to the database section of the settings.py file
+- I commented out the original DATABASES variable and add the below:
+    DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    }
+- I migrated changes to the database using: python3 manage.py migrate
+
+### ElephantSQL
+
+- Once the migrations were complete I opened the ElephantSQL dashboard.
+- I selected my easy-eats database instance
+- I then selected the “Browser” tab on the left
+- I click “Table queries” to reveal my database structure
+
+### Heroku Config Vars
+
+- I then needed to connect my database to Heroku
+- On the Heroku dashboard I opened the Settings tab
+- I added three config vars:
+    DATABASE_URL
+    PORT: 8000
+    SECRET_KEY
+
+### Cloudinary Account Set up
+
+- In order to set up an account on the Cloudinary website I clicked on the "Sign Up For Free" button
+- I entered my name, email address and choose a password
+- For Primary interest, I chose "Programmable Media for image and video API"
+- I clicked on "Create Account"
+- I verified my email address
+    
+### Link app to Cloudinary
+ 
+- I went to the dashboard on Cloudinary 
+- I clicked on "Copy to clipbpard" next to API Environment variable
+- I added this to the env.py file as os.environ["CLOUDINARY_URL"] ="<URL copied from Cloudinary>" 
+- On the Heroku dashboard I added a new Config Var - CLOUDINARY_URL & DISABLE_COLLECTSTATIC
+- In the settings.py file:
+  - I added in the Cloudinary libraries, "cloudinary_storage” and "cloudinary" to the  INSTALLED_APPS 
+  - I added the static files and media:
+        STATIC_URL = '/static/'
+        STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+        STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+        STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+        MEDIA_URL = '/media/'
+        DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+  - I changed the key in TEMPLATES to 'DIRS': [TEMPLATES_DIR],
+  - I added the Heroku host name and local host to allowed hosts
+
+
+- I then created 3 directories in my project called media, static and template
+- I created a Procfile and added web: gunicorn easy_eats.wsgi
+- I added, committed and pushed to Github
+
+
+### Deploy to hEROKU
+
+- On the Heroku dashboard I clicked on the deploy tab
+- I click on Github
+- I searced for my repository
+- I scrolled down to the bottom of the page and clicked on deploy branch
+- Once app was deployed I opened the app to view
+
+### Final Deployment
+- I went to the settings.py file
+- I set Degug to False
+- I added X_FRAME_OPTIONS = 'SAMEORIGIN'
+- I added, committed and pushed to git Github
+- On Heroku I went to the "Settings" tab
+- I clicked on "reveal config vars"
+- I removed DISABLE_COLLECTSTATIC
+- I went to the "Deploy" tab
+- I scrolled down and clicked on the "Deploy Branch" button
+- Once the message "Your app was successfully deployed" appears click on the "View" button to take you to the deployed link
