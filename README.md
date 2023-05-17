@@ -16,7 +16,7 @@ For the assessor, I have included the admin login details in the comments sectio
 
 
 ### View the live project here:
-
+https://easy-eats-recipe-app.herokuapp.com/
 
 ## User Stories
 
