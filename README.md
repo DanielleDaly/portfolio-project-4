@@ -639,32 +639,111 @@ I tried entering a password that was too short. Validation error was returned to
 
 Testing CRUD functionality 
 
-Comments Section
+### Comments Section - CRUD
 
-The main area of this site where all elements of crud are displayed is in the comments section. The comments section allows users to interact with the website from the user interfact without having to access the admin section
+The main area of this site where all elements of **CRUD** are displayed is in the comments section. The comments section allows users to interact with the website from the user interface without having to access the admin section to create, read, update or delete their comments.
+
+#### Create
+
+- Logged in users can add a comment to a recipe but users that are not logged in or who haven't registered for the site are unable to leave a comment. 
+  
+- I tested the site to ensure that if a user is not logged in, the leave a comments section does not display on the Recipes Page and confirmed that it does not. 
+
+#### Image of Recipes Page - No Comment Box:
+
+![Image of Recipes Page - No Comment Box](readme-images/screenshot-no-comment-box.png)
+  
+- I logged in as a user to test if I could leave a comment as a logged in user. As a logged in user the leave a comment section was now displated with the logged in users username displayed. 
+
+#### Image of Recipes Page - Comment Box and Username Displayed:
+
+![Image of Recipes Page - Comment Box and Username Displayed](readme-images/screenshot-logged-in-comments-box.png)
+
+- I tested if a comment could be written in the comment box provided and it could.
+
+#### Image of Test Comment in Comment Box:
+
+![Image of Comment in Comment Box](readme-images/screenshot-test-comment-box.png)
 
 
-Logged in users can create a comment. Users that are not logged in cannot. 
-I tested the site to ensure that if a user is not logged in, the leave a comments section does not display. 
-I logged in as a user to test if I could leave a comment as a logged in user. As a logged in user the leave a comment section was now displated with the logged in user user name displayed. 
-I tested if a comment cold be written in the comment box provided and it could. 
-I tested if the submit button for the comment worked and it did. 
-I tested if a message would display to advise the user that their comment was awaiting approval. 
-I logged in as an admin to approve the comment. I tested if the comment could be approved. 
-I tested if the approved comment displayed on the recipe with the other comments. 
-I tested if the username was correct on the published comment
-I tested if the time and date was correct in the approved comment
-I tested if the comments were displaying in the correct order based on their created on dates
-I tested if the number of comments displayed increased after my test comment was made
-I tested that I could view other users comments as well as my own
-I tested that the Edit Comment button was displayed on my comment
-I tested that I could update my comments
-I tested if I could update other peoples comments
-I tested that my updated comment displayed correctly and the previous comment was no longer visible. 
-I tested that the delete button was visible on my comment
-i tested that i could delete my comment
-i tested that my deleted comment no longer displayed in the comments section
-I tested if I could delete a comment created by another user. 
+- I tested if the submit button for the comment worked and confirmed it did. 
+  
+- I tested if a message would display to advise the user that their comment was awaiting approval and confirmed a message displayed.
+
+#### Image of Test Comment Awaiting Approval Message:
+
+![Image of Comment Awaiting Approval Message](readme-images/screenshot-test-comment-approval.png)
+
+- I logged in as an admin user to approve the test comment. I tested if the comment and confirmed it could be approved. 
+
+#### Image of Test -Comment Approved in Admin Section:
+
+![Image of Comment Approved in Admin Section](readme-images/screenshot-test-comment-approved-admin.png)
+
+#### Read
+
+- I tested if the approved comment was displayed on the Recipe page with comments from other users and confirmed it was displayed.
+
+- I tested if the username was displayed on the published comment and confirmed it was.
+
+- I tested if the time and date was displayed correctly in the approved test comment and confirmed it was.
+
+- I tested if the comments were displaying in the correct order based on their created-on dates. These should display with the newest comment first and older comments below in descending order. I confirmed they were displaying in the correct order. 
+
+- I tested if I could read other users comments as well as my own and confirmed that comments made by other users were displaying correclty on the Recipes page.
+
+#### Image of Test Comment displayed on site:
+
+![Image of Test Comment displayed on site](readme-images/screenshot-test-comment-displayed.png)
+
+- I tested if the number of comments displayed increased after my test comment was made and confirmed that they increased by 1.
+
+#### Update
+
+I tested if the Edit Comment button was displayed on my comment and confirmed that it was.
+
+I tested if the Edit Comment was displayed on comments made by other users and confirmed that it was not. Comments can only be updated by the user who has created them.
+
+#### Image of Edit Comment Button:
+
+![Image of Edit Comment Button](readme-images/screenshot-edit-delete-comment-button.png)
+
+- I tested if the number of comments on the recipe increased after my test comment was made and confirmed that it increased by 1.
+
+- I tested that I could update my comments by clicking on the edit button. I confirmed that the edit button pulled in the content of the comment I would like to edit and allowed me to update the details of the comment.
+
+- I tested if my updated comment displayed correctly and the previous comment was no longer visible and confirmed that the updated comment had replaced the previous comment.
+  
+#### Image of Updated Comment:
+
+![Image of Updated Comment](readme-images/screenshot-updated-comment.png)
+
+#### Delete
+
+- I tested if the Delete Comment button was displayed on my comment and confirmed that it was.
+
+- I tested if the Delete Comment was displayed on comments made by other users and confirmed that it was not. Comments can only be deleted by the user who has created them.
+
+#### Image of Delete Comment Button:
+
+![Image of Delete Comment Button](readme-images/screenshot-edit-delete-comment-button.png)
+  
+- I tested if I could delete my comment and confirmed that my comment was deleted.
+
+- I tested id my deleted comment had been removed from the comments section and confirmed it was no longer visible. 
+
+#### Image of Deleted Comment:
+
+![Image of Deleted Comment](readme-images/screenshot-deleted-comment.png)
+
+- I tested if a pop up would be displayed asking the user to confirm if they wanted to delete their comment. Whentested a message displayed asking "Are you sure you want to delete this comment". Below there was a button to delete or cancel. The cancel button brings the user back to the comments section on the recipe page.
+
+#### Image of Delete Comment Message:
+
+![Image of Delete Comment Message](readme-images/screenshot-delete-comment-message.png)
+
+
+-
 
 Likes
 I tested that the like this comment option was displayed on the recipe page. 
