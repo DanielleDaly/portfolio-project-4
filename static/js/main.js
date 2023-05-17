@@ -17,8 +17,8 @@ if (commentsLink) {
 
 
 // Hide messages after specified time (3 seconds)
-setTimeout(function() {
-    const messages = document.getElementById("msg");
-    const alert = new bootstrap.Alert(messages);
-    alert.close();
-}, 3000);
+// setTimeout(function() {
+//     const messages = document.getElementById("msg");
+//     const alert = new bootstrap.Alert(messages);
+//     alert.close();
+// }, 3000);

@@ -951,18 +951,43 @@ Features I would like to include on this site in future include:
 - I confirmed that a user cannot enter a password that is too similar to their username.
 - I confirmed that a user is redirected to the homepage once they have registered.
 
-### Browsers
+###JavaScript Testing
 
-- I tested this website on a number of different browsers and confirmed that it was working in Chrome, Safari, Firefox
+Manual testing was carried out to verify that all JavaScript is working throughout the website.
+Testing has been carried out on:
+
+- Message Timeout: When the notification messages are displayed to the user, when the user logs in / out, for example, the message is hidden after 3 seconds. This has been confirmed to work as expected.
+- ScrollIntoView: There are 2 scenarios that have been tested for this functionality:
+  - When the user clicks on the "Comments" in the Full Recipe header section, the page scrolls down to the comments section.
+  - When the user clicks on the "Edit" button, to edit a comment, the page reloads to show the Edit Comment form, and the page scrolls to the Comments section when loaded.
+  - Both of the above scenarios have been tested and verified as working as expected.
+  
+### Browser Testing
+
+- Browser Testing was carried out on a number of desktop, tablet and mobile devices, to verify that the website workedd as expected across devices and screen sizes.
+
+- The browsers used for testing were:
+
+- Desktop
+  - Chrome (MacOS)
+  - Safari (MacOS)
+  - Firefox (Windows 11)
+  - Edge (Windows 11)
+- Tablet
+  - Safari (iOS - iPad Mini)
+  - Firefox (Android - Samsung Galaxy Tab)
+- Phone
+  - Safari (iOS - iPhone 12)
+  - Chrome (Android - OnePlus Nord 2)
 
 
-## Validator Testing
+### Validator Testing
 
 ### HTML
 
 - I passed my HTML through the validator (validator.w3.org) by right-clicking on the page in the deployed app and selecting the view page source.
 
-- I received one warning: "The navigation role is unnecessary for the element nav
+- I received one warning: "The navigation role is unnecessary for the element nav"
 
 - I received one error: "Stray end tag div"
 
@@ -970,7 +995,7 @@ Features I would like to include on this site in future include:
 
 ![Image of HTML Validator Testing](readme-images/screenshot-html-validator.png)
 
-I removed the unnecessary navigation role and the stray div and ran the code through the validator again. This time it came back without any errors or warnings.
+- I removed the unnecessary navigation role and the stray end tag div and ran the code through the validator again. This time it came back without any errors or warnings.
 
 #### Image of HTML Validator Testing Fixed/No Errors:
 
@@ -988,7 +1013,7 @@ I removed the unnecessary navigation role and the stray div and ran the code thr
 
 - My JavaScript was passed through jshint for validation.
 
-- There was 1 unusued variable edit_comment_id which i removed.
+- There was 1 unusued variable edit_comment_id which I removed.
 
 - There was 1 undefined variable: bootstrap
 
@@ -998,11 +1023,46 @@ I removed the unnecessary navigation role and the stray div and ran the code thr
 
 ![Image of jshint Validator Testing](readme-images/screenshot-jshint-validator.png)
 
-### Python Validator
 
-### Deployment
+### Python Validator Testing
 
-#### Workspace set up
+- I tested my Python code in VSCode using the `pycodestyle` linter and no errors were returned. This is the PEP8 linter as recommended on the VSCode Python Linting extensions page (https://code.visualstudio.com/docs/python/linting).
+
+- The pep8online.com validator was not available at the time of testing.
+
+- I also tested my code in Code Institue's PEP8 Validator https://pep8ci.herokuapp.com/ and no errors were returned.
+
+### Known Bugs / Fixes
+
+## Missing Comment Awaiting Approval Message
+
+When the user adds a new comment, it is set to be Awaiting Approval by a superuser.
+The message in the comments section saying "Your comment is Awaiting Approval" was not displaying. This was due to the required page elements not being returned in the render function in views.py.
+
+## Override Font Family Coming From WYSIWYG Editor
+
+The SummerNote WYSIWYG editor being used in the admin area was applying font styling to the content when it was being saved. This resulted in the text being displayed in a default font, "Helvetica".
+I added CSS to target the text that was being displayed incorrectly and set it to use the correct font, "Poppins".
+
+## Remove Navigation Role from Nav Element
+
+The "nav" element had been given a role of "navigation" but this is not required for accessibility, as the use of the "nav" tag is sufficient to be recognised as a navigation element.
+
+## Floating Closing div Tag in Index Page
+
+When using the HTML Validator it was flagged that there was an additional closing "div" tag at the bottom of the loop for displaying the Latest Recipes.
+Removing this tag cleared the issue that was being seen on the Validator.
+
+## Fix JavaScript Validation Issues
+
+When using the JavaScript Validator there were some issues flagged, which were then fixed. The issues were:
+
+- Unused variable. I removed this variable, which cleared the issue.
+- Use of "let" when declaring variables that should be declared as "const". I updated the variable definitions to use "const" which cleared the issues.
+
+## Deployment
+
+### Workspace set up
 
 - I used CodeAnywhere and Github to begin creating this website.
 - I logged into Github.
@@ -1027,7 +1087,7 @@ I removed the unnecessary navigation role and the stray div and ran the code thr
 ### Install Django and supporting libraries
 
 - Gunicorn is the server that I used to run Django on Heroku.
-- I entered the following command in the terminal to install gunocorn: pip3 install 'django<4' gunicorn
+- I entered the following command in the terminal to install gunicorn: pip3 install 'django<4' gunicorn
 - I installed the supporting libraries using: pip3 install dj_database_url==0.5.0 psycopg2
 - I installed the libraries needed to run cloudinary using: pip3 install dj3-cloudinary-storage
 - I created a requirements.txt file using: pip3 freeze —local > requirements.txt
@@ -1038,34 +1098,34 @@ I removed the unnecessary navigation role and the stray div and ran the code thr
 
 ### Create a new Heroku App
 
-- I signed into Heroku.com 
-- On the Heroku app, I clicked “New”
-- I click on the "Create New App" button
-- I entered my project name under "App Name". Each app name must be unique. The name entered for this project is "easy-eats-recipe-app"
-- I selected my region in the space provided under "Choose a region". I selected Europe
-- I clicked on the "Create App" button
+- I signed into Heroku.com.
+- On the Heroku app, I clicked "New".
+- I clicked on the "Create New App" button.
+- I entered my project name under "App Name". Each app name must be unique. The name entered for this project is "easy-eats-recipe-app".
+- I selected my region in the space provided under "Choose a region". I selected Europe.
+- I clicked on the "Create App" button.
 
 ### Create a PostgreSQL database instance
 
-- I logged in to ElephantSQL.com
-- I accessed the dashboard
-- I clicked on “Create New Instance”
-- I named my instance easy-eats
-- I selected the "Tiny Turtle free plan
-- I selected a region
-- I selected a data center: EU-West-1 (Ireland)
-- I clicked review
-- I clicked on "Create Instance"
-- I returned to the ElephantSQL dashboard and clicked on the easy-eats instance
-- In the URL section, I clicked the copy icon to copy the database URL
+- I logged in to ElephantSQL.com.
+- I accessed the dashboard.
+- I clicked on “Create New Instance”.
+- I named my instance easy-eats.
+- I selected the "Tiny Turtle" free plan.
+- I selected a region.
+- I selected a data center: EU-West-1 (Ireland).
+- I clicked review.
+- I clicked on "Create Instance".
+- I returned to the ElephantSQL dashboard and clicked on the easy-eats instance.
+- In the URL section, I clicked the copy icon to copy the database URL.
 
 ### Create an eny.py file
 
-- In my workspace I createed a file called env.py
-- I checked that this file is included in the .gitignore file. As I used the CI template for this project it was already there
+- In my workspace I createed a file called env.py.
+- I checked that this file is included in the .gitignore file. As I used the CI template for this project it was already there.
 - I added the following to my env.py file: import os
-- I then added some environment variables. I set a DATABASE_URL variable, with the value I had copied from   ElephantSQL. I added os.environ["DATABASE_URL"]="<copiedURL>" replace <copiedURL> with the value I had copied from ElephantSQL
-- I added a SECRET_KEY in the env.py file. I added os.environ["SECRET_KEY"]="my_secret_key", replacing "my_secret_key" with an actual secret key
+- I then added some environment variables. I set a DATABASE_URL variable, with the value I had copied from   ElephantSQL. I added os.environ["DATABASE_URL"]="<copiedURL>" and replaced <copiedURL> with the value I had copied from ElephantSQL.
+- I added a SECRET_KEY in the env.py file. I added os.environ["SECRET_KEY"]="my_secret_key", replacing "my_secret_key" with an actual secret key.
 
 ### Modify settings.py
 
@@ -1086,14 +1146,14 @@ I removed the unnecessary navigation role and the stray div and ran the code thr
 ### ElephantSQL
 
 - Once the migrations were complete I opened the ElephantSQL dashboard.
-- I selected my easy-eats database instance
-- I then selected the “Browser” tab on the left
-- I click “Table queries” to reveal my database structure
+- I selected my easy-eats database instance.
+- I then selected the “Browser” tab on the left.
+- I click “Table queries” to reveal my database structure.
 
 ### Heroku Config Vars
 
-- I then needed to connect my database to Heroku
-- On the Heroku dashboard I opened the Settings tab
+- I then needed to connect my database to Heroku.
+- On the Heroku dashboard I opened the Settings tab.
 - I added three config vars:
     DATABASE_URL
     PORT: 8000
@@ -1101,16 +1161,16 @@ I removed the unnecessary navigation role and the stray div and ran the code thr
 
 ### Cloudinary Account Set up
 
-- In order to set up an account on the Cloudinary website I clicked on the "Sign Up For Free" button
-- I entered my name, email address and choose a password
-- For Primary interest, I chose "Programmable Media for image and video API"
-- I clicked on "Create Account"
-- I verified my email address
+- In order to set up an account on the Cloudinary website I clicked on the "Sign Up For Free" button.
+- I entered my name, email address and choose a password.
+- For Primary interest, I chose "Programmable Media for image and video API".
+- I clicked on "Create Account".
+- I verified my email address.
     
 ### Link app to Cloudinary
  
-- I went to the dashboard on Cloudinary 
-- I clicked on "Copy to clipbpard" next to API Environment variable
+- I went to the dashboard on Cloudinary.
+- I clicked on "Copy to clipbpard" next to API Environment variable.
 - I added this to the env.py file as os.environ["CLOUDINARY_URL"] ="<URL copied from Cloudinary>" 
 - On the Heroku dashboard I added a new Config Var - CLOUDINARY_URL & DISABLE_COLLECTSTATIC
 - In the settings.py file:
@@ -1125,21 +1185,20 @@ I removed the unnecessary navigation role and the stray div and ran the code thr
   - I changed the key in TEMPLATES to 'DIRS': [TEMPLATES_DIR],
   - I added the Heroku host name and local host to allowed hosts
 
-
 - I then created 3 directories in my project called media, static and template
 - I created a Procfile and added web: gunicorn easy_eats.wsgi
 - I added, committed and pushed to Github
 
-
-### Deploy to hEROKU
+### Deploy to Heroku
 
 - On the Heroku dashboard I clicked on the deploy tab
 - I click on Github
 - I searced for my repository
-- I scrolled down to the bottom of the page and clicked on deploy branch
-- Once app was deployed I opened the app to view
+- I scrolled down to the bottom of the page and clicked on "deploy branch"
+- Once the app was deployed I opened the app to view
 
 ### Final Deployment
+
 - I went to the settings.py file
 - I set Degug to False
 - I added X_FRAME_OPTIONS = 'SAMEORIGIN'
@@ -1151,90 +1210,97 @@ I removed the unnecessary navigation role and the stray div and ran the code thr
 - I scrolled down and clicked on the "Deploy Branch" button
 - Once the message "Your app was successfully deployed" appears click on the "View" button to take you to the deployed link
 
+### Accessibility
+
+- The website has been built with strong considerations for Accessibility throughout.
+
+- Semantic markup is used to ensure that each page can be read easily using a screen reader.
+- ARIA labels and roles have been added to the relevant elements to comply with Accessibility standards.
+- Form fields have the appropriate "labels", "id" and "for" tags and attributes.
 ### Technologies Used
 
-## HTML
+### HTML
 - HTML was used as a markup language to build the structure of the web pages.
 
-## CSS
+### CSS
 - CSS was used to apply styling to the elements of the website.
 
-## JavaScript
+### JavaScript
 - JavaScript is used on the site to provide additional interactivity to the user. Examples include:
   - 'scrollIntoView': When a user clicks on the number of comments in the full-recipe header section, the page scrolls down to the comments section.
   - User notification messages: Notification messages are hidden after a specified time, 3 seconds, to allow the user to continue using the website.
 
-## Python
+### Python
 - Python is used for the backend-driven functionality of the website.
   
-## Django
+### Django
 - Django is a Python Framework that I have used for building the admin section of the website and for interaction between the backend and frontend.
   
-## Django Allauth
+### Django Allauth
 - Django's allauth extension was used to provide authentication functionality on the website.
   - It was used to create the authentication forms for the website, including the login, logout and register forms.
 
-## Django Crispy Forms
+### Django Crispy Forms
 - Crispy Forms is used to provide the input forms for the comment section within the full-recipe page.
 
-## Heroku
+### Heroku
 - This project has been deployed using Heroku, which is a SAAS hosting service.
 
-## Gunicorn
+### Gunicorn
 - Gunicorn was used to faciitate deploying the application to Heroku.
 
-## Cloudinary
+### Cloudinary
   Cloudinary was used to store the images for the Easy Eats website.
 
-## ElephantSQL
+### ElephantSQL
 - ElephantSQL was used as a postgres database hosting service.
 
-## Summernote
+### Summernote
 - Summernote is a WYSIWYG used in the backend admin section for inputting content.
 
-## Git
+### Git
 - Git was used for version control.
   
-## Github
+### Github
 - Github was used to store the project repository and manage user stories in Github projects.
 
-## CodeAnywhere
+### CodeAnywhere
 -  CodeAnywhere is a cloud based development environment. The Code Institute template was used as a base for this project.
 
-## Pexels
+### Pexels
 - The images used in this website can were found on Pexels.
 
-## Looka
+### Looka
 - Looka was used to create the Easy Eats Logo located in the Navbar.
 
-## Bootstrap 
+### Bootstrap 
 - Bootstrap is a CSS Framework that was used for the grid layout to structure pages and general styling of the website.
 
-# Google Fonts
+### Google Fonts
 - The fonts on the website are from the Google Fonts library.
 
-## Font Awesome
+### Font Awesome
 - Font Awesome is an icons library that was used for displaying icons throughout the website.
   
-## Favicon.ie
+### Favicon.io
 - Favicon.io was used to generate a favicon for the website from a png image.
 
-## LucidChart
+### LucidChart
 - LucidChart was used to create a visual representation of the Database Schema.
   
-## Balsamiq
+### Balsamiq
 - Balsamiq was used to create wireframes for the website.
 
-### Credits
+## Credits
 
-## Content
+### Content
 
-- Inspiration taken from Code Institutes "Love Running" project for the Hero Image animation and text overlay 
-- Inspiration from Code Institutes "I think therefore I blog project"
+- Inspiration was taken from Code Institutes "Love Running" project for the Hero Image animation and text overlay 
+- Inspiration was taken from Code Institutes "I think therefore I blog project"
 - The icons used on the website are from Font Awesome
 - The Easy Eats Logo located in the Navbar was created using the looka.com logo creator
 
-## Media
+### Media
 
 - All images have been found on pexles.com
 
