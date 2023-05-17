@@ -6,18 +6,16 @@ Easy Eats is a recipe website aimed at anyone who is looking for inspiration and
 
 They can also easily access basic information on a recipe from the homepage and recipes page without having to view the full recipe detail. Each recipe listing contains an image of the recipe, the recipe title, how many people the recipe serves, the cooking time, how many likes this recipe has received from users, the date and time the recipe was posted as well as a short description of the recipe.
 
-Easy Eats is a  full-stack web application using the Python Django Framework, the Cloudinary database, HTML, CSS and JavaScript.
+Easy Eats is a full-stack web application using the Python Django Framework, the Cloudinary database, HTML, CSS and JavaScript.
 
 It provides full CRUD capabilities to the user, accessible from the front end without having to access the admin section. Users can create, read, update and delete their own comments when they are logged in. They can also read comments from other users and further interact with the website by 'liking' and 'unliking' a recipe. Users can also see the total number of likes a recipe has received.
 
-Easy Eats also has an Administration section.
+Easy Eats also has an Administration section. The admin user can add, update and delete content on the website. They can also manage comments by approving or deleting comments submitted by users. 
 
 For the assessor, I have included the admin login details in the comments section when submitting the project.
 
 
 ### View the live project here:
-
-
 
 
 ## User Stories
@@ -38,14 +36,13 @@ For the assessor, I have included the admin login details in the comments sectio
 ### As a user I want to be able to view the most recent recipes on the homepage, so I can see if there are any recipes that I am interested in
 
 - A selection of the latest recipes are displayed on the homepage so that the user can see the most recent additions to the website.
-- For each recipe in this section the user can view an image of the recipe, the recipe title, the cooking time, how many people the recipe will serve and a short description of the recipe.
-- Each recipe on the home page contains a "READ MORE" buttton which will bring the user to the full recipe page.
+- For each recipe in this section the user can view an image of the recipe, the recipe title, the cooking time, how many people the recipe will serve, the time and date the recipe was added, the number of likes the recipe has received and a short description of the recipe.
+- Each recipe on the home page contains a "View More" link to the full-recipe. The recipe image and title also contain a link to the full-recipe.
 
 ### As a user I want to be able to view full recipe details, so that I can find out more about a particular recipe
 
-- Full recipes can be accessed by clicking on the "Recipes" link in the Navigation Bar, and clicking on a recipe.
-- They can also be accessed by clicking on the "READ MORE" button on an individual recipe on the homepage.
-- Users can click on a recipe on the "All Recipes" page to view full recipe details and instructions.
+- Full recipe details can be accessed by clicking on a recipe listing on the homepage or recipes page.
+- Each recipe listing contains 3 links to that recipe. These are located in the recipe image, the recipe title and the 'view more' link.
 
 ### As a user I want to be able to access a list of all recipes from the homepage, so that I can browse recipes for inspiration
 
@@ -67,7 +64,7 @@ For the assessor, I have included the admin login details in the comments sectio
 
 ### As a user I want to be able to see how many people each recipe serves, so that I can decide if the recipe is suitable for my requirements
 
-- The number of people served by is displayed for each recipe.
+- The number of people a recipe serves is displayed for each recipe.
 - The number of people served is displayed clearly above the description and below the cooking time for each recipe.
 - It is visible on all pages without having to click into the recipe to view.
 - It also contains an icon to make this information stand out more for the user.
@@ -82,35 +79,36 @@ For the assessor, I have included the admin login details in the comments sectio
 
 - Users can register easily by clicking on the "Register" link in the navigtion bar.
 - In order to register users will be asked to fill in a form containing their username, email address and password.  
+- The email address is on the form but it is not required in order to register. If a user prefers they can sign up using a username and password.
 - Once registered, the user will be able to log in and leave comments and likes on recipes.
 
-### As a user I want to receive confirmation that I have registered successfully, so that I know the registration is complete and I can now log into the site
+### As a user I want to receive confirmation that I have registered/ signed in successfully, so that I know the registration is complete and I can now access the site
 
 - Once a user has registered they will receive a message to advise that they have registered successfully.
-- This message will appear on screen and give immediate feedback to the user and will prompt them to log in.
+- This message will appear on screen and give immediate feedback to the user.
 
 ### As a registered user I want to receive confirmation that I have logged in successfully, so I know I will be able to leave comments
 
-- When a user logs into the site, a message will display advising that they have logged in successfully.
+- When a user logs into the site, a message will display advising them that they have logged in successfully.
 - This message will disappear automatically after serveral seconds.
 
 ### As a registered user I want to receive confirmation that I have logged out successfully, so that I know that I can leave the site securely
 
-- When a user logs out of the site, a message will display advising that they have logged out successfully.
+- When a user logs out of the site, a message will display advising them that they have logged out successfully.
 - This message will disappear automatically after serveral seconds.
 
 ### As a registered user I want to be able to log into my account easily, so that I can leave comments and likes
 
 - Registered users can login easily by clicking on the "Login" link in the navigtion bar.
 - On the Login page the user will be asked to enter their username and password and click the "Login" button.
-- When a user logs into the site, a message will display advising that they have logged in successfully.
+- When a user logs into the site, a message will display advising them that they have logged in successfully.
 - This message will disappear automatically after serveral seconds.
 - Once logged in the user will be able to leave comments and likes on recipes.
 
 ### As a registered user I want to be able to leave comments on recipes, so that other users can see my opinion on a recipe
 
 - Registered users can leave comments on recipes.
-- Once a comment is submitted it will sent for approvel.
+- Once a comment is submitted it will be sent for approval.
 - Registered users will receive a message advising that their comment has been sent for approval.
 - Once approved their comment will display on the website.
 - The comment will contain details of who has left the comment, the comment content as well as the date and time the comment was left.
@@ -122,16 +120,16 @@ For the assessor, I have included the admin login details in the comments sectio
 - Once a user likes a recipe, the total number of likes will increase.
 - Once a user unlikes a recipe, the total number of likes will decrease.
 
-### As a logged in user I want to edit previous comments I have made so that I can update/ add detail to my comment
+### As a logged in user I want to edit previous comments I have made so that I can update / add detail to my comment
 
-- Logged in/ registered users can edit comments that they have made previously.
+- Logged in / registered users can edit comments that they have made previously.
 - When a user clicks the "Edit" Button on their comment, their previous comment will display giving them the chance to update it before saving.
 - The updated comment will then be displyed in the comments section instead of the original comment.
 - Users can only edit their own comments. They will not be able to edit comments left by other users.
 
 ### As a logged in user I want to delete previous comments I have made so that I can remove previous comments from a recipe
 
-- Logged in/ registered users can delete comments that they have made previously.
+- Logged in / registered users can delete comments that they have made previously.
 - The "Delete" button will display on a users comments when they are logged in.
 - They can only delete their own comments and not comments made by another user.
 - A pop up will be displayed when a user clicks on the delete button. This message will confirm if they want to delete the comment or cancel their request.
@@ -150,11 +148,11 @@ For the assessor, I have included the admin login details in the comments sectio
 
 ### As an admin I want to be able to create recipes, so that I can add and manage content for the website
 
-- Recipes/ website content can be created by the site admin and added to the website.
+- Recipes / website content can be created by the site admin and added to the website.
 
 ### As an admin I want to be able to create and save draft recipes, so that I can save my work and finish it later
 
-- Draft recipes can be creates and saved.
+- Draft recipes can be created and saved.
 - This allows the site admin to work on content for the website, save their changes and come back to it again later.
 
 ### As an admin I want to be able to update recipes, so that I can manage/ improve content for the website
@@ -204,10 +202,7 @@ I have created wireframes using Balsamiq for Desktop, Tablet and Phone
 - The Recipes Model contains the information about each recipe on the website.
 - The title field is the name of the recipe, and is unique.
 - It contains a one-to-many relationship with the Comment Model.
-- The title field is the foreign key for this relationship.
-It contains a many-to-one relationship with the Category Model.
-- The category field is the foreign key for this relationship.
-- It contains a many-to-many key for Likes.
+- The title field is the primary key for the recipe model.
 
 ### Comments
 
@@ -215,11 +210,6 @@ It contains a many-to-one relationship with the Category Model.
 - It contains a many-to-one relationship with the Recipe Model.
 - The id field is the primary key for this relationship.
 
-### Category
-
-- The Category model contains an id and category_name fields.
-- It contains a one-to-many relationship with the Recipe Model.
-- The id field is the primary key for this relationship.
 
 ## Database Schema
 
@@ -232,14 +222,13 @@ My database schema was created using Lucid Chart and is displayed in the below d
 
 **Wireframes:** These were created for mobile, tablet and desktop screens in order to create a consistent design across all pages of the website, taking into account the user experience on different devices. 
 
-**Typography:** Two different fonts were used across the website. These were taken from google fonts. 'Montserrat' has been used for all the headings and buttons and 'Poppins' has been used for the majority of the website content. The font weight used is 400, with a font weight of 600 used in certain areas where text needs to stand out more such as for subheadings.
+**Typography:** Two different fonts were used across the website. These were taken from Google Fonts. 'Montserrat' has been used for all the headings and buttons and 'Poppins' has been used for the majority of the website content. The font weight used is 400, with a font weight of 600 used in certain areas where text needs to stand out more such as for sub-headings.
 
-**Color:** The color scheme is simple and clean, using only 3 main colours. The colours used are a beige color for the background (#f7f1e9), a purple color for the navbar, headings and buttons (rgb(114,63,95)) and a mustard yellow color used mainly in the hover state (gb(255,203,112)). The purple color is also used with a different opacity rgba(114,63,95,0.1) in the comments section of the recipes page for contract. the colors used contrast with one another and text is easy to read. The same colors are used across all pages of the website in order to create a positive response for the user. The Logo has been sytled in the same colors also.
+**Color:** The color scheme is simple and clean, using only 3 main colours. The colours used are a beige color for the background, a purple color for the navbar, headings and buttons and a mustard yellow color used mainly in the hover state. The purple color is also used with a different opacity in the comments section in the full-recipe to add contrast. The colors used compliment one another and also provide contrast. Text on the website is clearly visible and easy to read. The same colors are used across all pages of the website in order to create a positive user experience. The Logo has been styled in the same colors as the main web pages.
 
-**Images:** Images are used for each recipe on the website. This is to evoke an emotional response in the user and to grab their interest and to intice them into finding out more. The Hero Image also contains animation as well as the images on the individual recipes. The images used were downloaded from Pexels. 
+**Images:** Images are used for each recipe on the website. This is to evoke an emotional response in the user, to grab their atttention and encourage them to find out more. The Hero Image contains animation as do the recipe images on the full-recipe.
 
-Icons: Icons have been used as part of the design for this website for a few key items. This is another way to facilitate the user to help them navigate the page effectively and to easily find the required information. Icons are used for the cooking time (clock icon), the number of people served by a recipe(people icon), the number of likes (heart icon) and comments. The ions used in the Easy Eats website comes from fontawesome.
-
+**Icons:** Icons have been used as part of the design for this website for a few key items. This is another way to facilitate the user to help them navigate the pages of the website effectively and to easily find the required information. Icons are used for the cooking time (clock icon), the number of people served by a recipe (people icon), the number of likes a recipe has received (heart icon) and for comments (speech bubble icon). 
 
 
 ## Existing features
@@ -1089,67 +1078,76 @@ I removed the unnecessary navigation role and the stray div and ran the code thr
 ### Technologies Used
 
 ## HTML
-- HTML was used to create the content and case for the website
+- HTML was used as a markup language to build the structure of the web pages.
 
 ## CSS
-- CSS was used create styling for the website
+- CSS was used to apply styling to the elements of the website.
 
 ## JavaScript
-- JavaScript was used to allow a user to scroll in the comment section by using 'scrollIntoView'
-- JavaScript is also used for the messages to ensure they automatically disappear after 3 seconds
+- JavaScript is used on the site to provide additional interactivity to the user. Examples include:
+  - 'scrollIntoView': When a user clicks on the number of comments in the full-recipe header section, the page scrolls down to the comments section.
+  - User notification messages: Notification messages are hidden after a specified time, 3 seconds, to allow the user to continue using the website.
 
 ## Python
-- Python was used
-- Django and Django extensions used
-
+- Python is used for the backend-driven functionality of the website.
+  
 ## Django
-- This recipes website has been created using Django 
-
+- Django is a Python Framework that I have used for building the admin section of the website and for interaction between the backend and frontend.
+  
 ## Django Allauth
-Django allauth was used to create the forms for the website. It was used for the login, logout and register forms
+- Django's allauth extension was used to provide authentication functionality on the website.
+  - It was used to create the authentication forms for the website, including the login, logout and register forms.
 
 ## Django Crispy Forms
+- Crispy Forms is used to provide the input forms for the comment section within the full-recipe page.
 
 ## Heroku
-- This project has been deployed using Heroku
-
+- This project has been deployed using Heroku, which is a SAAS hosting service.
 
 ## Gunicorn
-
-## Google Fonts
-
-## Font Awesome
-
-## Bootstrap 
-
-## LucidChart
-
-## Balsamiq
-
-## Git
-- Git was used as a version control in the terminal
-- 
-## Github
-
-## Github was used to store the project repository
-
-## CodeAnywhere
- - 
-
-## Pexels
-
-- The images used in this website can were found on Pexels
-
-## Looka 
-
-- Looka was used to create the Easy Eats Logo located in the Navbar
+- Gunicorn was used to faciitate deploying the application to Heroku.
 
 ## Cloudinary
-
- - Cloudinary was used to store the images for the Easy Eats website
+  Cloudinary was used to store the images for the Easy Eats website.
 
 ## ElephantSQL
+- ElephantSQL was used as a postgres database hosting service.
 
+## Summernote
+- Summernote is a WYSIWYG used in the backend admin section for inputting content.
+
+## Git
+- Git was used for version control.
+  
+## Github
+- Github was used to store the project repository and manage user stories in Github projects.
+
+## CodeAnywhere
+-  CodeAnywhere is a cloud based development environment. The Code Institute template was used as a base for this project.
+
+## Pexels
+- The images used in this website can were found on Pexels.
+
+## Looka
+- Looka was used to create the Easy Eats Logo located in the Navbar.
+
+## Bootstrap 
+- Bootstrap is a CSS Framework that was used for the grid layout to structure pages and general styling of the website.
+
+# Google Fonts
+- The fonts on the website are from the Google Fonts library.
+
+## Font Awesome
+- Font Awesome is an icons library that was used for displaying icons throughout the website.
+  
+## Favicon.ie
+- Favicon.io was used to generate a favicon for the website from a png image.
+
+## LucidChart
+- LucidChart was used to create a visual representation of the Database Schema.
+  
+## Balsamiq
+- Balsamiq was used to create wireframes for the website.
 
 ### Credits
 
