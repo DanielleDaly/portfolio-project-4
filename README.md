@@ -431,10 +431,6 @@ When a user clicks on the toggle the options are displayed below, towards the ri
 
 
  ## Recipes Page
-
-#### Image of Recipes page
-  
- ![Image of Recipes page](readme-images/screenshot-recipes-page.png)
  
 - The Recipes Page can be accesed via the Recipes link on the Navigation Bar. 
 - It can also be accessed by clicking on the "All Recipes" button on the homepage. 
@@ -532,7 +528,7 @@ When a user clicks on the toggle the options are displayed below, towards the ri
 - To Login a user is asked to enter their username and password. 
 - They can also select the 'Remember Me' tick box to allow them to sign in more easily next time they visit the site. 
 - After the user clicks on the 'Sign In' button, a message will display to tell the user that they have loggeed in successfully. 
-- 
+  
 #### Image of Login Successfully Message
 
 ![Image of Login Successfully Message](readme-images/screenshot-logged-in-successfully.png)
@@ -550,7 +546,6 @@ When a user clicks on the toggle the options are displayed below, towards the ri
 
 ![Image Don't have an account message](readme-images/screenshot-no-account-message.png)
 
-
 ## Footer
 
 #### Image of Footer
@@ -566,168 +561,192 @@ When a user clicks on the toggle the options are displayed below, towards the ri
 - The footer itself is a dark grey color which is contrasta well against the white text and icons. 
 - The color of the footer also creates a contrast with the colors used in the main page which makes the footer more obvious.
 
-### The Admin Section
+## The Admin Section
 
-The Admin Section for Easy Eats was created using Django.
+- The Admin Section for Easy Eats was created using Django.
+- On the main site administration page you can see the following sections on the left: 
+    - Accounts: Here you can view the email addresses entered by users and their usernames
+    - Authentication and Authorization
+    - Django Summernote
+    - Recipes: containing recipes and comments
+    - Sites 
+    - Social Accounts
+  
 
-On the main site administration page you can see the following sections on the left: 
-Accounts - where you can view the email addresses entered by users and their usernames.
-Authentication and Authorization
-Django Summernote
-Recipes - which contains recipes and comments
-Sites 
-Social Accounts
+## The Recipe Administration
 
-You can also see a list of recent activity. 
+- The Recipe Section contains details of the recipes that have been added to the website and the comments on each recipe. 
 
-### The Recipe Administration
-
-The Recipe Section contains details on the recipes posted to the website and the comments made on each recipe. 
+### Image of Django Administration Home
 
 ![Image of Django Administration Home](readme-images/screenshot-admin-home.png)
 
-Recipe
-Recipes can be added to the website in the recipe administration section.
+### Recipe
 
+- Recipes can be added to the website in the recipe administration section.
+
+#### Image of Django Administration Recipe
 
 ![Image of Django Administration Recipe](readme-images/screenshot-admin-recipe.png)
 
-All current recipes are displayed under title, slug, created on, status. 
-There is a search bar that can be used to search recipes.
-On the right a filter table is displayed. You can filter by status or created on dates
+- All current recipes are displayed with the following information: title, slug, created_on and status. 
+- There is a search bar that can be used to search recipes.
+- On the right a filter table is displayed. You can filter by status or created_on dates.
 
+### Image of Django Administration Recipe Add & Edit
 
 ![Image of Django Administration Recipe Add & Edit](readme-images/screenshot-admin-recipe-add-edit.png)
 
 
-Adding/ editing a recipe
-By clicking on Add Recipe you can add the recipe details that you would like to appear on the website. These are displayed under different sections. The sections are: title, slug, description, image, cooking time, serves, methos, short description, likes and status. 
+### Adding / Editing a recipe
 
-Recipes can be deleted by clicking on the recipe toggle and selecting the delete option
+- By clicking on 'Add Recipe' you can add the recipe content that you would like to appear on the website. - - These are displayed under different sections. 
+- The sections are: title, slug, description, image, cooking time, serves, method, short description, likes and status. 
+- Recipes can be deleted by clicking on the recipe toggle and selecting the delete option.
+
+#### Image of Django Administration Delete Recipes
 
 ![Image of Django Administration Delete Recipes](readme-images/screenshot-admin-delete-recipe.png)
 
-
-the slug is autimatically generated from the title
-
-the ingredients and method sections use django summernote to create a wysiwyg
-
-Status can be published or draft
-
-By clicking save the recipe is added to the website
-
-save and add another
-
-save and continue editing
-
-delete button
-
-recipes can also be edited in this area and once saved the changes are save to the website.
+- The slug is automatically generated from the title.
+- The ingredients and method sections use django summernote to create a WYSIWYG for editing.
+- The status can be published or draft.
+- By clicking 'save' the recipe is added to the website.
+- Recipes can also be edited in this area and once saved the changes are save to the website.
 
 
-Comments
-Comments can be managed in the administration section.
+### Comments
+
+- Comments can be managed in the administration section.
+
+#### Image of Django Administration Comments
 
 ![Image of Django Administration Comments](readme-images/screenshot-admin-comments.png)
 
-All current comments are displayed under recipe, name, body, created_on, approved
+- All current comments are displayed with the following informationb: recipe, name, body, created_on and approved.
+- There is a search bar that can be used to search comments.
+- On the right a filter table is displayed. 
+- You can filter by approved comments or created_on dates.
 
-There is a search bar that can be used to search comments
-On the right a filter table is displayed. You can filter by approved comments or created on dates
+#### Image of Django Administration Comments Filter
 
 ![Image of Django Administration Comments Filter](readme-images/screenshot-admin-comments-filter.png)
 
 
-Comments can be deleted by clicking on the comment toggle and selecting the delete option
-A site admin can delete any/ all comments
-Commants must be approved by a site admin before they are displayed on the website
+- Comments can be deleted by clicking on the comment toggle and selecting the delete option
+- A site admin can delete any / all comments made by users.
+- Comments must be approved by a site admin before they are displayed on the website.
+
+#### Image of Django Administration Delete Comments
 
 ![Image of Django Administration Delete Comments](readme-images/screenshot-admin-delete-comment.png)
 
 
-### Future Features
+## Future Features
 
 Features I would like to include on this site in future include:
 
-- I would like to add a search bar to this recipe website to make it easier for the user to find what they are looking for in a faster and easier way. Users could search by ingredients, cooking time, meal type etc and the website would return suitable suggestions.
+- I would like to add a search bar to this recipe website to make it easier for the user to find what they are looking for. Users could search by ingredients, cooking time, meal type etc and the website would return suitable suggestions.
   
 - I would also like to add a Categories section to this website. Each recipe could have one or more categories which could include meal types such as breakfast, lunch and dinner. They could also include recipes for specific dietery requirements such as vegan, vegetarian or gluten free. 
 
-- I would like to add more functionality for the registered users so that they could save all the recipes they like on their own account. I would also like users to be able to sign-up for a weekly/ monthly newsletter.
+- I would like to add more functionality for the registered users so that they could save all the recipes they like on their own account. I would also like users to be able to sign-up for a weekly / monthly newsletter.
    
-- I would like to develop the application so that the user can click on a recipe/ recipes they like and it generates a shopping list that can be saved to their account.
+- I would like to develop the application so that the user can click on a recipe / recipes they like and it generates a shopping list that can be saved to their account.
 
-### Testing
-All functionality of the website was tested to ensure it all worked correctly
+## Testing
+
+- All functionality of the website was tested to ensure it was working correctly.
 
 
-#### Forms
+## Testing Forms
 
-#### Testing blank forms
+### Testing Blank Forms
 
-I have tested all forms on the site to see if they display validation error if they have been left blank when the field is required. 
+- I have tested all forms on the site to see if they display a validation error if they have been left blank when the field is required. 
 
 ### Sign Up / Register Form
 
-For the sign up/ register form the following fields are required: Username, Password and Password (again). The email address is optional and not required. 
+- For the sign up / register form the following fields are required: Username, Password and Password (again). - The email address is optional and not required. 
+- I tested by this by leaving the entire form blank. I confirmed that I was unable to submit the form and the message "Please fill in this field" was displayed.
+- I also tested the Sign up / Register Form by entering a username but leaving the password and repeat password fields blank. I confirmed that I was unable to submit the form and the message "Please fill in this field" was displayed.
+- I tested by entering a username and a password but leaving the repeat password field blank. I confirmed that I was unable to submit the form. The message "Please fill in this field" was displayed;
 
-I tested by leaving the entire form blank. I was unable to submit the form and the message displayed for the username "Please fill in this field"
-
-I tested by entering a username and leaving the password and repeat password fields blank. I was unable to submit the form and the message displayed for the password "Please fill in this field"
-
-I tested by entering a username and a password but leaving the repeat password field blank. I was unable to submit the form and the message displayed for the  repeat password "Please fill in this field"
-
+#### Image of Blank Username Sign Up Form
 ![Image of Blank Username Sign Up Form](readme-images/screenshot-blank-username-register.png)
 
+#### Image of Blank Password Sign Up Form
 ![Image of Blank Password Sign Up Form](readme-images/screenshot-blank-password-register.png)
 
-For the Login Form both the Username and Password are required.
+- For the Login Form both the Username and Password fields are required.
+- I carried out testing by leaving the entire form blank.
+- I confirmed that I was unable to submit the form.
+- The message "Please fill in this field" was displayed.
+- I tested by entering a username and leaving the password field blank. 
+- I was unable to submit the form and the message "Please fill in this field" was displayed.
 
-I tested by leaving the entire form blank. I was unable to submit the form and the message displayed for the username "Please fill in this field"
-
-I tested by entering a username and leaving the password field blank. I was unable to submit the form and the message displayed for the password "Please fill in this field"
+#### Image of Blank Username Login Form
 
 ![Image of Blank Username Login Form](readme-images/screenshot-blank-username-login.png)
+
+#### Image of Blank Password Login Form
+
 ![Image of Blank Password Login Form](readme-images/screenshot-blank-password-login.png)
 
-For the comment form, the body of the comment is required. I was unable to submit the comment and the message displayed "Please fill in this field"
+### Comment and Edit Forms
+
+- For the comment form, the body of the comment is required. 
+- I was unable to submit the comment and the message "Please fill in this field" was displayed.
+
+#### Image of Blank Comment Form
 
 ![Image of Blank Comment Form](readme-images/screenshot-blank-comment-form.png)
 
-For the edit comment form, the body of the comment is required. When editing the content of the comment cannot be complete;y removed and left blank. After I removed the comment and clicked on the update button,  I was unable to submit the updated comment and the message displayed "Please fill in this field"
+- For the edit comment form, the body of the comment is required. 
+- When editing, the body of the comment cannot be completely removed and left blank. 
+- After I removed the comment and clicked on the update button, I was unable to submit the updated comment. - - The message "Please fill in this field" was displayed.
+- I tested if I could resubmit the same comment twice by clicking 'Update' with the previous comment unchanged. 
+- It returned me to the main edit comment section. 
 
-I tested if I could resubmit the same comment twice but clicking on update with the previous comment. It returned me to the main edit comment section. 
+#### Image of Blank Edit Comment Form
 
 ![Image of Blank Edit Comment Form](readme-images/screenshot-blank-edit-comment-form.png)
 
-Testing Forms - Incorrect Input
+### Testing Forms - Incorrect Input
 
-I checked the login and register forms to see if error messages are displayed to the user when entering the incorect inputs. 
+- I checked the login and register forms to see if the validation messages are displayed to the user when entering the incorect inputs. 
 
-Login 
-I tested the login by entering the incorrect password with the correct username. I was unable to login and the message displated was " The username/ and or password you specified are not correct?
+### Login 
 
-I tested the login by entering the incorrect name with the correct password. I was unable to login and the message displated was " The username/ and or password you specified are not correct?
+- I tested the login by entering the incorrect password with the correct username. 
+- I was unable to login and the message "The username / and or password you specified are not correct?" was displayed.
+- I tested the login by entering the incorrect name with the correct password. 
+- I was unable to login and the message "The username / and or password you specified are not correct?" was displayed.
+
+#### Image of Blank Edit Comment Form
 
 ![Image of Blank Edit Comment Form](readme-images/screenshot-login-incorrect-details.png)
 
-Register
+### Register
 
-I tested the sign up / register for validation errors by entering in invalid inputs into the registration fields. 
-
-Validation errors were returned when a user chooses a password that is similar to their username."The password is too similar to the username"
-
-I tried entering a password that was too short. Validation error was returned to the user to advised that a min of 8 characters are required "This password is too short. It must contain at least 8 characters.
+- I tested the sign up / register forms for validation errors by entering invalid inputs in the registration fields. 
+- Validation errors are returned when a user chooses a password that is similar to their username. The message "The password is too similar to the username" is displayed.
+- I tried entering a password that was too short. 
+- A validation error was returned to the user to advise that a minimum of 8 characters are required .
+- The message "This password is too short. It must contain at least 8 characters." was displayed.
+  
+### Image of Blank Edit Comment Form
 
 ![Image of Blank Edit Comment Form](readme-images/screenshot-register-invalid-input.png)
 
-Testing CRUD functionality 
+## Testing CRUD functionality 
 
 ### Comments Section - CRUD
 
-The main area of this site where all elements of **CRUD** are displayed is in the comments section. The comments section allows users to interact with the website from the user interface without having to access the admin section to create, read, update or delete their comments.
+- The main area of this site where all elements of **CRUD** are displayed is in the comments section. 
+- The comments section allows users to interact with the website from the user interface without having to access the admin section to create, read, update or delete their comments.
 
-#### Create
+### Create
 
 - Logged in users can add a comment to a recipe but users that are not logged in or who haven't registered for the site are unable to leave a comment. 
   
@@ -750,7 +769,7 @@ The main area of this site where all elements of **CRUD** are displayed is in th
 ![Image of Comment in Comment Box](readme-images/screenshot-test-comment-box.png)
 
 
-- I tested if the submit button for the comment worked and confirmed it did. 
+- I tested if the submit button for the comment worked and confirmed that it did. 
   
 - I tested if a message would display to advise the user that their comment was awaiting approval and confirmed a message displayed.
 
@@ -758,19 +777,19 @@ The main area of this site where all elements of **CRUD** are displayed is in th
 
 ![Image of Comment Awaiting Approval Message](readme-images/screenshot-test-comment-approval.png)
 
-- I logged in as an admin user to approve the test comment. I tested if the comment and confirmed it could be approved. 
+- I logged in as an admin user to approve the test comment. I tested if the comment was awaiting approval and confirmed it could be approved. 
 
-#### Image of Test -Comment Approved in Admin Section:
+#### Image of Test - Comment Approved in Admin Section:
 
 ![Image of Comment Approved in Admin Section](readme-images/screenshot-test-comment-approved-admin.png)
 
-#### Read
+### Read
 
 - I tested if the approved comment was displayed on the Recipe page with comments from other users and confirmed it was displayed.
 
 - I tested if the username was displayed on the published comment and confirmed it was.
 
-- I tested if the time and date was displayed correctly in the approved test comment and confirmed it was.
+- I tested if the time and date was displaying correctly in the approved test comment and confirmed it was.
 
 - I tested if the comments were displaying in the correct order based on their created-on dates. These should display with the newest comment first and older comments below in descending order. I confirmed they were displaying in the correct order. 
 
@@ -782,31 +801,31 @@ The main area of this site where all elements of **CRUD** are displayed is in th
 
 - I tested if the number of comments displayed increased after my test comment was made and confirmed that they increased by 1.
 
-#### Update
+### Update
 
-I tested if the Edit Comment button was displayed on my comment and confirmed that it was.
-
-I tested if the Edit Comment was displayed on comments made by other users and confirmed that it was not. Comments can only be updated by the user who has created them.
+- I tested if the Edit Comment button was displayed on my comment and confirmed that it was.
+- I tested if the Edit Comment was displayed on comments made by other users and confirmed that it was not.
+- Comments can only be updated by the user who has created them.
 
 #### Image of Edit Comment Button:
 
 ![Image of Edit Comment Button](readme-images/screenshot-edit-delete-comment-button.png)
 
 - I tested if the number of comments on the recipe increased after my test comment was made and confirmed that it increased by 1.
-
-- I tested that I could update my comments by clicking on the edit button. I confirmed that the edit button pulled in the content of the comment I would like to edit and allowed me to update the details of the comment.
-
+- I tested that I could update my comments by clicking on the edit button. 
+- I confirmed that the edit button pulled in the content of the comment I would like to edit and allowed me to update the details of the comment.
 - I tested if my updated comment displayed correctly and the previous comment was no longer visible and confirmed that the updated comment had replaced the previous comment.
   
 #### Image of Updated Comment:
 
 ![Image of Updated Comment](readme-images/screenshot-updated-comment.png)
 
-#### Delete
+### Delete
 
 - I tested if the Delete Comment button was displayed on my comment and confirmed that it was.
 
-- I tested if the Delete Comment was displayed on comments made by other users and confirmed that it was not. Comments can only be deleted by the user who has created them.
+- I tested if the Delete Comment was displayed on comments made by other users and confirmed that it was not.
+- Comments can only be deleted by the user who has created them.
 
 #### Image of Delete Comment Button:
 
@@ -814,13 +833,14 @@ I tested if the Edit Comment was displayed on comments made by other users and c
   
 - I tested if I could delete my comment and confirmed that my comment was deleted.
 
-- I tested id my deleted comment had been removed from the comments section and confirmed it was no longer visible. 
+- I tested if my deleted comment had been removed from the comments section and confirmed it was no longer visible. 
 
 #### Image of Deleted Comment:
 
 ![Image of Deleted Comment](readme-images/screenshot-deleted-comment.png)
 
-- I tested if a pop up would be displayed asking the user to confirm if they wanted to delete their comment. Whentested a message displayed asking "Are you sure you want to delete this comment". Below there was a button to delete or cancel. The cancel button brings the user back to the comments section on the recipe page.
+- I tested if a pop up would be displayed asking the user to confirm if they wanted to delete their comment. - When tested a message displayed asking "Are you sure you want to delete this comment". Below there was a button to delete or cancel. 
+- The cancel button brings the user back to the comments section on the recipe page.
 
 #### Image of Delete Comment Message:
 
@@ -829,106 +849,106 @@ I tested if the Edit Comment was displayed on comments made by other users and c
 
 ### Likes
 
-- I tested that the like this comment option was displayed on the recipe page. 
-- I tested that the icon for likes is displayed as a heart outline
-- I tested if i coul like a recipe
-- I tested if after liking a recipe there the icon changed on the recipe website
-- I tested that after linking the total number of likes increased on the recipe cards. 
-- I tested that I could unlike a recipe. 
-- I tested that adter unliking a recipe the like heart icon changed
-- I tested that after unliking a recipe the total number of likes on the recipe card decreased
+- I tested and confirmed that that the 'Like this comment' option was displayed on the recipe page.
+- I tested and confirmed that that the icon for 'likes' is displayed as a heart outline.
+- I tested and confirmed that if I could like a recipe as a logged in user.
+- I tested and confirmed that if I have already 'liked' a particular recipe, the heart icon changes to a solid heart.
+- I tested and confirmed that that after 'liking' a recipe, the total number of 'likes' displayed increased.
+- I tested and confirmed that that I could 'unlike' a recipe. 
+- I tested and confirmed that that adter 'unliking' a recipe, the like heart icon changes back to an outline.
+- I tested and confirmed that that after 'unliking' a recipe the total number of likes displayed decreased.
 
 ### Messages
 
-- I tested that a messgae displayed to the user when they logged in
-- I tested that a message displayed to the user when logged out
-- I tested that a message displayed to the user when their comment was awaiting approval. 
-- I tested that the user was able to dismiss these messages themselves
-- I tested that the message dissappeared by itself within the 3 seconds time frame
+- I tested that a messgae was displayed to the user when they have logged in.
+- I tested that a message was displayed to the user when they have logged out.
+- I tested that a message was displayed to the user when their comment was awaiting approval. 
+- I tested that the user was able to dismiss these messages themselves.
+- I tested that the message dissappeared by itself within the 3 second time frame.
 
 ### Admin Section
 
-- I tested that i could log into the admin section as a supeuser
-- I tested that all the required fields from my model displayed when adding a recipe
-- I tested that the wysiwyg from django displayed in the ingredients and methods section
-- I tested the functionality of the wysiwyg
-- I tested that i could set my recipe to publish and it would be added to the website when saved
-- I tested that i could save a draft recipe
-- I tested that I could return to the draft recipe later and continue working on it
-- I tested that I could delete a recipe
-- I tested that i could update a recipe that i had already published
-- I tested that the comment fields displayed as per the comments model
-- I tested that I could view if a comment is awaiting approval 
-- I tested that i could approve comments
-- I tested that I could delete comments as an admin
-- I tested that comments deleted as an admin were not published on the website
+- I tested that I could log into the admin section as a supeuser.
+- I tested that all the required fields from my model were displaying when adding a recipe.
+- I tested that the WYSIWYG from django was displaying in the ingredients and methods section.
+- I tested the functionality of the WYSIWYG.
+- I tested that I could set my recipe to 'published' and it would be added to the website when saved.
+- I tested that I could save a draft recipe.
+- I tested that I could return to the draft recipe later and continue working on it.
+- I tested if I could delete a recipe.
+- I tested if I could update a recipe that I had already published.
+- I tested if the comment fields displayed correctly as per the comments model.
+- I tested if I could see if a comment was awaiting approval.
+- I tested if I could approve comments.
+- I testedif I could delete comments as an admin.
+- I tested that comments deleted as an admin were not published on the website.
 
 ### Navbar
 
-- I tested that the logo link on the homepage was working correctly
-- I tested that the recipes link on the b=navbar was working correctly
-- I tested that the register link on the navbar was working
-- I tested that the login link on the navbar
-- I tested that when logged in the login and register links are no longer displayed on hte navbar
-- I tested that when logged in the logout link was displayed on the navbar
-- I tested that the logout link worked correctly
-- I tested that the hover state for each link on the navbar worked correclty
+- I tested that the logo link on the homepage was working correctly.
+- I tested that the recipes link on the navbar was working correctly.
+- I tested that the register link on the navbar was working correctly.
+- I tested that the login link on the navbar was working correctly.
+- I tested that when logged in, the login and register links are no longer displayed on the navbar
+- I tested that when logged in, the logout link was displayed on the navbar.
+- I tested that the logout link worked correctly.
+- I tested that the hover state for each link on the navbar worked correctly.
 
 ### Footer
 
-- I tested that the text displayed correctly on the footer
-- I tested that all social media links were displayed on the navbar
-- I tested that all the social media links on the footer link to the correct website
-- I tested that the hover state on the social media links was working correclty
+- I tested that the text was displaying correctly on the footer.
+- I tested that all social media links were displayed on the footer.
+- I tested that all the social media links on the footer link to the correct websites.
+- I tested that the hover state on the social media links was working correclty.
 
 ### Homepage
 
-#### Recipe Cards:
+### Recipes:
 
-- I confirmed that all the detail added for the recipe cards in the admin section was displayed on the recipe cards on the homepage
-- I confirmed that the recipe cards contained the following information: recipe image, recipe title, cooking time, number of people served, date and time recipe was added, number of likes, a short description and the view link app
-- I confirmed the icons for the cooking time, likes and people served were displaying correctly
-- I confirmed the links to the full recipe detail were working correctly on the recipe cards,
-- I tested the link on the recipe image and confirmed that it was working correctly
-- I tested the linnk in the recipe title and confirmed that it was working correctly
-- I tested the view recipe link and confirmed that irt was working correctly.
+- I confirmed that all the detail for the recipes was displaying on the homepage.
+- I confirmed that the recipe cards contained the following information: recipe image, recipe title, cooking time, number of people served, date and time the recipe was added, number of likes, a short description and the 'view more' link to the recipe.
+- I confirmed that the icons for the cooking time, 'likes' and people served were displaying correctly.
+- I confirmed the links to the full-recipe detail were working correctly.
+- I tested the link on the recipe image and confirmed that it was working correctly.
+- I tested the link in the recipe title and confirmed that it was working correctly.
+- I tested the view recipe link and confirmed that it was working correctly.
 
-#### All Recipes Button
+### All Recipes Button
 
-- I tested the link in the all recipes button ad confirmed that it brought me to the recipes page
+- I tested the link in the all recipes button ad confirmed that it brought me to the recipes page.
 
 ### Recipes Page
 
 - I confirmed that the pagination was working correctly. Pagination is set to 6 recipe cards per page and 6 recipes cards were displaying.
-- At the botttom of the page a next button brought me to the next page of 6 recipes when clicked.
-- On the final page of recipes i confirmed that the next button was replaced with the prev (previous button). - I tested this by clicking on it and confirmed that it brought me to the previous page of recipes
+- At the botttom of the page a 'NEXT' button brought me to the next page of 6 recipes when clicked.
+- On the final page of recipes I confirmed that the 'NEXT' button was replaced with the 'PREV' (previous button).I tested this by clicking on it and confirmed that it brought me to the previous page of recipes.
 
 ### Login
 
-- I tested the login form and confirmed that it allowed me to log in
-- I tested that a user was unable to log in if the username and/ or password details were entered incorrectly
-- I confirmed a user could not log in by submitting a blank form
-- I confirmed that the login form requested a users username and password before allowing them to login
+- I tested the login form and confirmed that it allowed me to log in.
+- I tested that a user was unable to log in if their username and / or password details were entered incorrectly.
+- I confirmed a user could not log in by submitting a blank form.
+- I confirmed that the login form requested a username and password before a user could login.
 - I tested that validation errors were working correctly if a user entered incorrect details or blank inputs into the required fields.
-- I confirmed that … message on ligin page
-- I confirmed that a message displayed when the user had logged in to tell them that they had logged in successfully.
-- I confirmed that once a user has logged in successfully that they were redirected back to the homepage
+- I confirmed that the "Don't have an account? Register now!: message on login page was displayed on the page.
+- I confirmed that a login message was displayed when the user logged in to tell them they had logged in successfully.
+- I confirmed that once a user had logged in successfully that they were redirected back to the homepage.
 
 ### Logout
 
-- I confirmed that a user was able to log out easily
-- I confirmed that …logout message
-- I confirmed that once a user has logged out they are redirected back to the home page
+- I confirmed that the user was able to log out easily.
+- I confirmed that once a user has logged out a message displays to confirm they have logged out.
+- I confirmed that once a user has logged out they are redirected back to the home page.
 
 ### Register/ Sign up
 
-- I confirmed that the correct details were displaying on the register form
-- I confirmed that the following fields were displaying on the register/ sign up form: username, email address, password, password again
-- I confirmed that the user did not have to enter an email address to register
-- I confirmed that the username and password fields were required in order for a user to register
-- I confirmed that validation errors displayed correctly when users entered blank fields or incorrect inpouts
-- I confirmed that a user cannot enter a password that is less than 8 characters long
-- I confirmed that a user cannot enter a password that is the same as the username…?
+- I confirmed that the correct details were displaying on the register form.
+- I confirmed that the following fields were displaying on the register/ sign up form: username, email address, password, password again.
+- I confirmed that the user did not have to enter an email address to register.
+- I confirmed that the username and password fields were required in order for a user to register.
+- I confirmed that validation errors displayed correctly when users entered blank fields or incorrect inputs.
+- I confirmed that a user cannot enter a password that is less than 8 characters long.
+- I confirmed that a user cannot enter a password that is too similar to their username.
 - I confirmed that a user is redirected to the homepage once they have registered.
 
 ### Browsers
