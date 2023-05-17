@@ -122,6 +122,20 @@ For the assessor, I have included the admin login details in the comments sectio
 - Once a user likes a recipe, the total number of likes will increase.
 - Once a user unlikes a recipe, the total number of likes will decrease.
 
+### As a logged in user I want to edit previous comments I have made so that I can update/ add detail to my comment
+
+- Logged in/ registered users can edit comments that they have made previously.
+- When a user clicks the "Edit" Button on their comment, their previous comment will display giving them the chance to update it before saving.
+- The updated comment will then be displyed in the comments section instead of the original comment.
+- Users can only edit their own comments. They will not be able to edit comments left by other users.
+
+### As a logged in user I want to delete previous comments I have made so that I can remove previous comments from a recipe
+
+- Logged in/ registered users can delete comments that they have made previously.
+- The "Delete" button will display on a users comments when they are logged in.
+- They can only delete their own comments and not comments made by another user.
+- A pop up will be displayed when a user clicks on the delete button. This message will confirm if they want to delete the comment or cancel their request.
+
 ### As an admin I want to be able to approve comments before they appear on a recipe, so that I can remove any offensive content
 
 - Comments can be viewed by an admin before they are displayed on the website.
@@ -429,8 +443,6 @@ The styling, layout and color scheme used are the same as the homepage to give c
 
 ### Register Page
 
-
-
 Users can sign up for the website by registering on the Register Page. The Register Page is accessed via a link on the Navigation Bar. 
 
 Once a user clicks on the Register Page they will see a Sign Up Form. The Sign Up Form requests the user inputs the following details: username, email, password, password repeat. The email address is not required in order to register. Users can sign up using a username and password only of they wish. if they prefer they can sign up using an email address. 
@@ -572,6 +584,18 @@ Commants must be approved by a site admin before they are displayed on the websi
 
 ![Image of Django Administration Delete Comments](readme-images/screenshot-admin-delete-comment.png)
 
+
+### Future Features
+
+Features I would like to include on this site in future include:
+
+- I would like to add a search bar to this recipe website to make it easier for the user to find what they are looking for in a faster and easier way. Users could search by ingredients, cooking time, meal type etc and the website would return suitable suggestions.
+  
+- I would also like to add a Categories section to this website. Each recipe could have one or more categories which could include meal types such as breakfast, lunch and dinner. They could also include recipes for specific dietery requirements such as vegan, vegetarian or gluten free. 
+
+- I would like to add more functionality for the registered users so that they could save all the recipes they like on their own account. I would also like users to be able to sign-up for a weekly/ monthly newsletter.
+   
+- I would like to develop the application so that the user can click on a recipe/ recipes they like and it generates a shopping list that can be saved to their account.
 
 ### Testing
 All functionality of the website was tested to ensure it all worked correctly
