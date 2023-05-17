@@ -227,6 +227,21 @@ My database schema was created using Lucid Chart and is displayed in the below d
 
  ![Image of database schema](readme-images/screenshot-database-schema.png)
 
+
+## Design
+
+**Wireframes:** These were created for mobile, tablet and desktop screens in order to create a consistent design across all pages of the website, taking into account the user experience on different devices. 
+
+**Typography:** Two different fonts were used across the website. These were taken from google fonts. 'Montserrat' has been used for all the headings and buttons and 'Poppins' has been used for the majority of the website content. The font weight used is 400, with a font weight of 600 used in certain areas where text needs to stand out more such as for subheadings.
+
+**Color:** The color scheme is simple and clean, using only 3 main colours. The colours used are a beige color for the background (#f7f1e9), a purple color for the navbar, headings and buttons (rgb(114,63,95)) and a mustard yellow color used mainly in the hover state (gb(255,203,112)). The purple color is also used with a different opacity rgba(114,63,95,0.1) in the comments section of the recipes page for contract. the colors used contrast with one another and text is easy to read. The same colors are used across all pages of the website in order to create a positive response for the user. The Logo has been sytled in the same colors also.
+
+**Images:** Images are used for each recipe on the website. This is to evoke an emotional response in the user and to grab their interest and to intice them into finding out more. The Hero Image also contains animation as well as the images on the individual recipes. The images used were downloaded from Pexels. 
+
+Icons: Icons have been used as part of the design for this website for a few key items. This is another way to facilitate the user to help them navigate the page effectively and to easily find the required information. Icons are used for the cooking time (clock icon), the number of people served by a recipe(people icon), the number of likes (heart icon) and comments. The ions used in the Easy Eats website comes from fontawesome.
+
+
+
 ## Existing features
 
 ### The Navigation Bar
@@ -1070,3 +1085,83 @@ I removed the unnecessary navigation role and the stray div and ran the code thr
 - I went to the "Deploy" tab
 - I scrolled down and clicked on the "Deploy Branch" button
 - Once the message "Your app was successfully deployed" appears click on the "View" button to take you to the deployed link
+
+### Technologies Used
+
+## HTML
+- HTML was used to create the content and case for the website
+
+## CSS
+- CSS was used create styling for the website
+
+## JavaScript
+- JavaScript was used to allow a user to scroll in the comment section by using 'scrollIntoView'
+- JavaScript is also used for the messages to ensure they automatically disappear after 3 seconds
+
+## Python
+- Python was used
+- Django and Django extensions used
+
+## Django
+- This recipes website has been created using Django 
+
+## Django Allauth
+Django allauth was used to create the forms for the website. It was used for the login, logout and register forms
+
+## Django Crispy Forms
+
+## Heroku
+- This project has been deployed using Heroku
+
+
+## Gunicorn
+
+## Google Fonts
+
+## Font Awesome
+
+## Bootstrap 
+
+## LucidChart
+
+## Balsamiq
+
+## Git
+- Git was used as a version control in the terminal
+- 
+## Github
+
+## Github was used to store the project repository
+
+## CodeAnywhere
+ - 
+
+## Pexels
+
+- The images used in this website can were found on Pexels
+
+## Looka 
+
+- Looka was used to create the Easy Eats Logo located in the Navbar
+
+## Cloudinary
+
+ - Cloudinary was used to store the images for the Easy Eats website
+
+## ElephantSQL
+
+
+### Credits
+
+## Content
+
+- Inspiration taken from Code Institutes "Love Running" project for the Hero Image animation and text overlay 
+- Inspiration from Code Institutes "I think therefore I blog project"
+- The icons used on the website are from Font Awesome
+- The Easy Eats Logo located in the Navbar was created using the looka.com logo creator
+
+## Media
+
+- All images have been found on pexles.com
+
+
