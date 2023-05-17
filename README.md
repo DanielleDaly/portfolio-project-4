@@ -231,41 +231,30 @@ My database schema was created using Lucid Chart and is displayed in the below d
 **Icons:** Icons have been used as part of the design for this website for a few key items. This is another way to facilitate the user to help them navigate the pages of the website effectively and to easily find the required information. Icons are used for the cooking time (clock icon), the number of people served by a recipe (people icon), the number of likes a recipe has received (heart icon) and for comments (speech bubble icon). 
 
 
-## Existing features
+## Existing Features
 
 ### The Navigation Bar
+
+- When logged in the navigation bar will display the following pages: Home, Recipes & Logout
 
 #### Image of Desktop Navigation Bar - Logged In 
 
  ![Image of Desktop Navigation Bar - Logged In](readme-images/navbar-images/screenshot-navbar-logged-in-desktop.png)
 
-#### Image of Tablet Navigation Bar - Not Logged In 
-
- ![Image of Tablet Navigation Bar - Logged In](readme-images/navbar-images/screenshot-navbar-logged-in-tablet.png)
-
+- When not logged in the navigation bar will display: Home, Recipes, Register & Login
+- 
  #### Image of Desktop Navigation Bar - Not Logged In 
 
  ![Image of Desktop Navigation Bar - Logged In](readme-images/navbar-images/screenshot-navbar-not-logged-in-desktop.png)
 
-The Navigation Bar for this website consists of the the following:
 
-When logged in the navigation bar will display: Home, Recipes & Logout
+- The Recipes, Register and Login pages can be accessed from the right hand side of the navigation bar. A user can also find the Logout here. 
 
-When not logged in the navigation bar will display: Home, Recipes, Register & Login
+- The left hand side of the navigation bar contains the Easy Eats logo. It displays an image of a dinner plate and utensils, giving the user an indication as to what the website is about. The Logo contains a link to the Homepage. This can be accessed from any page on the website. It brings the user back to the homepage when clicked and allows them to easily navigate the site. The colors used in the logo match the colors used throughout the site which adds to the overall aesthetic of the website. 
 
-Login, Logout and Register sections were created using Django allauth.
+- The links on the navbar change color when the user hovers over them to indicate to the user which page they are selecting.
 
-There are located on the top right- hand side of the page and enables the user to easily navigate to their desired location on the website.
-
-Each section on the navbar changes color when the user hovers over it. The hover color used is consistent throughout for hover states used throughout the website.
-
-On the top-left hand side of the navigation bar, the website logo is displayed. This contains the name of the website Easy Eats and an icon of a plate and utensils. This indicates to the user what the site will be about. 
-
-The Easy Eats logo contains a link to the homepage which can be accessed from any page to bring hte user back to the homepage when clicked and allows them to easily navigate the site. 
-
-The colors of the logo match the colors used throughout the site. 
-
-The navigation bar is the same across all pages in order to provide ease of use and consistency to the user. It also uses a contrasting colour scheme which allows the user to quickly navigate through the website.
+- The navigation bar is the same across all pages in order to provide ease of use and consistency to the user. 
 
 ### The Navigation Bar - Tablet and Mobile View
 
@@ -278,6 +267,11 @@ When a user clicks on the toggle the options are displayed below, towards the ri
 
  ![Image of Tablet Navigation Bar - Logged In](readme-images/navbar-images/screenshot-navbar-logged-in-tablet.png)
 
+ #### Image of Tablet Navigation Bar - Not Logged In 
+
+ ![Image of Tablet Navigation Bar - Not Logged In](readme-images/navbar-images/screenshot-navbar-not-logged-in-tablet.png)
+ 
+
  #### Image of Mobile Navigation Bar - Logged In 
 
  ![Image of Mobile Navigation Bar - Logged In](readme-images/navbar-images/screenshot-navbar-logged-in-mobile.png)
@@ -288,13 +282,15 @@ When a user clicks on the toggle the options are displayed below, towards the ri
  ![Image of Mobile Navigation Bar - Not Logged In](readme-images/navbar-images/screenshot-navbar-not-logged-in-mobile.png)
  
  
-### Homepage 
+## Homepage 
 
-The Hero Section
+### The Hero Section
 
-The Hero Section on the homepage consists of the main image featured on the page with a text overlay which includes a description of what the user can expect to find on the website as well as the website name Easy Eats. 
+- The Hero Section on the homepage consists of the feature image with a text overlay. A description of what the user can expect to find on the website as well as the website name Easy Eats are included in this section. 
+ 
+- The Hero Image contains animation which begins when the page is loaded. It makes it appear as though the image is moving forward on the page,towards the user. 
 
-The Hero Image contains animation which makes it appear as though it's moving forward on the page. 
+- The text is displayed on an opague background so as not to impede the view of the main image.
 
 #### Image of the Hero Image
 
@@ -302,105 +298,110 @@ The Hero Image contains animation which makes it appear as though it's moving fo
 
 ### Latest Recipes
 
+- Below the Hero Image there is a selection of the most recent recipes on the website, with the newest recipe appearing first.
+
+- The recipes on this page contain a brief overview of the recipe designed to grab the users attention. 
+
 #### Image of Latest Recipes
 
  ![Image of the Latest Recipes](readme-images/screenshot-latest-recipes.png)
 
- Below the Hero Image are a selection of the Latest Recipes. These are ordered with the newest recipe appearing first.
+- Each recipe in this section contains an image of the recipe, the recipe title, a short description of the recipe, the cooking time, how many people this recipe serves, the date and time that the recipe was added and how many likes it has received. Details of the full-recipe can be accessed via three links. The recipe image, the recipe title and a 'view recipe' link will all connect users to the full-recipe details when clicked. The cooking time, number of people served and likes all contain an icon to allow the user to scan the recipe quickly for the information they require. 
 
- The recipes on this page contain a brief overview of the recipe designed to grab the users attention. 
-
- Each recipe in this section contains an image of the recipe,,the recipe title a short description of the recipe, the cooking time, how many peple this recipe serves and how many likes it has. Details of the full recipe can be accessed by 3 links on the recipe - the recipe image, the recipe title and a view recipe link at the bottom. All of which brings to user to a page where they can view the full recipe details. The cooking time, number of people served and likes all contain an icon to allow the user to scan the recipe quickly for the information they require. Each recipe also contains, the date and time that the recipe was uploaded.
-
- ### Full Recipe Page
+ ## Full-Recipe Page
+ 
+ - From any of the recipes on the homepage, located under the 'Latest Recipes' heading, users can access more information about any of the recipes by clicking on the links provided.
 
  #### Image of Full Recipe Page
 
  ![Image of Full Recipe Page](readme-images/screenshot-full-recipe-page.png)
- 
- From any of the recipes on the homepage, located under the Latest Recipes heading, users can access full detail about any of the recipes by clicking on the links provided.
 
- On each recipe these are located in the recipe image, the recipe title and the vew recipe link.
- 
- Once a user clcks on the link they are brought to a page that contains full details of the recipe that the user has clicked on. 
 
- #### Image of Full Recipe Page - Image and Description
+ - The full-recipe page is divided into three main sections:
+
+#### Image of Full-Recipe Page - Image and Description
 
  ![Image of Full Recipe Page Image and Description](readme-images/screenshot-full-recipe-page-image-description.png)
 
- The top section of the page contains an image representing the recipe on the left. This also contains animation. On the right contains some information about the recipe. The design and infomration provided mirrors the shorter version of hte recipe displayed on the homepage somewhat to achieve consistency in user experience. The details include the recipe heading, the cooking time with icon and numebr of people served with icon. Below is also a description as in the recipe listing on the homepage but this description has been expanded and contains more detail. This section also displays likes and comments.
+   - The top section of the page contains an image representing the recipe. This is located on the left and also contains some animation. On the right some information is displayed about the recipe. 
+   - The design and infomration provided mirrors the shorter version of the recipe displayed on the homepage. The aim of this is to achieve consistency in the user experience. 
+   - The details include the recipe heading, the cooking time, the number of people served.
+   - Beneath there is also a description as in the recipe listing on the homepage but this description has been expanded and contains more detail. 
+   - At the bottom of this section the likes and comments are displayed.
+ 
+ ### Recipe 'Likes'
 
- ### Like Recipe
-
-A logged in user can also like recipes. 
-
-If a user is logged in they will see an option called "Like this Recipe?". This is displayed by a heart outline. If a user clicks on the heart icon, it adds a like to the recipe. Once a user has liked a recipe the heart icon changes to display that the recipe has already been liked. A logged in user can also unlike a recipe by clicking on the heart icon again. Once the user unlikes a recipe, the heart icon reverts to a heart outline. 
+- A logged in user can like a recipe. 
+- If a user is logged in they will see an option called "Like this Recipe?". This is displayed by an icon of a heart outline. 
+- If a user clicks on the heart icon, it adds a like to the recipe and the total number of likes increases by one.
+- If a user unlikes a recipe, the total number of likes decreases by one.
+- Once a user has liked a recipe the heart icon changes to an icon of a solid heart to show that the recipe has been liked. 
+- A logged in user can also unlike a recipe by clicking on the heart icon again. Once the user unlikes a recipe, the heart icon reverts to a heart outline. 
 
  #### Image of Like Recipe
 
- ![Image of Like Recipe](readme-images/screenshot-like-recipe.png)
+ ![Image of Unlike Recipe](readme-images/screenshot-unlike-recipe.png)
 
   #### Image of Unlike Recipe
 
- ![Image of Unlike Recipe](readme-images/screenshot-unlike-recipe.png)
+ ![Image of like Recipe](readme-images/screenshot-like-recipe.png)
 
-If a user is not logged in they canot like or unlike a recipe. In this instance instead of displaying "Like this recipe?", the number of likes a recipe has received is displayed instead. 
+- If a user is not logged in they cannot like or unlike a recipe. In this instance instead of displaying "Like this recipe?", the number of likes a recipe has received is displayed instead. 
 
  #### Image of Number of Likes
 
  ![Image of Number of likes](readme-images/screenshot-number-of-likes.png)
-
-
- #### Image of Full Recipe Page - Image and Description
-
- ![Image of Full Recipe Page Image and Description](readme-images/screenshot-full-recipe-page-image-description.png)
  
 
- #### Image of Full Recipe Page - Ingredients and Method
+ #### Image of Full-Recipe Page - Ingredients and Method
 
  ![Image of Full Recipe Page Ingredients and Method](readme-images/screenshot-full-recipe-page-ingredients-method.png)
  
- The next section of the page contains the recipe ingredients and method. On the left the ingredients are displayed, on the right the method. These are displayed in contrasting colours to ensable users to eaiily find the infomation they are looking for.
+ - The next section of the page contains the recipe ingredients and method. On the left the ingredients are displayed, on the right the method. These are displayed in contrasting colours to enable users to easily find the infomation they are looking for.
 
 ### Comments Section
 
- The final section on the page is the comments section. Here users can view any comments that have been made about a particular recipe. All users can view comments made on a recipe regardless of whether they are a registered user and logged in or not. 
+ - The final section on the page is the comments section. Here users can view any comments that have been made about a particular recipe. All users can view comments made on a recipe regardless of whether they are a registered user and logged in or not. 
 
- Each comment contains the name of the user that has left the comment, the time and date the comment was left. 
+ - Each comment contains the name of the user that has left the comment and the time and date the comment was left. 
 
 #### Image of a Comment
 
  ![Image of a Comment](readme-images/screenshot-comments.png)
 
- If a user is not logged in they can view only the comments that have been left but they cannot interact with the site themselves by leaving comments.
-
- Logged in/ registered users can leave their own comments on a recipe. When a user is logged in their view is slightly different. Below the displayed comments there is an option to leave a comment.
+ - If a user is not logged in they can only the comments that have been left but they cannot interact with the site themselves by leaving comments.
+ - Logged in / registered users can leave their own comments on a recipe. 
+- 
+ - When a user is logged in their view is slightly different. Below the displayed comments there is an option to leave a comment.
 
 #### Image of Comments Section - Leave Comment
 
  ![Image of Comments Section Leave Comment](readme-images/screenshot-leave-comment.png)
 
- Once a user has left a comment, the comment will go for approval by the site admin. This allows the site admin to control the content visible on tee website and to delete any comments that are deemed offensive or inappropriate.
-
- A pop up message is displayed to advise the logged in user is advised that their comment has gone for approval.buttons Once approved their comment will display on the site.
+ - Once a user has left a comment, the comment will go for approval. This allows the site admin to control the content visible on the website and to delete any comments that are deemed offensive or inappropriate.
+ - A pop up message is displayed to advise the logged in use that their comment has gone for approval.
+ - Once approved, their comment will display in the comments section of the full-recipe page.
 
 #### Image of Comments Section - Comment Approval Message
 
  ![Image of Comment Approval Message](readme-images/screenshot-comment-approval-message.png)
 
- A logged in user can also edit and delete their own comments. They can do this by clicking on the edit or delete buttons on the comments themselves. A user can only edit/ delete comments that they have made themselves. They cannot edit or delete comments made by other people.
+ - A logged in user can also edit and delete their own comments. They can do this by clicking on the 'Edit' or 'Delete' buttons on the comments themselves. 
+ - A user can only edit / delete comments that they have made themselves.
+ - They cannot edit or delete comments made by other users.
 
- If a user is logged in the edit and delete buttins are only visible on their own comments bit not on others.
+ ### Editing a Comment
+
+ - A logged in user can edit their own comment by clicking on the 'Edit' buttton located on their previous comments.
+ - If a user is logged in the 'Edit' and 'Delete' buttons are only visible on their own comments but not on other users comments.
 
 #### Image of Comments Section - Edit and Delete Comments
 
  ![Image Edit and Delete Comments](readme-images/screenshot-edit-delete-comments.png)
 
- ### Editing a Comment
-
- A logged in users can edit their own comment by clicking on the Edit buttton located on their previous comments. 
-
- Once they click on the Edit button, their previous comment/ the comment they have chosen to edit is displayed in the comment box. The user can edit their comment. An update button is displayed below which allows them to save the changes to their comments.
+ - Once a user clicks on the 'Edit' button, their previous comment / the comment they have chosen to edit is displayed in the comment box. 
+ - The user can edit their comment. 
+ - An 'Update' button is displayed below which allows them to save the changes to their comments.
 
 #### Image of Edit Comments Section
 
@@ -408,7 +409,13 @@ If a user is not logged in they canot like or unlike a recipe. In this instance 
 
  ### Deleting a Comment
 
- A logged in user can delete a comment. They can only delete comments they have made themselves. To delete a comment the user must click on the Delete button on the comment they wish to delete. They are prompted with a warning message which asks them "Are you sure you want to delete your comment". below this warning there are 2 buttons displaye - Cancel and Delete. If a user clicks cancel they are brought back to the comments section. If they click delet their comment isdeleted and removed from the list of displyed comments
+ - A logged in user can delete a comment. 
+ - They can only delete comments they have made themselves. 
+ - To delete a comment the user must click on the 'Delete' button on the comment they wish to delete. 
+ - They are prompted with a warning message which asks them "Are you sure you want to delete your comment?"
+ - Below this warning there are two buttons displayed: 'Cancel' and 'Delete'. 
+ - If a user clicks 'Cancel' they are brought back to the comments section.
+ - If they click 'DeletE' their comment is deleted and removed from the list of displyed comments.
 
  #### Image of Delete Comment Warning
 
@@ -416,23 +423,30 @@ If a user is not logged in they canot like or unlike a recipe. In this instance 
 
 ### Link to Recipes Page - "All Recipes" button
 
+- At the botton of the homepage the "All Recipes" button is located. This links to the Recipes page where the user can view all the recipes that are available on the website.
+
 #### Image of "All Recipes" button
   
  ![Image of the All Recipes button](readme-images/screenshot-all-recipes-button.png)
 
- At the botton of the homepage the "All Recipes" button is located. This links to the recipes page wherethe user can view all the recipes that are available on the website.
 
- ### Recipes Page
+ ## Recipes Page
 
 #### Image of Recipes page
   
  ![Image of Recipes page](readme-images/screenshot-recipes-page.png)
  
- The Recipes Page can be accesed via the Recipes link on the Navigation Bar. It can also be accessed by clicking on the "All Recipes" button on the homepage. 
+- The Recipes Page can be accesed via the Recipes link on the Navigation Bar. 
+- It can also be accessed by clicking on the "All Recipes" button on the homepage. 
+- The Recipes Page contains a list of all the recipes that are available to view on the website.
+- The recipe layout and design are identical to those found on the homepage. 
+- They contain an image, the recipe title, the cooking time, the number of people the recipe serves, the likes the recipe has received, the date and time the recipe was posted, a short description and a 'View more' link to the full-recipe details. 
+- The full-recipe details can also be accessed by clicking on the image and the title.
 
- The Recipes Page contains a list of a. the recipes that are available to view on the website. The recipe cards are identical to those on the homepage. They contain an image, the recipe title, the cooking time, the number of people the recipe serves, the likes the recipe has received, the date and time the recipe was posted, a short description and a View more link to the full recipe. The full-recipe details can also be accessed by clicking on the image and the title.
-
-The All Recipes Page contains pagination so that 6 recipes are displayed per page. At the bottom of the page there is a next button that takes you to the next 6 recipes. On the final page of recipes the prev button is displayed to take to you to the previous page of recipes. 
+- The Recipes Page contains pagination which limits the number of recipes displayed per page to six.
+- Recipes are displayed in rows of three on both the home page and the recipes page.
+- At the bottom of the page there is a 'NEXT' button that takes you to the second page and another six recipes. 
+- On the final page of recipes the 'PREV' button is displayed to take to you back to the previous page of recipes. 
 
 #### Image of Next Button
   
@@ -443,72 +457,114 @@ The All Recipes Page contains pagination so that 6 recipes are displayed per pag
  ![Image of Previous Button](readme-images/screenshot-prev-button.png)
  
 
-The styling, layout and color scheme used are the same as the homepage to give consistency to the user and to provide a good user experience
+- The styling, layout and color scheme used are the same as the homepage to give consistency to the user and to provide a pleasant user experience.
 
-### Register Page
+## Register Page
 
-Users can sign up for the website by registering on the Register Page. The Register Page is accessed via a link on the Navigation Bar. 
+- Users can sign up for the website by registering on the Register Page. 
+- The Register Page is accessed via a link on the Navigation Bar. 
+- Once a user clicks on the Register Page they will see a Sign Up Form. 
+- The Sign Up Form requests the user inputs the following details: username, email, password, password(again!)
+- The email address is not required in order to register.
+- Users can sign up using a username and password only of they wish. 
+- If they prefer they can sign up using an email address. 
 
-Once a user clicks on the Register Page they will see a Sign Up Form. The Sign Up Form requests the user inputs the following details: username, email, password, password repeat. The email address is not required in order to register. Users can sign up using a username and password only of they wish. if they prefer they can sign up using an email address. 
+#### Image of Sign up Form
 
  ![Image of Sign up Form](readme-images/screenshot-register-form.png)
 
+- Below the form is a "Sign Up" button. 
+- Once the user has entered their details and clicked on the button they will receive a message to advise them that they have logged in successfully. 
+- This message can be dismissed by the user by clicking on the 'X' on the message to close.
+- If the message is not closed by the user it will disappear automatically after 3 seconds. 
+- Once logged in the Navigation Bar options change. 
+- Logout will now appear in the navigation bar and the Register and Login options will no longer be available. 
 
-Below the form is a "Sign Up" button. Once the user has entered their details and clicked on the button they will receive a message to advise that they have logged in successfully. This message can be dismissed by the user or it will disappear autiomatically after 3 seconds. Once logged in the Navigation Bar option changes. An option now appears for Logout and the Register and Login In options are no longer available. 
+#### Image of Navigation Bar Change Form
 
 ![Image of Navigation Bar Change Form](readme-images/navbar-images/screenshot-navbar-logout.png) 
 
 
-If a user tries to register but they already have an account "A user with that username already exists" will be displayed on screen. 
+- If a user tries to register but they already have an account the message "A user with that username already exists" will be displayed on screen. 
 
+#### Image of Username already exists
 ![Image of Username already exists](readme-images/screenshot-user-already-exists.png)
 
-If a user tries to submit a blank form or without a username/ password it wont be possible and "Please fill in this field" will be displayed. 
+- If a user tries to submit a blank form or a form with required details missing the message "Please fill in this field" will be displayed. 
+
+#### Image of Blank Form
 
 ![Image of Blank Form](readme-images/screenshot-blank-form.png)
 
-The register page also has a short Welcome message. "Welcome back to Easy Eats. Do you already have an account? Then please sign in instead." Users can click on the sign in link which will re-direct them to the login page. This benefits the user in terms of experience as they dont have to navigate back to the homepage first if they find themselves on the incorrect page. 
+- The register page also has a short welcome message. "Welcome back to Easy Eats. Do you already have an account? Then please sign in instead." 
+- Users can click on the sign in link which will re-direct them to the login page. 
+- This benefits the user in terms of experience as they dont have to navigate back to the homepage first if they find themselves on the incorrect page. 
+
+#### Image of Welcome Message on Register Page
 
 ![Image of Welcome Message on Register Page](readme-images/screenshot-register-message.png)
 
+## Logout
 
-### Logout
+- A logged in user can logout by clicking on the 'Logout' link in the Navigation Bar.
+- Once a user clicks the logout link, the logout page displays. 
 
-A logged in  user can logout by clicking on the Logout link in the Navigation Bar. Once a user clicks the logout link, the logout page displays. 
+#### Image of Logout Page
 
 ![Image of Logout Page](readme-images/screenshot-logout-page.png)
 
-The user is asked "Are you sure you want to Sign Out". If a user clicks on the Sign Out button they will be logged out of the website. Once logged out a message will display to the user to tell them that they have signed out successfully.
+- The user is asked "Are you sure you want to Sign Out". 
+- If a user clicks on the 'Sign Out' button they will be logged out of the website. 
+- Once logged out a message will display to the user to tell them that they have signed out.
+- The user will then be re-directed back to the homepage.
+
+#### Image of Logged Out Message
 
 ![Image of Logged Out Successfully Message](readme-images/screenshot-logged-out-successfully.png)
 
+## Login Page
 
-### Login Page
+#### Image of Login Page
 
 ![Image of Login Page](readme-images/screenshot-login-page.png)
 
-A user can login to the website by clicking on the Login link in the Navigation Bar. To Login a user is asked to enter their username and password. They can also select the remeer me tick box to allow them to sign in more easily next time they visit the site. 
-
-After the user clicks on the Sign In button a message will display to tell the user that they have loeed in successfully. 
+- A user can login to the website by clicking on the 'Login' link in the Navigation Bar. 
+- To Login a user is asked to enter their username and password. 
+- They can also select the 'Remember Me' tick box to allow them to sign in more easily next time they visit the site. 
+- After the user clicks on the 'Sign In' button, a message will display to tell the user that they have loggeed in successfully. 
+- 
+#### Image of Login Successfully Message
 
 ![Image of Login Successfully Message](readme-images/screenshot-logged-in-successfully.png)
 
-If the user enters the incorrect details they will not be able to log in. "The username and/or password you specified are not correct"
+- If the user enters the incorrect details they will not be able to log in. The message "The username and/or password you specified are not correct" will be displayed.
+
+### Image of Incorrect Login Details
 
 ![Image of Incorrect Login Details](readme-images/screenshot-incorrect-login-details.png)
 
-The Login Page also contains a link to redirect users to the Register Page in order to sign up if they do not already have an account. "Don't have an account? Register Now!" 
+- The Login Page also contains a link to redirect users to the Register Page in order to sign up if they do not already have an account. 
+- It reads: "Don't have an account? Register Now!" 
+
+#### Image Don't have an account message
 
 ![Image Don't have an account message](readme-images/screenshot-no-account-message.png)
 
 
-### Footer
+## Footer
 
+#### Image of Footer
 
 ![Image of Footer](readme-images/screenshot-footer.png)
 
-Easy Eats has a footer which is displayed across all pages on the site. It is a simple footer containing the name of the webiste, Easy Eats and where to follow on social media. Links to Instagram, Facebook, Twitter and Youtube can be found in the footer. These are displayed as the icons for those social media sites. The links have a hover state which changes to yellow when a user hovers over the icon. The hover is the same color used throughout the site when the user hovers over a link for ease of use and an enhanced user experience. The footer itself is a dark grey color which is contrasted by white text and icone. The color of the footer also creates a contrast with the colors used in the main page to make the Footer more obvious and easier to find for the user. 
-
+- Easy Eats has a footer which is displayed across all pages on the site. 
+- It is a simple footer containing the name of the webiste, Easy Eats and where to follow them on social media. 
+- Links to Instagram, Facebook, Twitter and Youtube can be found in the footer. 
+- These are displayed as the icons for the social media sites. 
+- The links have a hover state which changes the color to yellow when a user hovers over the icon. 
+- The hover color is the same color used throughout the site when the user hovers over a link.
+- The footer itself is a dark grey color which is contrasta well against the white text and icons. 
+- The color of the footer also creates a contrast with the colors used in the main page which makes the footer more obvious.
 
 ### The Admin Section
 
