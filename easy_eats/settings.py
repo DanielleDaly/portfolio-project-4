@@ -34,7 +34,7 @@ DEBUG = False
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = [
-    '8000-danielledaly-portfolio-p-hayry7065u.us2.codeanyapp.com', 'easy-eats-recipe-app.herokuapp.com', 'localhost']
+    '8000-danielledaly-portfolio-p-hayry7065u.us2.codeanyapp.com', 'easy-eats-recipe-app.herokuapp.com', 'localhost', 'easy-eats-recipe-app-87b42a2741f9.herokuapp.com']
 
 
 # Application definition
